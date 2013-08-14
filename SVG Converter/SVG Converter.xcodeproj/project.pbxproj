@@ -57,6 +57,11 @@
 		D19271AB1353D771001CEA07 /* ARRAY_LONGINT.h in Headers */ = {isa = PBXBuildFile; fileRef = D19271A91353D771001CEA07 /* ARRAY_LONGINT.h */; };
 		D19271CD1353DE6E001CEA07 /* ARRAY_INTEGER.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19271CB1353DE6E001CEA07 /* ARRAY_INTEGER.cpp */; };
 		D19271CE1353DE6E001CEA07 /* ARRAY_INTEGER.h in Headers */ = {isa = PBXBuildFile; fileRef = D19271CC1353DE6E001CEA07 /* ARRAY_INTEGER.h */; };
+		D19B6E2D17BB670D00D580A1 /* libfreetype.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D19B6E2C17BB670D00D580A1 /* libfreetype.dylib */; };
+		D19B6E2F17BB670D00D580A1 /* libharfbuzz-icu.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D19B6E2E17BB670D00D580A1 /* libharfbuzz-icu.dylib */; };
+		D19B6E3117BB670D00D580A1 /* libharfbuzz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D19B6E3017BB670D00D580A1 /* libharfbuzz.dylib */; };
+		D19B6E3317BB670D00D580A1 /* libicudata.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D19B6E3217BB670D00D580A1 /* libicudata.dylib */; };
+		D19B6E3517BB670D00D580A1 /* libicuuc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D19B6E3417BB670D00D580A1 /* libicuuc.dylib */; };
 		D19CC17E1353782E0004336E /* C_INTEGER.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19CC1761353782E0004336E /* C_INTEGER.cpp */; };
 		D19CC17F1353782E0004336E /* C_INTEGER.h in Headers */ = {isa = PBXBuildFile; fileRef = D19CC1771353782E0004336E /* C_INTEGER.h */; };
 		D19CC1801353782E0004336E /* C_LONGINT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19CC1781353782E0004336E /* C_LONGINT.cpp */; };
@@ -120,6 +125,11 @@
 		D19271A91353D771001CEA07 /* ARRAY_LONGINT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARRAY_LONGINT.h; path = Classes/ARRAY_LONGINT.h; sourceTree = "<group>"; };
 		D19271CB1353DE6E001CEA07 /* ARRAY_INTEGER.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ARRAY_INTEGER.cpp; path = Classes/ARRAY_INTEGER.cpp; sourceTree = "<group>"; };
 		D19271CC1353DE6E001CEA07 /* ARRAY_INTEGER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARRAY_INTEGER.h; path = Classes/ARRAY_INTEGER.h; sourceTree = "<group>"; };
+		D19B6E2C17BB670D00D580A1 /* libfreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreetype.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libfreetype.dylib"; sourceTree = "<group>"; };
+		D19B6E2E17BB670D00D580A1 /* libharfbuzz-icu.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libharfbuzz-icu.dylib"; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libharfbuzz-icu.dylib"; sourceTree = "<group>"; };
+		D19B6E3017BB670D00D580A1 /* libharfbuzz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libharfbuzz.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libharfbuzz.dylib"; sourceTree = "<group>"; };
+		D19B6E3217BB670D00D580A1 /* libicudata.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicudata.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libicudata.dylib"; sourceTree = "<group>"; };
+		D19B6E3417BB670D00D580A1 /* libicuuc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicuuc.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libicuuc.dylib"; sourceTree = "<group>"; };
 		D19CC1761353782E0004336E /* C_INTEGER.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_INTEGER.cpp; path = classes/C_INTEGER.cpp; sourceTree = "<group>"; };
 		D19CC1771353782E0004336E /* C_INTEGER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_INTEGER.h; path = classes/C_INTEGER.h; sourceTree = "<group>"; };
 		D19CC1781353782E0004336E /* C_LONGINT.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_LONGINT.cpp; path = classes/C_LONGINT.cpp; sourceTree = "<group>"; };
@@ -155,6 +165,11 @@
 				D12973CB17BAD0870063647B /* librsvg.dylib in Frameworks */,
 				D12973CD17BAD0870063647B /* libxml2.dylib in Frameworks */,
 				D12973CF17BAD0870063647B /* libz.dylib in Frameworks */,
+				D19B6E2D17BB670D00D580A1 /* libfreetype.dylib in Frameworks */,
+				D19B6E2F17BB670D00D580A1 /* libharfbuzz-icu.dylib in Frameworks */,
+				D19B6E3117BB670D00D580A1 /* libharfbuzz.dylib in Frameworks */,
+				D19B6E3317BB670D00D580A1 /* libicudata.dylib in Frameworks */,
+				D19B6E3517BB670D00D580A1 /* libicuuc.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +201,11 @@
 				D12973CA17BAD0870063647B /* librsvg.dylib */,
 				D12973CC17BAD0870063647B /* libxml2.dylib */,
 				D12973CE17BAD0870063647B /* libz.dylib */,
+				D19B6E2C17BB670D00D580A1 /* libfreetype.dylib */,
+				D19B6E2E17BB670D00D580A1 /* libharfbuzz-icu.dylib */,
+				D19B6E3017BB670D00D580A1 /* libharfbuzz.dylib */,
+				D19B6E3217BB670D00D580A1 /* libicudata.dylib */,
+				D19B6E3417BB670D00D580A1 /* libicuuc.dylib */,
 			);
 			name = "4D Plugin";
 			sourceTree = "<group>";
@@ -439,8 +459,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -479,8 +501,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
@@ -517,8 +541,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";

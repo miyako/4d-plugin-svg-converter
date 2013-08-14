@@ -1,0 +1,1033 @@
+TSVG Converter
+v7
+r0
+t398157595.625520
+cCheck dependencies
+cProcessInfoPlistFile "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/Info.plist" Info.plist
+cCopyStringsFile "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
+cProcessPCH++ "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch.gch" "4D Plugin_Prefix.pch" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/4DPluginAPI.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/4DPlugin-A75C1BDA8545CD80.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_INTEGER.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_INTEGER.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_LONGINT.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_LONGINT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_REAL.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_REAL.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_TEXT.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_TEXT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_TEXT.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_TEXT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_LONGINT.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_LONGINT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_INTEGER.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_INTEGER.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_REAL.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_REAL.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_PICTURE.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_PICTURE.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_BLOB.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_BLOB.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_TIME.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_TIME.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_DATE.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_DATE.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_BOOLEAN.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/rsvg-size-callback.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/librsvg-2.37.0/rsvg-size-callback.c" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+cLd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/SVG Converter" normal i386
+cResMergerCollector "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/ResourceManagerResources/SVG Converter.rsrc"
+cResMergerProduct "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/Resources/SVG Converter.rsrc"
+cTouch "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle"
+
+N/System/Library/Frameworks/Carbon.framework/Carbon
+c000000005096793000000000000069F0
+t1352038704
+s27120
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c00000000509679300000000000006730
+t1352038704
+s26416
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp
+c0000000051E78AF5000000000002CE16
+t1374128885
+s183830
+i"4DPluginAPI.h"
+i"PrivateTypes.h"
+i"EntryPoints.h"
+i<stdlib.h>
+i<string.h>
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.h
+c0000000051E62D43000000000000CA06
+t1374039363
+s51718
+i"Flags.h"
+i"PublicTypes.h"
+i<Cocoa/Cocoa.h>
+i"C_TEXT.h"
+i"C_INTEGER.h"
+i"C_LONGINT.h"
+i"C_TIME.h"
+i"C_DATE.h"
+i"C_REAL.h"
+i"C_BLOB.h"
+i"C_PICTURE.h"
+i"C_POINTER.h"
+i"ARRAY_TEXT.h"
+i"ARRAY_INTEGER.h"
+i"ARRAY_LONGINT.h"
+i"ARRAY_REAL.h"
+i"ARRAY_BOOLEAN.h"
+i<windows.h>
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp
+c0000000050695FAA0000000000000AB0
+t1349083050
+s2736
+i"ARRAY_BOOLEAN.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_INTEGER.cpp
+c000000004DA54EE0000000000000099C
+t1302679264
+s2460
+i"ARRAY_INTEGER.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_LONGINT.cpp
+c000000004DA54E0D000000000000095C
+t1302679053
+s2396
+i"ARRAY_LONGINT.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_REAL.cpp
+c000000004DA54F180000000000000993
+t1302679320
+s2451
+i"ARRAY_REAL.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_TEXT.cpp
+c000000005146F5AA0000000000002131
+t1363604906
+s8497
+i"ARRAY_TEXT.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_BLOB.cpp
+c000000004FC335060000000000001BB3
+t1338193158
+s7091
+i"C_BLOB.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_DATE.cpp
+c00000000512CFC4200000000000004F8
+t1361902658
+s1272
+i"C_DATE.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_PICTURE.cpp
+c0000000050B29A050000000000001F3A
+t1353882117
+s7994
+i"C_PICTURE.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_TIME.cpp
+c00000000512CEAF20000000000000491
+t1361898226
+s1169
+i"C_TIME.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/EntryPoints.h
+c0000000051E62C230000000000005602
+t1374039075
+s22018
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Flags.h
+c000000004F838069000000000000050C
+t1334018153
+s1292
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/PrivateTypes.h
+c000000004C159E340000000000000ACC
+t1276485172
+s2764
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/PublicTypes.h
+c0000000051E78ABC0000000000007344
+t1374128828
+s29508
+i<string>
+i<vector>
+i<map>
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/ARRAY_BOOLEAN.h
+c000000004ECA22FF00000000000002DF
+t1321870079
+s735
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/ARRAY_INTEGER.h
+c000000004DA4060600000000000002D8
+t1302595078
+s728
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/ARRAY_LONGINT.h
+c000000004DA3A79C00000000000002C4
+t1302570908
+s708
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/ARRAY_REAL.h
+c000000004DA4084600000000000002D6
+t1302595654
+s726
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/ARRAY_TEXT.h
+c0000000050F906B20000000000000799
+t1358497458
+s1945
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_BLOB.h
+c000000004FC4A20E0000000000000603
+t1338286606
+s1539
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_DATE.h
+c00000000512CFC3B00000000000002E5
+t1361902651
+s741
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_INTEGER.cpp
+c000000004DA3A77D00000000000002C2
+t1302570877
+s706
+i"C_INTEGER.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_INTEGER.h
+c000000004DA3A777000000000000022A
+t1302570871
+s554
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_LONGINT.cpp
+c000000004DA3A77000000000000002A3
+t1302570864
+s675
+i"C_LONGINT.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_LONGINT.h
+c000000004DA3A76A0000000000000235
+t1302570858
+s565
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_PICTURE.h
+c0000000050B296D90000000000000784
+t1353881305
+s1924
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_POINTER.h
+c00000000514631580000000000000276
+t1363554648
+s630
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_REAL.cpp
+c000000004DA3A76100000000000002B1
+t1302570849
+s689
+i"C_REAL.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_REAL.h
+c000000004DA3A75B0000000000000237
+t1302570843
+s567
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_TEXT.cpp
+c000000005146F5C600000000000017A1
+t1363604934
+s6049
+i"C_TEXT.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_TEXT.h
+c0000000050F8CBFD0000000000000644
+t1358482429
+s1604
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_TIME.h
+c00000000512CEA7E00000000000002EB
+t1361898110
+s747
+i"4DPluginAPI.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin_Prefix.pch
+c000000004D419E1B0000000000000081
+t1296145947
+s129
+i<Carbon/Carbon.h>
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp
+c00000000520ADCF60000000000003816
+t1376443638
+s14358
+i"4DPluginAPI.h"
+i"4DPlugin.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.h
+c00000000520AD7B30000000000000410
+t1376442291
+s1040
+i"config.h"
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<locale.h>
+i"rsvg-css.h"
+i"rsvg.h"
+i"rsvg-private.h"
+i"rsvg-size-callback.h"
+i<cairo-ps.h>
+i<cairo-pdf.h>
+i<cairo-svg.h>
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.rsrc
+c00000000520AE1BF000000000000034B
+t1376444863
+s843
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/English.lproj/InfoPlist.strings
+c00000000520A877A000000000000017E
+t1376421754
+s382
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle
+t1376464795
+s102
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/Info.plist
+t1376421822
+s1065
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/SVG Converter
+t1376464795
+s238460
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libcairo.dylib
+c00000000520A81E2000000000014677C
+t1376420322
+s1337212
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libcroco.dylib
+c00000000520A811C0000000000045B48
+t1376420124
+s285512
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libffi.dylib
+c00000000520A80BF000000000000B390
+t1376420031
+s45968
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libfreetype.dylib
+c00000000520B2D6D00000000000B2078
+t1376464237
+s729208
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libgdk_pixbuf.dylib
+c00000000520A86F100000000000265A4
+t1376421617
+s157092
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libgio.dylib
+c00000000520A863D00000000001B0F94
+t1376421437
+s1773460
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libglib.dylib
+c00000000520A809C000000000015B8D8
+t1376419996
+s1423576
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libgmodule.dylib
+c00000000520A83B30000000000004C28
+t1376420787
+s19496
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libgobject.dylib
+c00000000520A82950000000000057344
+t1376420501
+s357188
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libgthread.dylib
+c00000000520A843C0000000000002164
+t1376420924
+s8548
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libharfbuzz-icu.dylib
+c00000000520B2DEB0000000000002B60
+t1376464363
+s11104
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libharfbuzz.dylib
+c00000000520B2CEE000000000005D7B4
+t1376464110
+s382900
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libiconv.dylib
+c00000000520A7FE500000000000F1340
+t1376419813
+s987968
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libicudata.dylib
+c00000000520B2F0E00000000011700F4
+t1376464654
+s18284788
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libicuuc.dylib
+c00000000520B2F4600000000001743D8
+t1376464710
+s1524696
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libintl.dylib
+c00000000520A8032000000000000EDB4
+t1376419890
+s60852
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libpango.dylib
+c00000000520B2EC7000000000005BE00
+t1376464583
+s376320
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libpangocairo.dylib
+c00000000520A84F00000000000017718
+t1376421104
+s96024
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libpixman.dylib
+c00000000520A820500000000003A8DD0
+t1376420357
+s3837392
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libpng.dylib
+c00000000520A816E000000000003E078
+t1376420206
+s254072
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/librsvg.dylib
+c00000000520A7C040000000000045674
+t1376418820
+s284276
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libxml2.dylib
+c00000000520A7E6900000000001A3830
+t1376419433
+s1718320
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libz.dylib
+c00000000520A7FC0000000000001A5FC
+t1376419776
+s108028
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/Resources/English.lproj/InfoPlist.strings
+t1376421822
+s382
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/Resources/SVG Converter.rsrc
+t1376464795
+s843
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/4DPlugin-A75C1BDA8545CD80.o
+t1376464793
+s25540
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/4DPluginAPI.o
+t1376464795
+s156368
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_BOOLEAN.o
+t1376464794
+s16276
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_INTEGER.o
+t1376464794
+s17472
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_LONGINT.o
+t1376464793
+s17444
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_REAL.o
+t1376464794
+s17504
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_TEXT.o
+t1376464793
+s53976
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_BLOB.o
+t1376464794
+s31672
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_DATE.o
+t1376464794
+s3120
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_INTEGER.o
+t1376464792
+s2776
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_LONGINT.o
+t1376464792
+s2760
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_PICTURE.o
+t1376464794
+s37944
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_REAL.o
+t1376464792
+s2756
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_TEXT.o
+t1376464793
+s35124
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_TIME.o
+t1376464794
+s3040
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/SVG Converter.LinkFileList
+c00000000520B2F9800000000000009CA
+t1376464792
+s2506
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/rsvg-size-callback.o
+t1376464794
+s3764
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/ResourceManagerResources/SVG Converter.rsrc
+t1376464795
+s843
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/cairo/cairo-deprecated.h
+c000000005209940500000000000021FA
+t1376359429
+s8698
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/cairo/cairo-features.h
+c000000005209940500000000000003A8
+t1376359429
+s936
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/cairo/cairo-pdf.h
+c00000000520994050000000000000C40
+t1376359429
+s3136
+i"cairo.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/cairo/cairo-ps.h
+c00000000520994050000000000000E30
+t1376359429
+s3632
+i"cairo.h"
+i<stdio.h>
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/cairo/cairo-svg.h
+c00000000520994050000000000000B07
+t1376359429
+s2823
+i"cairo.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/cairo/cairo-version.h
+c00000000520994050000000000000095
+t1376359429
+s149
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/cairo/cairo.h
+c0000000052099405000000000001A775
+t1376359429
+s108405
+i"cairo-version.h"
+i"cairo-features.h"
+i"cairo-deprecated.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/config.h
+c00000000520A77E50000000000000A41
+t1376417765
+s2625
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/glib-2.0/glib-object.h
+c00000000520A3BDC00000000000005E0
+t1376402396
+s1504
+i<gobject/gbinding.h>
+i<gobject/gboxed.h>
+i<gobject/genums.h>
+i<gobject/gobject.h>
+i<gobject/gparam.h>
+i<gobject/gparamspecs.h>
+i<gobject/gsignal.h>
+i<gobject/gsourceclosure.h>
+i<gobject/gtype.h>
+i<gobject/gtypemodule.h>
+i<gobject/gtypeplugin.h>
+i<gobject/gvalue.h>
+i<gobject/gvaluearray.h>
+i<gobject/gvaluetypes.h>
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/glib-2.0/glib.h
+c00000000520A3BDC0000000000000D2A
+t1376402396
+s3370
+i<glib/galloca.h>
+i<glib/garray.h>
+i<glib/gasyncqueue.h>
+i<glib/gatomic.h>
+i<glib/gbacktrace.h>
+i<glib/gbase64.h>
+i<glib/gbitlock.h>
+i<glib/gbookmarkfile.h>
+i<glib/gbytes.h>
+i<glib/gcharset.h>
+i<glib/gchecksum.h>
+i<glib/gconvert.h>
+i<glib/gdataset.h>
+i<glib/gdate.h>
+i<glib/gdatetime.h>
+i<glib/gdir.h>
+i<glib/genviron.h>
+i<glib/gerror.h>
+i<glib/gfileutils.h>
+i<glib/ggettext.h>
+i<glib/ghash.h>
+i<glib/ghmac.h>
+i<glib/ghook.h>
+i<glib/ghostutils.h>
+i<glib/giochannel.h>
+i<glib/gkeyfile.h>
+i<glib/glist.h>
+i<glib/gmacros.h>
+i<glib/gmain.h>
+i<glib/gmappedfile.h>
+i<glib/gmarkup.h>
+i<glib/gmem.h>
+i<glib/gmessages.h>
+i<glib/gnode.h>
+i<glib/goption.h>
+i<glib/gpattern.h>
+i<glib/gpoll.h>
+i<glib/gprimes.h>
+i<glib/gqsort.h>
+i<glib/gquark.h>
+i<glib/gqueue.h>
+i<glib/grand.h>
+i<glib/gregex.h>
+i<glib/gscanner.h>
+i<glib/gsequence.h>
+i<glib/gshell.h>
+i<glib/gslice.h>
+i<glib/gslist.h>
+i<glib/gspawn.h>
+i<glib/gstrfuncs.h>
+i<glib/gstring.h>
+i<glib/gstringchunk.h>
+i<glib/gtestutils.h>
+i<glib/gthread.h>
+i<glib/gthreadpool.h>
+i<glib/gtimer.h>
+i<glib/gtimezone.h>
+i<glib/gtrashstack.h>
+i<glib/gtree.h>
+i<glib/gtypes.h>
+i<glib/gunicode.h>
+i<glib/gurifuncs.h>
+i<glib/gutils.h>
+i<glib/gvarianttype.h>
+i<glib/gvariant.h>
+i<glib/gversion.h>
+i<glib/gversionmacros.h>
+i<glib/gwin32.h>
+i<glib/deprecated/gallocator.h>
+i<glib/deprecated/gcache.h>
+i<glib/deprecated/gcompletion.h>
+i<glib/deprecated/gmain.h>
+i<glib/deprecated/grel.h>
+i<glib/deprecated/gthread.h>
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/librsvg-enum-types.h
+c00000000520A7A750000000000000217
+t1376418421
+s535
+i<glib-object.h>
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/librsvg-features.h
+c00000000520A7A7500000000000003BC
+t1376418421
+s956
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg-cairo.h
+c00000000520A7A75000000000000059A
+t1376418421
+s1434
+i<cairo.h>
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg.h
+c00000000520A7A750000000000002015
+t1376418421
+s8213
+i<glib-object.h>
+i<gio/gio.h>
+i<gdk-pixbuf/gdk-pixbuf.h>
+i"librsvg-enum-types.h"
+i"librsvg-features.h"
+i"rsvg-cairo.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/rsvg-css.h
+c000000004F30993D0000000000000CB9
+t1328585021
+s3257
+i<glib.h>
+i<pango/pango.h>
+i"rsvg-private.h"
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/rsvg-private.h
+c000000004F30993D0000000000003810
+t1328585021
+s14352
+i<cairo.h>
+i"rsvg.h"
+i<libxml/SAX.h>
+i<libxml/xmlmemory.h>
+i<pango/pango.h>
+i<glib.h>
+i<glib-object.h>
+i<math.h>
+i<float.h>
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/rsvg-size-callback.h
+c000000004F30993D0000000000000566
+t1328585021
+s1382
+i<glib.h>
+
+N/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/librsvg-2.37.0/rsvg-size-callback.c
+c000000004F30993D0000000000000BDD
+t1328585021
+s3037
+i"config.h"
+i"rsvg-size-callback.h"
+i<math.h>
+
+N/Xcode3/SDKs/MacOSX10.4u.sdk
+c000000004A1199E200000000000000EE
+t1242667490
+s238
+
+N/Xcode3/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
+c000000004A1199E400000000000005BF
+t1242667492
+s1471
+
+N/Xcode3/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Xcode3/SDKs/MacOSX10.4u.sdk/usr/include/locale.h
+c00000000463BAA5A00000000000008F0
+t1178315354
+s2288
+
+N/Xcode3/SDKs/MacOSX10.4u.sdk/usr/include/math.h
+c00000000462E7AF500000000000004B7
+t1177451253
+s1207
+
+N/Xcode3/SDKs/MacOSX10.4u.sdk/usr/include/stdio.h
+c00000000463BAA5A0000000000003B7F
+t1178315354
+s15231
+
+N/Xcode3/SDKs/MacOSX10.4u.sdk/usr/include/stdlib.h
+c00000000463BAA5A0000000000002647
+t1178315354
+s9799
+
+N/Xcode3/SDKs/MacOSX10.4u.sdk/usr/include/string.h
+c00000000463BAA5A00000000000014D3
+t1178315354
+s5331
+
+N/Xcode3/SDKs/MacOSX10.4u.sdk/usr/lib/gcc/i686-apple-darwin10/4.0.1/include/float.h
+c000000004CC3D349000000000000153C
+t1287902025
+s5436
+
+N/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch.gch
+t1376444992
+s25210088
+
+NInfo.plist
+c00000000520A878B000000000000029A
+t1376421771
+s666
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies398157592#398157592#0(0"0(0#1#0"17257963264#0"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/4DPlugin-A75C1BDA8545CD80.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157592.384878
+e398157593.783847
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/4DPlugin-A75C1BDA8545CD80.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+o/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp: In function 'void SVG_Convert_array(sLONG_PTR*, uint8_t**)':
+o/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp:252: warning: 'rsvg_handle_set_size_callback' is deprecated (declared at /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg.h:203)
+o/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp:252: warning: 'rsvg_handle_set_size_callback' is deprecated (declared at /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg.h:203)
+o/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp: In function 'void SVG_Convert(sLONG_PTR*, uint8_t**)':
+o/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp:432: warning: 'rsvg_handle_set_size_callback' is deprecated (declared at /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg.h:203)
+o/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp:432: warning: 'rsvg_handle_set_size_callback' is deprecated (declared at /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg.h:203)
+lSLF07#2@86"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp398157592#398157593#0(1308"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp: In function 'void SVG_Convert_array(sLONG_PTR*, uint8_t**)':/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp:252: warning: 'rsvg_handle_set_size_callback' is deprecated (declared at /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg.h:203)/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp:252: warning: 'rsvg_handle_set_size_callback' is deprecated (declared at /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg.h:203)/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp: In function 'void SVG_Convert(sLONG_PTR*, uint8_t**)':/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp:432: warning: 'rsvg_handle_set_size_callback' is deprecated (declared at /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg.h:203)/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp:432: warning: 'rsvg_handle_set_size_callback' is deprecated (declared at /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg.h:203)4(22@164"'rsvg_handle_set_size_callback' is deprecated (declared at /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg.h:203)398157593#141#258#0(6@78"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp398136438#252#0#252#0#33"'*' is deprecated (declared at *)0(22@164"'rsvg_handle_set_size_callback' is deprecated (declared at /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg.h:203)398157593#399#258#0(6@78"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp398136438#252#0#252#0#33"'*' is deprecated (declared at *)0(22@164"'rsvg_handle_set_size_callback' is deprecated (declared at /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg.h:203)398157593#792#258#0(6@78"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp398136438#432#0#432#0#33"'*' is deprecated (declared at *)0(22@164"'rsvg_handle_set_size_callback' is deprecated (declared at /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/librsvg-2.0/librsvg/rsvg.h:203)398157593#1050#258#0(6@78"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp398136438#432#0#432#0#33"'*' is deprecated (declared at *)0(0#0#78"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp4317978624#1899"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/4DPlugin-A75C1BDA8545CD80.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/4DPluginAPI.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157592.382703
+e398157595.525219
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/4DPluginAPI.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+o/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp: In function 'void PA_ResizeArray(PA_Variable*, unsigned int)':
+o/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp:4008: warning: comparison between signed and unsigned integer expressions
+o/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp:4061: warning: comparison between signed and unsigned integer expressions
+o/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp:4065: warning: comparison between signed and unsigned integer expressions
+lSLF07#2@103"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp398157592#398157595#0(670"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp: In function 'void PA_ResizeArray(PA_Variable*, unsigned int)':/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp:4008: warning: comparison between signed and unsigned integer expressions/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp:4061: warning: comparison between signed and unsigned integer expressions/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp:4065: warning: comparison between signed and unsigned integer expressions3(22@58"Comparison between signed and unsigned integer expressions398157592#160#170#0(6@95"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp395821685#4008#0#4008#0#58"comparison between signed and unsigned integer expressions0(22@58"Comparison between signed and unsigned integer expressions398157592#330#170#0(6@95"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp395821685#4061#0#4061#0#58"comparison between signed and unsigned integer expressions0(22@58"Comparison between signed and unsigned integer expressions398157592#500#170#0(6@95"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp395821685#4065#0#4065#0#58"comparison between signed and unsigned integer expressions0(0#0#95"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp17259606016#1902"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/4DPluginAPI.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/4DPluginAPI.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_BOOLEAN.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157593.783988
+e398157594.584171
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_BOOLEAN.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@113"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp398157593#398157594#0(0"0(0#0#105"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp4317978624#1914"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_BOOLEAN.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_BOOLEAN.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_INTEGER.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_INTEGER.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157592.926684
+e398157594.070444
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_INTEGER.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_INTEGER.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@113"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_INTEGER.cpp398157592#398157594#0(0"0(0#0#105"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_INTEGER.cpp4317978624#1914"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_INTEGER.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_INTEGER.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_LONGINT.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_LONGINT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157592.388185
+e398157593.207573
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_LONGINT.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_LONGINT.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@113"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_LONGINT.cpp398157592#398157593#0(0"0(0#0#105"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_LONGINT.cpp4317978624#1914"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_LONGINT.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_LONGINT.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_REAL.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_REAL.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157592.929280
+e398157594.041880
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_REAL.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_REAL.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@110"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_REAL.cpp398157592#398157594#0(0"0(0#0#102"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_REAL.cpp4317978624#1908"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_REAL.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_REAL.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_TEXT.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_TEXT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157592.387401
+e398157593.781600
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_TEXT.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_TEXT.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@110"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_TEXT.cpp398157592#398157593#0(0"0(0#0#102"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_TEXT.cpp4317978624#1908"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/ARRAY_TEXT.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/ARRAY_TEXT.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_BLOB.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_BLOB.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157593.207735
+e398157594.467644
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_BLOB.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_BLOB.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@106"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_BLOB.cpp398157593#398157594#0(0"0(0#0#98"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_BLOB.cpp17259134720#1900"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_BLOB.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_BLOB.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_DATE.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_DATE.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157593.781760
+e398157594.463983
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_DATE.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_DATE.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@106"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_DATE.cpp398157593#398157594#0(0"0(0#0#98"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_DATE.cpp4317978624#1900"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_DATE.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_DATE.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_INTEGER.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_INTEGER.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157592.385328
+e398157592.935371
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_INTEGER.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_INTEGER.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@109"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_INTEGER.cpp398157592#398157592#0(0"0(0#0#101"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_INTEGER.cpp4317978624#1906"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_INTEGER.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_INTEGER.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_LONGINT.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_LONGINT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157592.385823
+e398157592.929149
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_LONGINT.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_LONGINT.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@109"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_LONGINT.cpp398157592#398157592#0(0"0(0#0#101"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_LONGINT.cpp4317978624#1906"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_LONGINT.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_LONGINT.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_PICTURE.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_PICTURE.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157592.935514
+e398157594.304630
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_PICTURE.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_PICTURE.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@109"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_PICTURE.cpp398157592#398157594#0(0"0(0#0#101"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_PICTURE.cpp4317978624#1906"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_PICTURE.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_PICTURE.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_REAL.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_REAL.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157592.386261
+e398157592.926278
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_REAL.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_REAL.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@106"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_REAL.cpp398157592#398157592#0(0"0(0#0#98"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_REAL.cpp4317978624#1900"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_REAL.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_REAL.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_TEXT.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_TEXT.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157592.386779
+e398157593.453594
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_TEXT.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_TEXT.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@106"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_TEXT.cpp398157592#398157593#0(0"0(0#0#98"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_TEXT.cpp4317978624#1900"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/classes/C_TEXT.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_TEXT.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_TIME.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_TIME.cpp" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157593.453739
+e398157594.304934
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_TIME.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_TIME.cpp
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@106"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_TIME.cpp398157593#398157594#0(0"0(0#0#98"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_TIME.cpp4317978624#1900"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4D Plugin API/Classes/C_TIME.cpp" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/C_TIME.o"0#
+
+CCompileC "build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/rsvg-size-callback.o" "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/librsvg-2.37.0/rsvg-size-callback.c" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+s398157594.042111
+e398157594.245886
+r1
+xCompileC
+xbuild/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/rsvg-size-callback.o
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/librsvg-2.37.0/rsvg-size-callback.c
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_0
+lSLF07#2@109"Compile /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/librsvg-2.37.0/rsvg-size-callback.c398157594#398157594#0(0"0(0#0#101"/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/librsvg-2.37.0/rsvg-size-callback.c4317978624#1915"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv LANG en_US.US-ASCII    /Xcode3/usr/bin/gcc-4.0 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk -fvisibility=hidden -fvisibility-inlines-hidden -fobjc-call-cxx-cdtors -mmacosx-version-min=10.4 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/SVG Converter.hmap" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -Iinclude -Iinclude/cairo -Iinclude/gdk-pixbuf-2.0 -Iinclude/glib-2.0 -Iinclude/librsvg-2.0 -Iinclude/libxml2 -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0/gdk-pixbuf -Iinclude/glib-2.0/gio -Iinclude/glib-2.0/glib -Iinclude/glib-2.0/gobject -Iinclude/librsvg-2.0/librsvg -Iinclude/libxml2/libxml -Iinclude/pango-1.0/pango -Iinclude/glib-2.0/glib/deprecated -Iinclude/pango-1.0 -Iinclude/gdk-pixbuf-2.0 "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/include" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources/i386" "-I/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/DerivedSources" -include "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch" -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/librsvg-2.37.0/rsvg-size-callback.c" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/rsvg-size-callback.o"0#
+
+CCopyStringsFile "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
+r0
+
+CLd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/SVG Converter" normal i386
+s398157595.525306
+e398157595.587808
+r1
+xLd
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/SVG Converter
+xnormal
+xi386
+lSLF07#2@149"Link /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/SVG Converter398157595#398157595#0(0"0(0#0#0"4317978624#1265"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    setenv MACOSX_DEPLOYMENT_TARGET 10.4    /Xcode3/usr/bin/g++-4.0 -arch i386 -bundle -isysroot /Xcode3/SDKs/MacOSX10.4u.sdk "-L/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" "-L/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS" "-L/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS" "-F/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins" -filelist "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/Objects-normal/i386/SVG Converter.LinkFileList" -mmacosx-version-min=10.4 -framework Carbon -framework Cocoa -lcairo -lcroco -lffi -lgdk_pixbuf -lgio -lglib -lgmodule -lgobject -lgthread -liconv -lintl -lpango -lpangocairo -lpixman -lpng -lrsvg -lxml2 -lz -lfreetype -lharfbuzz-icu -lharfbuzz -licudata -licuuc -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/SVG Converter"0#
+
+CProcessInfoPlistFile "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/Info.plist" Info.plist
+r0
+
+CProcessPCH++ "/var/folders/jz/g48pnvt16wg_pzlzws5r196c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/4D Plugin_Prefix-edopusawbiorpigzthjpccionbad/4D Plugin_Prefix.pch.gch" "4D Plugin_Prefix.pch" normal i386 objective-c++ com.apple.compilers.gcc.4_0
+r0
+
+CResMergerCollector "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/ResourceManagerResources/SVG Converter.rsrc"
+s398157595.587934
+e398157595.608293
+r1
+xResMergerCollector
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/ResourceManagerResources/SVG Converter.rsrc
+lSLF07#2@187"Merge resources into /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/ResourceManagerResources/SVG Converter.rsrc398157595#398157595#0(0"0(0#0#0"4317978624#367"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    /Xcode3/Tools/ResMerger -dstIs DF "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/4DPlugin.rsrc" -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/ResourceManagerResources/SVG Converter.rsrc"0#
+
+CResMergerProduct "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/Resources/SVG Converter.rsrc"
+s398157595.608354
+e398157595.622458
+r1
+xResMergerProduct
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/Resources/SVG Converter.rsrc
+lSLF07#2@174"Merge resources into /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/Resources/SVG Converter.rsrc398157595#398157595#0(0"0(0#0#0"4317978624#441"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    /Xcode3/Tools/ResMerger "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/build/SVG Converter.build/Deployment/SVG Converter.build/ResourceManagerResources/SVG Converter.rsrc" -dstIs DF -o "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/Resources/SVG Converter.rsrc"0#
+
+CTouch "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle"
+s398157595.622514
+e398157595.625484
+r1
+xTouch
+x/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle
+lSLF07#2@121"Touch /Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle398157595#398157595#0(0"0(0#0#0"4317978624#215"    cd "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter"    /usr/bin/touch -c "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Plugins/SVG Converter.bundle"0#
+

@@ -72,14 +72,15 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 398137780;
-			PBXWorkspaceStateSaveDate = 398137780;
+			PBXPerProjectTemplateStateSaveDate = 398157557;
+			PBXWorkspaceStateSaveDate = 398157557;
 		};
 		perUserProjectItems = {
 			D117ABF217BB0FCC009EAF0F /* PBXTextBookmark */ = D117ABF217BB0FCC009EAF0F /* PBXTextBookmark */;
 			D117AC2E17BB14E9009EAF0F /* PBXTextBookmark */ = D117AC2E17BB14E9009EAF0F /* PBXTextBookmark */;
-			D117AC3717BB14E9009EAF0F /* PBXTextBookmark */ = D117AC3717BB14E9009EAF0F /* PBXTextBookmark */;
-			D16D20A717BB19C60069F6B0 /* PBXTextBookmark */ = D16D20A717BB19C60069F6B0 /* PBXTextBookmark */;
+			D19B6E3C17BB688900D580A1 /* PBXTextBookmark */ = D19B6E3C17BB688900D580A1 /* PBXTextBookmark */;
+			D19B6E3D17BB688900D580A1 /* PBXTextBookmark */ = D19B6E3D17BB688900D580A1 /* PBXTextBookmark */;
+			D19B6E4A17BB688900D580A1 /* PBXTextBookmark */ = D19B6E4A17BB688900D580A1 /* PBXTextBookmark */;
 		};
 		sourceControlManager = D129734117BABEE80063647B /* Source Control */;
 		userBuildSettings = {
@@ -95,9 +96,9 @@
 	};
 	18B684EE06944F2000CC6A1E /* 4DPluginAPI.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {859, 108160}}";
+			sepNavIntBoundsRect = "{{0, 0}, {663, 108446}}";
 			sepNavSelRange = "{88076, 0}";
-			sepNavVisRange = "{87884, 526}";
+			sepNavVisRange = "{87933, 420}";
 			sepNavWindowFrame = "{{108, 44}, {612, 743}}";
 		};
 	};
@@ -143,16 +144,6 @@
 		rType = 0;
 		vrLen = 348;
 		vrLoc = 301;
-	};
-	D117AC3717BB14E9009EAF0F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 18B684EE06944F2000CC6A1E /* 4DPluginAPI.cpp */;
-		name = "4DPluginAPI.cpp: 4008";
-		rLen = 0;
-		rLoc = 88076;
-		rType = 0;
-		vrLen = 640;
-		vrLoc = 87884;
 	};
 	D120937E13534DCC00A72CAA /* 4DPlugin.h */ = {
 		uiCtxt = {
@@ -262,15 +253,50 @@
 			sepNavWindowFrame = "{{123, 73}, {844, 738}}";
 		};
 	};
-	D16D20A717BB19C60069F6B0 /* PBXTextBookmark */ = {
+	D19B6E3C17BB688900D580A1 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 18B684EE06944F2000CC6A1E /* 4DPluginAPI.cpp */;
 		name = "4DPluginAPI.cpp: 4008";
 		rLen = 0;
 		rLoc = 88076;
 		rType = 0;
-		vrLen = 526;
-		vrLoc = 87884;
+		vrLen = 420;
+		vrLoc = 87933;
+	};
+	D19B6E3D17BB688900D580A1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D19B6E3E17BB688900D580A1 /* test.svg */;
+		rLen = 0;
+		rLoc = 9223372036854775805;
+		rType = 0;
+	};
+	D19B6E3E17BB688900D580A1 /* test.svg */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.xml;
+		name = test.svg;
+		path = "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Resources/test.svg";
+		sourceTree = "<absolute>";
+	};
+	D19B6E4A17BB688900D580A1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D19B6E4B17BB688900D580A1 /* test.svg */;
+		name = "test.svg: 8";
+		rLen = 0;
+		rLoc = 324;
+		rType = 0;
+		vrLen = 344;
+		vrLoc = 0;
+	};
+	D19B6E4B17BB688900D580A1 /* test.svg */ = {
+		isa = PBXFileReference;
+		name = test.svg;
+		path = "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Resources/test.svg";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {565, 168}}";
+			sepNavSelRange = "{324, 0}";
+			sepNavVisRange = "{0, 344}";
+		};
 	};
 	D19CC17C1353782E0004336E /* C_TEXT.cpp */ = {
 		uiCtxt = {
