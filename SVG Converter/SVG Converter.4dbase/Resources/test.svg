@@ -5,5 +5,5 @@
               fill="blue"
               stroke="firebrick"
               stroke-width="3" />
-      <text x="60" y="155">日本語 World</text>
+      <text x="60" y="155" writing-mode="tb">日本語 World</text>
 </svg>
