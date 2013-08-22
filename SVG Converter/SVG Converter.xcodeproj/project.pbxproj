@@ -517,7 +517,7 @@
 				OBJROOT = "$(SRCROOT)/build";
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				SYMROOT = "$(SRCROOT)/SVG Converter.4dbase/Plugins";
-				USER_HEADER_SEARCH_PATHS = "include/** include/pango-1.0 include/gdk-pixbuf-2.0";
+				USER_HEADER_SEARCH_PATHS = "include/mac/**";
 			};
 			name = Development;
 		};
@@ -534,7 +534,7 @@
 				OBJROOT = "$(SRCROOT)/build";
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				SYMROOT = "$(SRCROOT)/SVG Converter.4dbase/Plugins";
-				USER_HEADER_SEARCH_PATHS = "include/** include/pango-1.0 include/gdk-pixbuf-2.0";
+				USER_HEADER_SEARCH_PATHS = "include/mac/**";
 			};
 			name = Deployment;
 		};
@@ -549,7 +549,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				SYMROOT = "$(SRCROOT)/SVG Converter.4dbase/Plugins";
-				USER_HEADER_SEARCH_PATHS = "include/** include/pango-1.0 include/gdk-pixbuf-2.0";
+				USER_HEADER_SEARCH_PATHS = "include/mac/**";
 			};
 			name = Default;
 		};
