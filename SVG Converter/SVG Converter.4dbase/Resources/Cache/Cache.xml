@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<CacheFiles xmlns="http://namespace/reserved/2004/cache">
+
+  <File>
+    <ArchiveName>test0.4darchive</ArchiveName>
+    <Name>test0.svg</Name>
+    <Type>File</Type>
+    <Contents>130216482040000000130219497280000000375</Contents>
+  </File>
+
+  <File>
+    <ArchiveName>test.4darchive</ArchiveName>
+    <Name>test.svg</Name>
+    <Type>File</Type>
+    <Contents>130210562190000000130219497280000000368</Contents>
+  </File>
+
+  <File>
+    <ArchiveName>Anonymous_crazy_monkey.4darchive</ArchiveName>
+    <Name>Anonymous_crazy_monkey.svg</Name>
+    <Type>File</Type>
+    <Contents>13020881332000000013021949728000000021405</Contents>
+  </File>
+
+  <version>11</version>
+
+</CacheFiles>

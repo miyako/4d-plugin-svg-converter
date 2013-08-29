@@ -114,7 +114,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>4D Plugin API\Classes;4D Plugin API;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>4D Plugin API\Classes;4D Plugin API;include\win;include\win\libxml2;include\win\pango-1.0;include\win\librsvg-2.0\librsvg;include\win\cairo;include\win\gdk-pixbuf-2.0;include\win\glib-2.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_WIN64;WIN32;_DEBUG;_WINDOWS;_USRDLL;MY4DPLUGIN_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -125,12 +125,15 @@
       <CallingConvention>Cdecl</CallingConvention>
       <CompileAs>Default</CompileAs>
       <OmitFramePointers>false</OmitFramePointers>
+      <DisableSpecificWarnings>4244;4018;4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <OutputFile>$(TargetPath)</OutputFile>
       <ModuleDefinitionFile>.\4D Plugin API\4DPluginAPI.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>libgio-2.0.a;libpangoft2-1.0-0.lib;libpangocairo-1.0-0.lib;librsvg-2-2.lib;libxml2-2.lib;libfreetype-6.lib;libfontconfig-1.lib;libcroco-0.6-3.lib;libgio-2.0-0.lib;libgdk_pixbuf-2.0-0.lib;libpangowin32-1.0-0.lib;libpango-1.0-0.lib;libglib-2.0-0.lib;libgobject-2.0-0.lib;libcairo-2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>lib\windows64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -161,7 +164,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>4D Plugin API\Classes;4D Plugin API;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>4D Plugin API\Classes;4D Plugin API;include\win;include\win\libxml2;include\win\pango-1.0;include\win\librsvg-2.0\librsvg;include\win\cairo;include\win\gdk-pixbuf-2.0;include\win\glib-2.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_WIN64;WIN32;NDEBUG;_WINDOWS;_USRDLL;MY4DPLUGIN_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
@@ -170,6 +173,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CallingConvention>Cdecl</CallingConvention>
       <OmitFramePointers>false</OmitFramePointers>
+      <DisableSpecificWarnings>4244;4018;4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <OutputFile>$(TargetPath)</OutputFile>
@@ -178,12 +182,11 @@
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalDependencies>libpangoft2-1.0-0.lib;libpangocairo-1.0-0.lib;librsvg-2-2.lib;libxml2-2.lib;libfreetype-6.lib;libfontconfig-1.lib;libcroco-0.6-3.lib;libgio-2.0-0.lib;libgdk_pixbuf-2.0-0.lib;libpangowin32-1.0-0.lib;libpango-1.0-0.lib;libglib-2.0-0.lib;libgobject-2.0-0.lib;libcairo-2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>lib\windows64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\SVG Converter-0\librsvg-2.37.0\rsvg-size-callback.c">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
-    </ClCompile>
     <ClCompile Include="4D Plugin API\Classes\ARRAY_BOOLEAN.cpp" />
     <ClCompile Include="4D Plugin API\Classes\ARRAY_INTEGER.cpp" />
     <ClCompile Include="4D Plugin API\Classes\ARRAY_LONGINT.cpp" />
@@ -199,6 +202,11 @@
     <ClCompile Include="4D Plugin API\Classes\C_TIME.cpp" />
     <ClCompile Include="4DPlugin.cpp" />
     <ClCompile Include="4D Plugin API\4DPluginAPI.cpp" />
+    <ClCompile Include="librsvg-2.37.0\rsvg-size-callback.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="4D Plugin API\Classes\ARRAY_BOOLEAN.h" />
