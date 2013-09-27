@@ -138,7 +138,7 @@ G_BEGIN_DECLS
  *  Since 2.26
  * 
  * Through the #GParamFlags flag values, certain aspects of parameters
- * can be configured.
+ * can be configured. See also #G_PARAM_READWRITE and #G_PARAM_STATIC_STRINGS.
  */
 typedef enum
 {
@@ -336,6 +336,8 @@ void           g_value_take_param               (GValue        *value,
 GLIB_DEPRECATED_FOR(g_value_take_param)
 void           g_value_set_param_take_ownership (GValue        *value,
                                                  GParamSpec    *param);
+GLIB_AVAILABLE_IN_2_36
+const GValue *  g_param_spec_get_default_value  (GParamSpec     *param);
 
 /* --- convenience functions --- */
 typedef struct _GParamSpecTypeInfo GParamSpecTypeInfo;
@@ -419,7 +421,6 @@ GLIB_AVAILABLE_IN_ALL
 GParamSpec**	g_param_spec_pool_list		(GParamSpecPool	*pool,
 						 GType		 owner_type,
 						 guint		*n_pspecs_p);
-
 
 
 /* contracts:

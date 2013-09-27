@@ -47,6 +47,8 @@ extern "C" {
 		void convertPath();
 		void setPath(NSString* path);		
 		NSURL *copyUrl();
+		NSString* copyUrlString();
+		NSString* copyPathString();		
 #endif
 #endif
 		

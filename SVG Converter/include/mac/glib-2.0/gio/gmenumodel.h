@@ -74,6 +74,21 @@ G_BEGIN_DECLS
 #define G_MENU_ATTRIBUTE_LABEL "label"
 
 /**
+ * G_MENU_ATTRIBUTE_ICON:
+ *
+ * The menu item attribute which holds the icon of the item.
+ *
+ * The icon is stored in the format returned by g_icon_serialize().
+ *
+ * This attribute is intended only to represent 'noun' icons such as
+ * favicons for a webpage, or application icons.  It should not be used
+ * for 'verbs' (ie: stock icons).
+ *
+ * Since: 2.38
+ **/
+#define G_MENU_ATTRIBUTE_ICON "icon"
+
+/**
  * G_MENU_LINK_SUBMENU:
  *
  * The name of the link that associates a menu item with a submenu.
@@ -126,6 +141,22 @@ struct _GMenuModel
   GMenuModelPrivate *priv;
 };
 
+/**
+ * GMenuModelClass::get_item_attributes:
+ * @model: the #GMenuModel to query
+ * @item_index: The #GMenuItem to query
+ * @attributes: (out) (element-type utf8 GLib.Variant): Attributes on the item
+ *
+ * Gets all the attributes associated with the item in the menu model.
+ */
+/**
+ * GMenuModelClass::get_item_links:
+ * @model: the #GMenuModel to query
+ * @item_index: The #GMenuItem to query
+ * @links: (out) (element-type utf8 GLib.MenuModel): Links from the item
+ *
+ * Gets all the links associated with the item in the menu model.
+ */
 struct _GMenuModelClass
 {
   GObjectClass parent_class;

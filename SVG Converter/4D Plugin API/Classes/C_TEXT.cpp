@@ -106,6 +106,35 @@ NSURL *C_TEXT::copyUrl()
 	return u;
 }
 
+NSString* C_TEXT::copyUrlString()
+{
+	NSString *url = @"";
+	
+	NSURL *u = this->copyUrl();
+	if(u){
+		url = [[NSString alloc]initWithString:[u absoluteString]];
+		[u release];
+	}
+	
+	return url;
+}
+
+NSString* C_TEXT::copyPathString()
+{
+	NSString *path = @"";
+	
+	NSString *u = this->copyUTF16String();
+	NSURL *url = [[NSURL alloc]initWithString:u];
+	[u release];
+
+	if(url){
+		path = (NSString *)CFURLCopyFileSystemPath((CFURLRef)url, kCFURLHFSPathStyle);
+		[url release];
+	}
+	
+	return path;
+}
+
 void C_TEXT::setPath(NSString* path)
 {
 	if(path){

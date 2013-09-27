@@ -32,25 +32,32 @@ void CommandDispatcher (int32_t pProcNum, sLONG_PTR *pResult, PackagePtr pParams
 {
 	switch(pProcNum)
 	{
-		case kDeinitPlugin :
-		case kServerDeinitPlugin :			
-			rsvg_cleanup();
-			break;			
-			
 			// --- Convert Many
 			
 		case 1 :
 			SVG_Convert_array(pResult, pParams);
 			break;
 			
-			// --- Converter
+			// --- Convert One
 			
 		case 2 :
 			SVG_Convert(pResult, pParams);
 			break;
 			
+			// --- URL
+			
+		case 3 :
+			URL_Convert_from_path(pResult, pParams);
+			break;
+			
+		case 4 :
+			URL_Convert_to_path(pResult, pParams);
+			break;
+			
 	}
 }
+
+#pragma mark -
 
 static cairo_status_t rsvg_cairo_write_func (void *data, const unsigned char *bytes, unsigned int len)
 {	
@@ -61,13 +68,6 @@ static cairo_status_t rsvg_cairo_write_func (void *data, const unsigned char *by
 	}
 	
 	return CAIRO_STATUS_SUCCESS;
-}
-
-static void rsvg_cairo_size_callback (int *width, int *height, gpointer data)
-{
-    RsvgDimensionData *dimensions = (RsvgDimensionData *)data;
-    *width = dimensions->width;
-    *height = dimensions->height;
 }
 
 void _getParams(ARRAY_LONGINT &keys, ARRAY_REAL &values,
@@ -142,8 +142,9 @@ void _getParams(ARRAY_LONGINT &keys, ARRAY_REAL &values,
 	
 }
 
-// --------------------------------- Convert Many ---------------------------------
+#pragma mark -
 
+// --------------------------------- Convert Many ---------------------------------
 
 void SVG_Convert_array(sLONG_PTR *pResult, PackagePtr pParams)
 {
@@ -161,8 +162,6 @@ void SVG_Convert_array(sLONG_PTR *pResult, PackagePtr pParams)
 	Param5_Values.fromParamAtIndex(pParams, 5);
 	Param6_Color.fromParamAtIndex(pParams, 6);
 	Param7_Uri.fromParamAtIndex(pParams, 7);
-	
-	// --- write the code of SVG_Convert_array here...
 	
 	int format = Param3_Format.getIntValue();
 	
@@ -249,8 +248,6 @@ void SVG_Convert_array(sLONG_PTR *pResult, PackagePtr pParams)
 									if(uri.size())
 										rsvg_handle_set_base_uri (rsvg, (const char *)uri.c_str());
 									
-									rsvg_handle_set_size_callback (rsvg, rsvg_cairo_size_callback, &dimensions, NULL);
-									
 									if(!surface) {
 										
 										struct RsvgSizeCallbackData size_data;
@@ -282,8 +279,6 @@ void SVG_Convert_array(sLONG_PTR *pResult, PackagePtr pParams)
 											size_data.height = height;
 											size_data.keep_aspect_ratio = keep_aspect_ratio;
 										}
-										
-										_rsvg_size_callback (&dimensions.width, &dimensions.height, &size_data);
 										
 										switch (format) {
 												
@@ -338,6 +333,7 @@ void SVG_Convert_array(sLONG_PTR *pResult, PackagePtr pParams)
 
 									}
 									
+									rsvg_handle_close(rsvg, &error);
 									g_object_unref(rsvg);
 									
 								}else{
@@ -354,7 +350,7 @@ void SVG_Convert_array(sLONG_PTR *pResult, PackagePtr pParams)
 				
 			}
 			
-			if(surface){
+			if(cr){
 				cairo_destroy(cr);
 				cairo_surface_destroy(surface);	
 			}
@@ -390,8 +386,6 @@ void SVG_Convert(sLONG_PTR *pResult, PackagePtr pParams)
 	Param5_Values.fromParamAtIndex(pParams, 5);
 	Param6_Color.fromParamAtIndex(pParams, 6);
 	Param7_Uri.fromParamAtIndex(pParams, 7);
-
-	// --- write the code of SVG_Convert here...
 	
 	int format = Param3_Format.getIntValue();
 	
@@ -423,13 +417,11 @@ void SVG_Convert(sLONG_PTR *pResult, PackagePtr pParams)
 		rsvg_set_default_dpi_x_y (dpi_x, dpi_y);
 		
 		rsvg = rsvg_handle_new_from_data(p, Param1_In.getBytesLength(&type), &error);
-
-		if (rsvg) {
 		
+		if (rsvg) {
+
 			if(uri.size())
 				rsvg_handle_set_base_uri (rsvg, (const char *)uri.c_str());
-			
-			rsvg_handle_set_size_callback (rsvg, rsvg_cairo_size_callback, &dimensions, NULL);
 			
 			struct RsvgSizeCallbackData size_data;
 			rsvg_handle_get_dimensions (rsvg, &dimensions);
@@ -460,8 +452,6 @@ void SVG_Convert(sLONG_PTR *pResult, PackagePtr pParams)
                 size_data.height = height;
                 size_data.keep_aspect_ratio = keep_aspect_ratio;
             }
-			
-			_rsvg_size_callback (&dimensions.width, &dimensions.height, &size_data);
 			
 			switch (format) {
 					
@@ -530,6 +520,7 @@ void SVG_Convert(sLONG_PTR *pResult, PackagePtr pParams)
 				returnValue.setIntValue(-3);//invalid export format	
 			}
 
+			rsvg_handle_close(rsvg, &error);
 			g_object_unref(rsvg);
 		
 		}else{
@@ -540,5 +531,55 @@ void SVG_Convert(sLONG_PTR *pResult, PackagePtr pParams)
 	}
 	
 	Param2_Out.toParamAtIndex(pParams, 2);
+	returnValue.setReturn(pResult);
+}
+
+// -------------------------------------- URL -------------------------------------
+
+#pragma mark -
+
+void URL_Convert_from_path(sLONG_PTR *pResult, PackagePtr pParams)
+{
+	C_TEXT Param1;
+	C_TEXT returnValue;
+	
+	Param1.fromParamAtIndex(pParams, 1);
+	
+#ifndef _WIN32
+	NSString *url = Param1.copyUrlString();
+	returnValue.setUTF16String(url);
+	[url release];
+#else
+	CUTF16String path;
+	Param1.copyUTF16String(&path);
+	wchar_t fileUrl[INTERNET_MAX_URL_LENGTH] = {0};	
+	DWORD urlLen = INTERNET_MAX_URL_LENGTH;
+	if(UrlCreateFromPath((const wchar_t *)path.c_str(), fileUrl, &urlLen, NULL) == S_OK)
+		returnValue.setUTF16String((const PA_Unichar*)fileUrl, urlLen);
+#endif
+	
+	returnValue.setReturn(pResult);
+}
+
+void URL_Convert_to_path(sLONG_PTR *pResult, PackagePtr pParams)
+{
+	C_TEXT Param1;
+	C_TEXT returnValue;
+	
+	Param1.fromParamAtIndex(pParams, 1);
+	
+#ifndef _WIN32
+	NSString *path = Param1.copyPathString();
+	returnValue.setUTF16String(path);
+	[path release];
+#else
+	CUTF16String url;
+	Param1.copyUTF16String(&url);
+	wchar_t filePath[MAX_PATH] = {0};	
+	DWORD pathLen = MAX_PATH;
+	if(PathCreateFromUrl((const wchar_t *)url.c_str(), filePath, &pathLen, NULL) == S_OK)
+		returnValue.setUTF16String((const PA_Unichar*)filePath, pathLen);	
+#endif
+	
 	returnValue.setReturn(pResult);
 }

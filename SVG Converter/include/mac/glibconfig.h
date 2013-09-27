@@ -61,12 +61,14 @@ G_GNUC_EXTENSION typedef unsigned long long guint64;
 #define GLIB_SIZEOF_VOID_P 4
 #define GLIB_SIZEOF_LONG   4
 #define GLIB_SIZEOF_SIZE_T 4
+#define GLIB_SIZEOF_SSIZE_T 4
 
 typedef signed long gssize;
 typedef unsigned long gsize;
 #define G_GSIZE_MODIFIER "l"
-#define G_GSSIZE_FORMAT "li"
+#define G_GSSIZE_MODIFIER "l"
 #define G_GSIZE_FORMAT "lu"
+#define G_GSSIZE_FORMAT "li"
 
 #define G_MAXSIZE	G_MAXULONG
 #define G_MINSSIZE	G_MINLONG
@@ -103,8 +105,8 @@ typedef unsigned int guintptr;
 #define g_memmove(dest,src,len) G_STMT_START { memmove ((dest), (src), (len)); } G_STMT_END
 
 #define GLIB_MAJOR_VERSION 2
-#define GLIB_MINOR_VERSION 36
-#define GLIB_MICRO_VERSION 0
+#define GLIB_MINOR_VERSION 37
+#define GLIB_MICRO_VERSION 6
 
 #define G_OS_UNIX
 

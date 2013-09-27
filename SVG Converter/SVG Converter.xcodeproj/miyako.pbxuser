@@ -33,7 +33,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					496,
+					316,
 					20,
 					48,
 					43,
@@ -55,10 +55,10 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					316,
+					456,
 					60,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 				);
@@ -72,16 +72,23 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 398884727;
-			PBXWorkspaceStateSaveDate = 398884727;
+			PBXPerProjectTemplateStateSaveDate = 401954843;
+			PBXWorkspaceStateSaveDate = 401954843;
 		};
 		perUserProjectItems = {
-			D127FFFE17BC4EE8002889AA /* PBXTextBookmark */ = D127FFFE17BC4EE8002889AA /* PBXTextBookmark */;
-			D140645717BCD2FC0077C964 /* PBXTextBookmark */ = D140645717BCD2FC0077C964 /* PBXTextBookmark */;
-			D19910C317C63E3D0071B708 /* PBXTextBookmark */ = D19910C317C63E3D0071B708 /* PBXTextBookmark */;
-			D19910C417C63E3D0071B708 /* PBXTextBookmark */ = D19910C417C63E3D0071B708 /* PBXTextBookmark */;
-			D1DBC9D517BC3C8500020037 /* PBXTextBookmark */ = D1DBC9D517BC3C8500020037 /* PBXTextBookmark */;
-			D1DD34B317C6811A00F0E671 /* PBXTextBookmark */ = D1DD34B317C6811A00F0E671 /* PBXTextBookmark */;
+			D120A33C17F5576D00905A25 /* PBXTextBookmark */ = D120A33C17F5576D00905A25 /* PBXTextBookmark */;
+			D12868C317DCA7A3002535D3 /* PBXTextBookmark */ = D12868C317DCA7A3002535D3 /* PBXTextBookmark */;
+			D12868C517DCA7A3002535D3 /* PBXTextBookmark */ = D12868C517DCA7A3002535D3 /* PBXTextBookmark */;
+			D12868C717DCA7A3002535D3 /* PBXTextBookmark */ = D12868C717DCA7A3002535D3 /* PBXTextBookmark */;
+			D12868F817DCC3C7002535D3 /* PBXTextBookmark */ = D12868F817DCC3C7002535D3 /* PBXTextBookmark */;
+			D12868FA17DCC3C7002535D3 /* PBXTextBookmark */ = D12868FA17DCC3C7002535D3 /* PBXTextBookmark */;
+			D12868FC17DCC3C7002535D3 /* PBXTextBookmark */ = D12868FC17DCC3C7002535D3 /* PBXTextBookmark */;
+			D1286A1C17DCC942002535D3 /* PBXTextBookmark */ = D1286A1C17DCC942002535D3 /* PBXTextBookmark */;
+			D1286A3F17DCD29D002535D3 /* PBXTextBookmark */ = D1286A3F17DCD29D002535D3 /* PBXTextBookmark */;
+			D12F4A1B17F55827000AA47E /* PBXTextBookmark */ = D12F4A1B17F55827000AA47E /* PBXTextBookmark */;
+			D14E59A017DB9BEF00EDFE31 /* PBXTextBookmark */ = D14E59A017DB9BEF00EDFE31 /* PBXTextBookmark */;
+			D14E5A1317DC1EBC00EDFE31 /* PBXTextBookmark */ = D14E5A1317DC1EBC00EDFE31 /* PBXTextBookmark */;
+			D14E5A4D17DC3A3B00EDFE31 /* PBXTextBookmark */ = D14E5A4D17DC3A3B00EDFE31 /* PBXTextBookmark */;
 		};
 		sourceControlManager = D129734117BABEE80063647B /* Source Control */;
 		userBuildSettings = {
@@ -97,18 +104,18 @@
 	};
 	18B684EE06944F2000CC6A1E /* 4DPluginAPI.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {663, 108485}}";
+			sepNavIntBoundsRect = "{{0, 0}, {663, 108446}}";
 			sepNavSelRange = "{88076, 0}";
-			sepNavVisRange = "{87884, 526}";
+			sepNavVisRange = "{87933, 420}";
 			sepNavWindowFrame = "{{108, 50}, {612, 743}}";
 		};
 	};
 	18B684FE06944F8800CC6A1E /* 4DPlugin.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1009, 7358}}";
-			sepNavSelRange = "{352, 0}";
-			sepNavVisRange = "{0, 1057}";
-			sepNavWindowFrame = "{{140, 65}, {1068, 813}}";
+			sepNavIntBoundsRect = "{{0, 0}, {796, 7501}}";
+			sepNavSelRange = "{13773, 14}";
+			sepNavVisRange = "{13704, 826}";
+			sepNavWindowFrame = "{{469, 184}, {933, 694}}";
 		};
 	};
 	8D01CCC60486CAD60068D4B7 /* SVG Converter */ = {
@@ -119,29 +126,152 @@
 			sepNavWindowFrame = "{{245, 112}, {843, 551}}";
 		};
 	};
-	D117ABED17BB0FB6009EAF0F /* rsvg-size-callback.c */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {523, 1287}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 559}";
-		};
-	};
 	D120937E13534DCC00A72CAA /* 4DPlugin.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {659, 598}}";
-			sepNavSelRange = "{405, 0}";
-			sepNavVisRange = "{104, 347}";
+			sepNavIntBoundsRect = "{{0, 0}, {874, 598}}";
+			sepNavSelRange = "{423, 0}";
+			sepNavVisRange = "{89, 954}";
+			sepNavWindowFrame = "{{406, 104}, {933, 694}}";
 		};
 	};
-	D127FFFE17BC4EE8002889AA /* PBXTextBookmark */ = {
+	D120A33C17F5576D00905A25 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = D117ABED17BB0FB6009EAF0F /* rsvg-size-callback.c */;
-		name = "rsvg-size-callback.c: 1";
+		fRef = 18B684FE06944F8800CC6A1E /* 4DPlugin.cpp */;
+		name = "4DPlugin.cpp: 533";
+		rLen = 14;
+		rLoc = 13773;
+		rType = 0;
+		vrLen = 826;
+		vrLoc = 13704;
+	};
+	D12868C317DCA7A3002535D3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D12868C417DCA7A3002535D3 /* icu-uc.pc */;
+		name = "icu-uc.pc: 34";
+		rLen = 17;
+		rLoc = 1628;
+		rType = 0;
+		vrLen = 1672;
+		vrLoc = 0;
+	};
+	D12868C417DCA7A3002535D3 /* icu-uc.pc */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text;
+		name = "icu-uc.pc";
+		path = "/usr/local/lib/pkgconfig/icu-uc.pc";
+		sourceTree = "<absolute>";
+	};
+	D12868C517DCA7A3002535D3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D12868C617DCA7A3002535D3 /* Makefile */;
+		name = "Makefile: 137";
+		rLen = 0;
+		rLoc = 5681;
+		rType = 0;
+		vrLen = 1019;
+		vrLoc = 7557;
+	};
+	D12868C617DCA7A3002535D3 /* Makefile */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.make;
+		name = Makefile;
+		path = "/Xcode3/GNU/src/rsvg/harfbuzz-0.9.19/Makefile";
+		sourceTree = "<absolute>";
+	};
+	D12868C717DCA7A3002535D3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D12868C817DCA7A3002535D3 /* configure */;
+		name = "configure: 15";
+		rLen = 0;
+		rLoc = 525;
+		rType = 0;
+		vrLen = 950;
+		vrLoc = 524053;
+	};
+	D12868C817DCA7A3002535D3 /* configure */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.script.sh;
+		name = configure;
+		path = "/Xcode3/GNU/src/rsvg/harfbuzz-0.9.19/configure";
+		sourceTree = "<absolute>";
+	};
+	D12868F817DCC3C7002535D3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D12868F917DCC3C7002535D3 /* io-svg.c */;
+		name = "io-svg.c: 1";
 		rLen = 0;
 		rLoc = 0;
 		rType = 0;
-		vrLen = 559;
+		vrLen = 1239;
+		vrLoc = 2684;
+	};
+	D12868F917DCC3C7002535D3 /* io-svg.c */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.c;
+		name = "io-svg.c";
+		path = "/Xcode3/GNU/src/rsvg/librsvg-2.37.0/gdk-pixbuf-loader/io-svg.c";
+		sourceTree = "<absolute>";
+	};
+	D12868FA17DCC3C7002535D3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D12868FB17DCC3C7002535D3 /* test.c */;
+		name = "test.c: 14";
+		rLen = 6;
+		rLoc = 564;
+		rType = 0;
+		vrLen = 1240;
 		vrLoc = 0;
+	};
+	D12868FB17DCC3C7002535D3 /* test.c */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.c;
+		name = test.c;
+		path = "/Xcode3/GNU/src/rsvg/librsvg-2.37.0/gdk-pixbuf-loader/test.c";
+		sourceTree = "<absolute>";
+	};
+	D12868FC17DCC3C7002535D3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D12868FD17DCC3C7002535D3 /* rsvg.h */;
+		name = "rsvg.h: 172";
+		rLen = 1;
+		rLoc = 5721;
+		rType = 0;
+		vrLen = 1569;
+		vrLoc = 4837;
+	};
+	D12868FD17DCC3C7002535D3 /* rsvg.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = rsvg.h;
+		path = "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/include/mac/librsvg-2.0/librsvg/rsvg.h";
+		sourceTree = "<absolute>";
+	};
+	D128690217DCC3C7002535D3 /* rsvg-image.c */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.c;
+		name = "rsvg-image.c";
+		path = "/Xcode3/GNU/src/rsvg/librsvg-2.37.0/rsvg-image.c";
+		sourceTree = "<absolute>";
+	};
+	D1286A1C17DCC942002535D3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D128690217DCC3C7002535D3 /* rsvg-image.c */;
+		name = "rsvg-image.c: 37";
+		rLen = 0;
+		rLoc = 1394;
+		rType = 0;
+		vrLen = 1468;
+		vrLoc = 0;
+	};
+	D1286A3F17DCD29D002535D3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D120937E13534DCC00A72CAA /* 4DPlugin.h */;
+		name = "4DPlugin.h: 10";
+		rLen = 0;
+		rLoc = 299;
+		rType = 0;
+		vrLen = 850;
+		vrLoc = 193;
 	};
 	D129734117BABEE80063647B /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -220,6 +350,16 @@
 		path = "/Applications/4D v12/12.5 (HF3)/4D.app";
 		sourceTree = "<absolute>";
 	};
+	D12F4A1B17F55827000AA47E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 18B684FE06944F8800CC6A1E /* 4DPlugin.cpp */;
+		name = "4DPlugin.cpp: 533";
+		rLen = 14;
+		rLoc = 13773;
+		rType = 0;
+		vrLen = 826;
+		vrLoc = 13704;
+	};
 	D1392DD313582164004911A5 /* C_PICTURE.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {796, 5200}}";
@@ -252,42 +392,49 @@
 			sepNavWindowFrame = "{{123, 73}, {844, 738}}";
 		};
 	};
-	D140645717BCD2FC0077C964 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 18B684FE06944F8800CC6A1E /* 4DPlugin.cpp */;
-		name = "4DPlugin.cpp: 255";
-		rLen = 0;
-		rLoc = 5633;
-		rType = 0;
-		vrLen = 736;
-		vrLoc = 5419;
-	};
-	D19910C317C63E3D0071B708 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D120937E13534DCC00A72CAA /* 4DPlugin.h */;
-		name = "4DPlugin.h: 16";
-		rLen = 0;
-		rLoc = 405;
-		rType = 0;
-		vrLen = 347;
-		vrLoc = 104;
-	};
-	D19910C417C63E3D0071B708 /* PBXTextBookmark */ = {
+	D14E59A017DB9BEF00EDFE31 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 18B684EE06944F2000CC6A1E /* 4DPluginAPI.cpp */;
 		name = "4DPluginAPI.cpp: 4008";
 		rLen = 0;
 		rLoc = 88076;
 		rType = 0;
-		vrLen = 640;
-		vrLoc = 87884;
+		vrLen = 420;
+		vrLoc = 87933;
 	};
-	D19B6E4B17BB688900D580A1 /* test.svg */ = {
+	D14E59A517DB9BEF00EDFE31 /* Makefile */ = {
 		isa = PBXFileReference;
-		lastKnownFileType = text.xml;
-		name = test.svg;
-		path = "/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.4dbase/Resources/test.svg";
+		lastKnownFileType = sourcecode.make;
+		name = Makefile;
+		path = "/Xcode3/GNU/src/rsvg/gdk-pixbuf-2.28.2/Makefile";
 		sourceTree = "<absolute>";
+	};
+	D14E5A1317DC1EBC00EDFE31 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D14E59A517DB9BEF00EDFE31 /* Makefile */;
+		name = "Makefile: 3";
+		rLen = 1;
+		rLoc = 115;
+		rType = 0;
+		vrLen = 568;
+		vrLoc = 0;
+	};
+	D14E5A1917DC1EBC00EDFE31 /* configure */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.script.sh;
+		name = configure;
+		path = "/Xcode3/GNU/src/rsvg/gdk-pixbuf-2.28.2/configure";
+		sourceTree = "<absolute>";
+	};
+	D14E5A4D17DC3A3B00EDFE31 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D14E5A1917DC1EBC00EDFE31 /* configure */;
+		name = "configure: 13";
+		rLen = 1;
+		rLoc = 453;
+		rType = 0;
+		vrLen = 1032;
+		vrLoc = 0;
 	};
 	D19CC17C1353782E0004336E /* C_TEXT.cpp */ = {
 		uiCtxt = {
@@ -304,24 +451,11 @@
 			sepNavVisRange = "{359, 1245}";
 		};
 	};
-	D1DBC9D517BC3C8500020037 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D19B6E4B17BB688900D580A1 /* test.svg */;
-		name = "test.svg: 8";
-		rLen = 0;
-		rLoc = 324;
-		rType = 0;
-		vrLen = 344;
-		vrLoc = 0;
-	};
-	D1DD34B317C6811A00F0E671 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 18B684EE06944F2000CC6A1E /* 4DPluginAPI.cpp */;
-		name = "4DPluginAPI.cpp: 4008";
-		rLen = 0;
-		rLoc = 88076;
-		rType = 0;
-		vrLen = 526;
-		vrLoc = 87884;
+	D1DBC9CF17BC3C6800020037 /* SVG Converter.htm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {659, 519}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 308}";
+		};
 	};
 }

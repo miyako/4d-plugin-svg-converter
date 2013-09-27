@@ -108,11 +108,11 @@ typedef struct _GFileIface    		GFileIface;
  * @delete_file_async: Asynchronously deletes a file.
  * @delete_file_finish: Finishes an asynchronous delete.
  * @trash: Sends a #GFile to the Trash location.
- * @_trash_async: Asynchronously sends a #GFile to the Trash location.
- * @_trash_finish: Finishes an asynchronous file trashing operation.
+ * @trash_async: Asynchronously sends a #GFile to the Trash location.
+ * @trash_finish: Finishes an asynchronous file trashing operation.
  * @make_directory: Makes a directory.
- * @_make_directory_async: Asynchronously makes a directory.
- * @_make_directory_finish: Finishes making a directory asynchronously.
+ * @make_directory_async: Asynchronously makes a directory.
+ * @make_directory_finish: Finishes making a directory asynchronously.
  * @make_symbolic_link: Makes a symbolic link.
  * @_make_symbolic_link_async: Asynchronously makes a symbolic link
  * @_make_symbolic_link_finish: Finishes making a symbolic link asynchronously.
@@ -365,14 +365,26 @@ struct _GFileIface
   gboolean            (* trash)                       (GFile                *file,
                                                        GCancellable         *cancellable,
                                                        GError              **error);
-  void                (* _trash_async)                (void);
-  void                (* _trash_finish)               (void);
+  void                (* trash_async)                 (GFile                *file,
+						       int                   io_priority,
+						       GCancellable         *cancellable,
+						       GAsyncReadyCallback   callback,
+						       gpointer              user_data);
+  gboolean            (* trash_finish)                (GFile                *file,
+						       GAsyncResult         *result,
+						       GError              **error);
 
   gboolean            (* make_directory)              (GFile                *file,
                                                        GCancellable         *cancellable,
                                                        GError              **error);
-  void                (* _make_directory_async)       (void);
-  void                (* _make_directory_finish)      (void);
+  void                (* make_directory_async)        (GFile                *file,
+                                                       int                   io_priority,
+                                                       GCancellable         *cancellable,
+                                                       GAsyncReadyCallback   callback,
+                                                       gpointer              user_data);
+  gboolean            (* make_directory_finish)       (GFile                *file,
+                                                       GAsyncResult         *result,
+                                                       GError              **error);
 
   gboolean            (* make_symbolic_link)          (GFile                *file,
                                                        const char           *symlink_value,
@@ -838,6 +850,19 @@ GLIB_AVAILABLE_IN_ALL
 gboolean                g_file_trash                      (GFile                      *file,
 							   GCancellable               *cancellable,
 							   GError                    **error);
+
+GLIB_AVAILABLE_IN_2_38
+void                    g_file_trash_async                (GFile                      *file,
+							   int                         io_priority,
+							   GCancellable               *cancellable,
+							   GAsyncReadyCallback         callback,
+							   gpointer                    user_data);
+
+GLIB_AVAILABLE_IN_2_38
+gboolean                g_file_trash_finish               (GFile                      *file,
+							   GAsyncResult               *result,
+							   GError                    **error);
+
 GLIB_AVAILABLE_IN_ALL
 gboolean                g_file_copy                       (GFile                      *source,
 							   GFile                      *destination,
@@ -872,6 +897,17 @@ GLIB_AVAILABLE_IN_ALL
 gboolean                g_file_make_directory             (GFile                      *file,
 							   GCancellable               *cancellable,
 							   GError                    **error);
+GLIB_AVAILABLE_IN_2_38
+void                    g_file_make_directory_async       (GFile                      *file,
+                                                           int                         io_priority,
+                                                           GCancellable               *cancellable,
+                                                           GAsyncReadyCallback         callback,
+                                                           gpointer                    user_data);
+GLIB_AVAILABLE_IN_2_38
+gboolean                g_file_make_directory_finish      (GFile                      *file,
+                                                           GAsyncResult               *result,
+                                                           GError                    **error);
+
 GLIB_AVAILABLE_IN_ALL
 gboolean                g_file_make_directory_with_parents (GFile                     *file,
 		                                           GCancellable               *cancellable,

@@ -120,6 +120,12 @@
   _Pragma ("GCC diagnostic ignored \"-Wdeprecated-declarations\"")
 #define G_GNUC_END_IGNORE_DEPRECATIONS			\
   _Pragma ("GCC diagnostic pop")
+#elif defined (_MSC_VER) && (_MSC_VER >= 1500)
+#define G_GNUC_BEGIN_IGNORE_DEPRECATIONS		\
+  __pragma (warning (push))  \
+  __pragma (warning (disable : 4996))
+#define G_GNUC_END_IGNORE_DEPRECATIONS			\
+  __pragma (warning (pop))
 #else
 #define G_GNUC_BEGIN_IGNORE_DEPRECATIONS
 #define G_GNUC_END_IGNORE_DEPRECATIONS
@@ -152,6 +158,19 @@
 #endif  /* !__GNUC__ */
 #endif  /* !G_DISABLE_DEPRECATED */
 
+/* Clang feature detection: http://clang.llvm.org/docs/LanguageExtensions.html */
+#ifndef __has_feature
+#define __has_feature(x) 0
+#endif
+
+#if __has_feature(attribute_analyzer_noreturn)
+#define G_ANALYZER_ANALYZING 1
+#define G_ANALYZER_NORETURN __attribute__((analyzer_noreturn))
+#else
+#define G_ANALYZER_ANALYZING 0
+#define G_ANALYZER_NORETURN
+#endif
+
 #define G_STRINGIFY(macro_or_string)	G_STRINGIFY_ARG (macro_or_string)
 #define	G_STRINGIFY_ARG(contents)	#contents
 
@@ -174,11 +193,11 @@
 #endif
 
 /* Provide a string identifying the current function, non-concatenatable */
-#if defined (__GNUC__)
+#if defined (__GNUC__) && defined (__cplusplus)
 #  define G_STRFUNC     ((const char*) (__PRETTY_FUNCTION__))
 #elif defined (__STDC_VERSION__) && __STDC_VERSION__ >= 19901L
 #  define G_STRFUNC     ((const char*) (__func__))
-#elif defined(_MSC_VER) && (_MSC_VER > 1300)
+#elif defined (__GNUC__) || (defined(_MSC_VER) && (_MSC_VER > 1300))
 #  define G_STRFUNC     ((const char*) (__FUNCTION__))
 #else
 #  define G_STRFUNC     ((const char*) ("???"))
@@ -321,7 +340,7 @@
 #elif defined(_MSC_FULL_VER) && (_MSC_FULL_VER > 140050320)
 #define G_UNAVAILABLE(maj,min) __declspec(deprecated("is not available before " #maj "." #min))
 #else
-#define G_UNAVAILABLE(maj,min)
+#define G_UNAVAILABLE(maj,min) G_DEPRECATED
 #endif
 
 #ifndef _GLIB_EXTERN

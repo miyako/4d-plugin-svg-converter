@@ -63,6 +63,9 @@ GLIB_AVAILABLE_IN_2_32
 void        g_menu_remove                           (GMenu       *menu,
                                                      gint         position);
 
+GLIB_AVAILABLE_IN_2_38
+void        g_menu_remove_all                       (GMenu       *menu);
+
 GLIB_AVAILABLE_IN_2_32
 void        g_menu_insert                           (GMenu       *menu,
                                                      gint         position,
@@ -171,6 +174,10 @@ void        g_menu_item_set_action_and_target       (GMenuItem   *menu_item,
 GLIB_AVAILABLE_IN_2_32
 void        g_menu_item_set_detailed_action         (GMenuItem   *menu_item,
                                                      const gchar *detailed_action);
+
+GLIB_AVAILABLE_IN_2_38
+void        g_menu_item_set_icon                    (GMenuItem   *menu_item,
+                                                     GIcon       *icon);
 
 G_END_DECLS
 

@@ -89,7 +89,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>4D Plugin API\Classes;4D Plugin API;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>4D Plugin API\Classes;4D Plugin API;include\win;include\win\libxml2;include\win\pango-1.0;include\win\librsvg-2.0\librsvg;include\win\cairo;include\win\gdk-pixbuf-2.0;include\win\glib-2.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;MY4DPLUGIN_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -100,6 +100,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <CallingConvention>Cdecl</CallingConvention>
       <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4244;4018;4819;4068</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <OutputFile>$(TargetPath)</OutputFile>
@@ -109,6 +110,8 @@
       <TargetMachine>MachineX86</TargetMachine>
       <EntryPointSymbol>
       </EntryPointSymbol>
+      <AdditionalDependencies>Shlwapi.lib;libgio-2.0-0.lib;libglib-2.0-0.lib;libgobject-2.0-0.lib;libgdk_pixbuf-2.0-0.lib;libcairo-2.lib;libcroco-0.6-3.lib;libpango-1.0-0.lib;libpangocairo-1.0-0.lib;libpangoft2-1.0-0.lib;librsvg-2-2.lib;libfreetype-6.lib;libfontconfig-1.lib;libpangowin32-1.0-0.lib;libjpeg-9.lib;libpng16-16.lib;libxml2-2.lib;zlib1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -146,7 +149,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CallingConvention>Cdecl</CallingConvention>
-      <DisableSpecificWarnings>4244;4018;4819</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4244;4018;4819;4068</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <OutputFile>$(TargetPath)</OutputFile>
@@ -159,7 +162,7 @@
       <EntryPointSymbol>
       </EntryPointSymbol>
       <AdditionalLibraryDirectories>lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libpangoft2-1.0-0.lib;libpangocairo-1.0-0.lib;librsvg-2-2.lib;libxml2-2.lib;libfreetype-6.lib;libfontconfig-1.lib;libcroco-0.6-3.lib;libgio-2.0-0.lib;libgdk_pixbuf-2.0-0.lib;libpangowin32-1.0-0.lib;libpango-1.0-0.lib;libglib-2.0-0.lib;libgobject-2.0-0.lib;libcairo-2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Shlwapi.lib;libgio-2.0-0.lib;libglib-2.0-0.lib;libgobject-2.0-0.lib;libgdk_pixbuf-2.0-0.lib;libcairo-2.lib;libcroco-0.6-3.lib;libpango-1.0-0.lib;libpangocairo-1.0-0.lib;libpangoft2-1.0-0.lib;librsvg-2-2.lib;libfreetype-6.lib;libfontconfig-1.lib;libpangowin32-1.0-0.lib;libjpeg-9.lib;libpng16-16.lib;libxml2-2.lib;zlib1.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -173,7 +176,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CallingConvention>Cdecl</CallingConvention>
       <OmitFramePointers>false</OmitFramePointers>
-      <DisableSpecificWarnings>4244;4018;4819</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4244;4018;4819;4068;4267</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <OutputFile>$(TargetPath)</OutputFile>
@@ -182,7 +185,7 @@
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>libpangoft2-1.0-0.lib;libpangocairo-1.0-0.lib;librsvg-2-2.lib;libxml2-2.lib;libfreetype-6.lib;libfontconfig-1.lib;libcroco-0.6-3.lib;libgio-2.0-0.lib;libgdk_pixbuf-2.0-0.lib;libpangowin32-1.0-0.lib;libpango-1.0-0.lib;libglib-2.0-0.lib;libgobject-2.0-0.lib;libcairo-2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Shlwapi.lib;libpangoft2-1.0-0.lib;libpangocairo-1.0-0.lib;librsvg-2-2.lib;libxml2-2.lib;libfreetype-6.lib;libfontconfig-1.lib;libcroco-0.6-3.lib;libgio-2.0-0.lib;libgdk_pixbuf-2.0-0.lib;libpangowin32-1.0-0.lib;libpango-1.0-0.lib;libglib-2.0-0.lib;libgobject-2.0-0.lib;libcairo-2.lib;libpng16-16.lib;libjpeg-9.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>lib\windows64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -202,11 +205,6 @@
     <ClCompile Include="4D Plugin API\Classes\C_TIME.cpp" />
     <ClCompile Include="4DPlugin.cpp" />
     <ClCompile Include="4D Plugin API\4DPluginAPI.cpp" />
-    <ClCompile Include="librsvg-2.37.0\rsvg-size-callback.c">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="4D Plugin API\Classes\ARRAY_BOOLEAN.h" />

@@ -52,6 +52,7 @@ typedef struct _GRemoteActionGroup            GRemoteActionGroup;
 typedef struct _GDBusActionGroup              GDBusActionGroup;
 typedef struct _GActionMap                    GActionMap;
 typedef struct _GActionGroup                  GActionGroup;
+typedef struct _GPropertyAction               GPropertyAction;
 typedef struct _GSimpleAction                 GSimpleAction;
 typedef struct _GAction                       GAction;
 typedef struct _GApplication                  GApplication;
@@ -117,6 +118,7 @@ typedef struct _GIOExtension                  GIOExtension;
 typedef struct _GIOSchedulerJob               GIOSchedulerJob;
 typedef struct _GIOStreamAdapter              GIOStreamAdapter;
 typedef struct _GLoadableIcon                 GLoadableIcon; /* Dummy typedef */
+typedef struct _GBytesIcon                    GBytesIcon;
 typedef struct _GMemoryInputStream            GMemoryInputStream;
 typedef struct _GMemoryOutputStream           GMemoryOutputStream;
 
