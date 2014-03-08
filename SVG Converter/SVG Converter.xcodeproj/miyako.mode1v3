@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>D1141AB817F5A53100BB3D3F</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>4DPlugin.cpp</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>D1141ABC17F5A54900BB3D3F</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>4DPlugin.cpp</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>D188722118434E1700110758</string>
+						<key>history</key>
+						<array>
+							<string>D1141AC417F5A71B00BB3D3F</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {933, 597}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>469 240 933 638 0 0 1440 878 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -276,8 +317,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
-									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -301,7 +340,7 @@
 							<real>201</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>113 228 748 607 0 0 1440 878 </string>
+						<string>53 94 748 607 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -317,7 +356,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>4DPlugin.cpp</string>
+								<string>Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,25 +364,24 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>4DPlugin.cpp</string>
+										<string>Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D12F4A1B17F55827000AA47E</string>
+										<string>D188721E18434E1700110758</string>
 										<key>history</key>
 										<array>
 											<string>D14E59A017DB9BEF00EDFE31</string>
-											<string>D14E5A1317DC1EBC00EDFE31</string>
 											<string>D14E5A4D17DC3A3B00EDFE31</string>
 											<string>D12868C317DCA7A3002535D3</string>
-											<string>D12868C517DCA7A3002535D3</string>
 											<string>D12868C717DCA7A3002535D3</string>
 											<string>D12868F817DCC3C7002535D3</string>
 											<string>D12868FA17DCC3C7002535D3</string>
 											<string>D12868FC17DCC3C7002535D3</string>
 											<string>D1286A1C17DCC942002535D3</string>
 											<string>D1286A3F17DCD29D002535D3</string>
-											<string>D120A33C17F5576D00905A25</string>
+											<string>D15FC63317F5944A00579621</string>
+											<string>D1141AC317F5A71B00BB3D3F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -355,14 +393,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {540, 440}}</string>
+								<string>{{0, 0}, {540, 420}}</string>
 								<key>RubberWindowFrame</key>
-								<string>113 228 748 607 0 0 1440 878 </string>
+								<string>53 94 748 607 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>440pt</string>
+							<string>420pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -370,19 +408,19 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20506471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>詳細</string>
+								<string>Detail</string>
 							</dict>
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 445}, {540, 121}}</string>
+								<string>{{0, 425}, {540, 141}}</string>
 								<key>RubberWindowFrame</key>
-								<string>113 228 748 607 0 0 1440 878 </string>
+								<string>53 94 748 607 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>121pt</string>
+							<string>141pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -401,9 +439,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D12F4A1817F55827000AA47E</string>
+				<string>D188721F18434E1700110758</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D12F4A1917F55827000AA47E</string>
+				<string>D188722018434E1700110758</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -518,7 +556,7 @@
 	<key>PerspectivesBarVisible</key>
 	<false/>
 	<key>PinnedNavigatorIdentifier</key>
-	<string>D120A32817F556A600905A25</string>
+	<string>D1141AB817F5A53100BB3D3F</string>
 	<key>ShelfIsVisible</key>
 	<false/>
 	<key>SourceDescription</key>
@@ -544,10 +582,11 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>D129733F17BABEE80063647B</string>
+		<string>D1141AB817F5A53100BB3D3F</string>
 		<string>/Users/miyako/github-miyako/4d-plugin-svg-converter/SVG Converter/SVG Converter.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>113 228 748 607 0 0 1440 878 </string>
+	<string>53 94 748 607 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -590,7 +629,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>XCMainBuildResultsModuleGUID</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ビルド結果</string>
+								<string>Build Results</string>
 								<key>XCBuildResultsTrigger_Collapse</key>
 								<integer>1021</integer>
 								<key>XCBuildResultsTrigger_Open</key>
@@ -624,7 +663,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D129733F17BABEE80063647B</string>
-				<string>D12F4A1A17F55827000AA47E</string>
+				<string>D188722218434E1700110758</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

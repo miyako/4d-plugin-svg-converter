@@ -334,7 +334,8 @@ void SVG_Convert_array(sLONG_PTR *pResult, PackagePtr pParams)
 									}
 									
 									rsvg_handle_close(rsvg, &error);
-									g_object_unref(rsvg);
+								//	g_object_unref(rsvg);
+									g_clear_object(&rsvg);
 									
 								}else{
 									returnValue.setIntValue(-1);//svg parse error
@@ -521,7 +522,8 @@ void SVG_Convert(sLONG_PTR *pResult, PackagePtr pParams)
 			}
 
 			rsvg_handle_close(rsvg, &error);
-			g_object_unref(rsvg);
+		//	g_object_unref(rsvg);
+			g_clear_object(&rsvg);
 		
 		}else{
 			returnValue.setIntValue(-1);//svg parse error
