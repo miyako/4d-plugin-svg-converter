@@ -66,3 +66,7 @@ SVG_WIDTH (6)
 SVG_HEIGHT (7)
 SVG_KEEP_ASPECT_RATIO (8)
 ```
+
+## Example
+
+<img width="328" alt="2017-05-26 14 13 24" src="https://cloud.githubusercontent.com/assets/1725068/26481650/9575822a-421d-11e7-9980-b4613254bc1a.png">
