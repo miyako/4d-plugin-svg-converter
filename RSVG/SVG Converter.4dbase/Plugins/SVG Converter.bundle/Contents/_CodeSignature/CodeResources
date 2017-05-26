@@ -4,6 +4,50 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Resources/COPYING (libcairo)</key>
+		<data>
+		0Sk2FRCyy7+DoMLT3AOBt22HrJo=
+		</data>
+		<key>Resources/COPYING (libcroco)</key>
+		<data>
+		X7Ni7xaA5jX+X7IStV7vTbnq1I8=
+		</data>
+		<key>Resources/COPYING (libfontconfig)</key>
+		<data>
+		rpKl5mZQsuRgOPVrAVmFGEBRNHY=
+		</data>
+		<key>Resources/COPYING (libgdk-pixbuf)</key>
+		<data>
+		v1C6wk5+wyXbsJxrbE3MiKfXno8=
+		</data>
+		<key>Resources/COPYING (libglib)</key>
+		<data>
+		v1C6wk5+wyXbsJxrbE3MiKfXno8=
+		</data>
+		<key>Resources/COPYING (libharfbuzz)</key>
+		<data>
+		6RGt9WQaCfE/3V1ZlirTfaBD33k=
+		</data>
+		<key>Resources/COPYING (libiconv)</key>
+		<data>
+		hiS82uVbru8AzRHV38+mD2hxCgI=
+		</data>
+		<key>Resources/COPYING (libpango)</key>
+		<data>
+		v1C6wk5+wyXbsJxrbE3MiKfXno8=
+		</data>
+		<key>Resources/COPYING (libpixman)</key>
+		<data>
+		O5Cq9zD6IEYPj+P9IMFtrzrKulk=
+		</data>
+		<key>Resources/COPYING (librsvg)</key>
+		<data>
+		36wZmnU5pARAcJiiVBuUgiefaQ0=
+		</data>
+		<key>Resources/COPYING (libxml2)</key>
+		<data>
+		PCFQakXo0BcfyS/U/2kDwTrd5mA=
+		</data>
 		<key>Resources/Documentation/images/Field_0.png</key>
 		<data>
 		tiDJoel4B9Su5Vc6F5vwnss1hxA=
@@ -105,9 +149,29 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Resources/LICENSE (freetype)</key>
+		<data>
+		pk+fJHGuEiUX24ha8Q1mjLe9u1M=
+		</data>
+		<key>Resources/LICENSE (libffi)</key>
+		<data>
+		LJOLL+Q5s9eMpXnl/Fz0mzIYwKs=
+		</data>
+		<key>Resources/LICENSE (libpng)</key>
+		<data>
+		NsQ6u4M2dqNS/Uhw7ZEdxH6Z1o4=
+		</data>
+		<key>Resources/README (libz)</key>
+		<data>
+		s5+38SLDwdTXs9NFYBiS0Oqke7s=
+		</data>
 		<key>Resources/constants.xlf</key>
 		<data>
 		JteZceg4sf5VY3zC6vScIXhur1U=
+		</data>
+		<key>Resources/etc/pango/pango.modules</key>
+		<data>
+		EJvtWj7lacihearPOwwoga0MEus=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -130,6 +194,127 @@
 			<key>hash2</key>
 			<data>
 			98jKbUnZvoNXKS37m5JUoBfuRCxC2JzhKP+uHKV6WFc=
+			</data>
+		</dict>
+		<key>Resources/COPYING (libcairo)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0Sk2FRCyy7+DoMLT3AOBt22HrJo=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZyKKn3xfm2fFj1VvG+F49i2k2eLmKFMY2MdNVnJVq98=
+			</data>
+		</dict>
+		<key>Resources/COPYING (libcroco)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			X7Ni7xaA5jX+X7IStV7vTbnq1I8=
+			</data>
+			<key>hash2</key>
+			<data>
+			lLA/GmCn/VAHFJUwYmqJWm71qLk0Kr/VaGDF85VvXSM=
+			</data>
+		</dict>
+		<key>Resources/COPYING (libfontconfig)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rpKl5mZQsuRgOPVrAVmFGEBRNHY=
+			</data>
+			<key>hash2</key>
+			<data>
+			+kzZqwBRheEM2PdQRRiFbH3TbAHnZsK6yH9Pxjjp+IY=
+			</data>
+		</dict>
+		<key>Resources/COPYING (libgdk-pixbuf)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			v1C6wk5+wyXbsJxrbE3MiKfXno8=
+			</data>
+			<key>hash2</key>
+			<data>
+			0kWAf5ADKHLRQ410HtIeJJDhF13Iqjr6XdtsjlKbWOU=
+			</data>
+		</dict>
+		<key>Resources/COPYING (libglib)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			v1C6wk5+wyXbsJxrbE3MiKfXno8=
+			</data>
+			<key>hash2</key>
+			<data>
+			0kWAf5ADKHLRQ410HtIeJJDhF13Iqjr6XdtsjlKbWOU=
+			</data>
+		</dict>
+		<key>Resources/COPYING (libharfbuzz)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6RGt9WQaCfE/3V1ZlirTfaBD33k=
+			</data>
+			<key>hash2</key>
+			<data>
+			KohpFd5PKWza5e1nBk+G26AdDFUobYboSH8qXKr0AhY=
+			</data>
+		</dict>
+		<key>Resources/COPYING (libiconv)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hiS82uVbru8AzRHV38+mD2hxCgI=
+			</data>
+			<key>hash2</key>
+			<data>
+			jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM=
+			</data>
+		</dict>
+		<key>Resources/COPYING (libpango)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			v1C6wk5+wyXbsJxrbE3MiKfXno8=
+			</data>
+			<key>hash2</key>
+			<data>
+			0kWAf5ADKHLRQ410HtIeJJDhF13Iqjr6XdtsjlKbWOU=
+			</data>
+		</dict>
+		<key>Resources/COPYING (libpixman)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			O5Cq9zD6IEYPj+P9IMFtrzrKulk=
+			</data>
+			<key>hash2</key>
+			<data>
+			+sknDwmHuW/0Uz/KNUjGM+Agg8u6SgFyo7FJsuQBl5M=
+			</data>
+		</dict>
+		<key>Resources/COPYING (librsvg)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			36wZmnU5pARAcJiiVBuUgiefaQ0=
+			</data>
+			<key>hash2</key>
+			<data>
+			MrEGL32oSWfnAZ0Bq4BZNcqnq3Mhp87Q4w6+deXfFnA=
+			</data>
+		</dict>
+		<key>Resources/COPYING (libxml2)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PCFQakXo0BcfyS/U/2kDwTrd5mA=
+			</data>
+			<key>hash2</key>
+			<data>
+			xcY2dPioPE0uOF2W0cZwoDy4cbopJ3VUZwFzF4eFdL0=
 			</data>
 		</dict>
 		<key>Resources/Documentation/images/Field_0.png</key>
@@ -398,6 +583,50 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Resources/LICENSE (freetype)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pk+fJHGuEiUX24ha8Q1mjLe9u1M=
+			</data>
+			<key>hash2</key>
+			<data>
+			gy51Q0YZ5WyByiUv7NfFBxH9potyCN83AAp8Q3D3Dow=
+			</data>
+		</dict>
+		<key>Resources/LICENSE (libffi)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LJOLL+Q5s9eMpXnl/Fz0mzIYwKs=
+			</data>
+			<key>hash2</key>
+			<data>
+			QU9GCu1RlIa+t46S6nEsnM+Hwaz7c1qC0wH0zfBvSOM=
+			</data>
+		</dict>
+		<key>Resources/LICENSE (libpng)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NsQ6u4M2dqNS/Uhw7ZEdxH6Z1o4=
+			</data>
+			<key>hash2</key>
+			<data>
+			S9fv69nhHotKGvWugddQ7im008HhK4qBSfYCdDMImkE=
+			</data>
+		</dict>
+		<key>Resources/README (libz)</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			s5+38SLDwdTXs9NFYBiS0Oqke7s=
+			</data>
+			<key>hash2</key>
+			<data>
+			CwsielD9SpWBt2hZ6BvWCVbawnlaGh32VrXHSIh8krI=
+			</data>
+		</dict>
 		<key>Resources/constants.xlf</key>
 		<dict>
 			<key>hash</key>
@@ -409,15 +638,26 @@
 			WXqZ0ZyU33IVdd1CBkpYfjIDIgmeSWzdYmdCSJlQRcQ=
 			</data>
 		</dict>
+		<key>Resources/etc/pango/pango.modules</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			EJvtWj7lacihearPOwwoga0MEus=
+			</data>
+			<key>hash2</key>
+			<data>
+			CgRlMIJnGX1UpAwfapwKqcY3V05mE8q5O+DY3hCLoy8=
+			</data>
+		</dict>
 		<key>Windows/SVG Converter.4DX</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8WH79l2tgViHfCYSUBu+HCIQ5Es=
+			t48van8hVMZ8EAH4OgJxgqxFWLw=
 			</data>
 			<key>hash2</key>
 			<data>
-			rp5mwPoToTOMBrO5g9ATVRBDkkR1XpJE6MF06FX5mo0=
+			8W54+7EJpaMt0yfErZfaTyGjcnL/lLZ/GqLj6aIOuWA=
 			</data>
 		</dict>
 		<key>Windows/SVG Converter.html</key>
@@ -431,15 +671,312 @@
 			EKLRdLPtg+PsdxOrCPdnhlHZLbWCJYLapu/sbQTYgHg=
 			</data>
 		</dict>
+		<key>Windows/libcairo-2.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Dasw7GeMS/OqC11/HxsyKaaVwUg=
+			</data>
+			<key>hash2</key>
+			<data>
+			00NgV3VMF7ShAosYmraEPbFmUSl1MIFFdhxAvNFqYxQ=
+			</data>
+		</dict>
+		<key>Windows/libcharset-1.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vknL2pbA8T7R1dEdafLkaQusqOQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			QEhXrVZzn4T+Vh2tB64riKVxkiRuMyuwqmbov4v46Tg=
+			</data>
+		</dict>
+		<key>Windows/libcroco-0.6-3.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LQbIoaj+rbskSfeNO2gBveNFxdo=
+			</data>
+			<key>hash2</key>
+			<data>
+			CRng6yPNTgp4U+1qC8a+AE7swJr/N1T1upzCtPY+Lzw=
+			</data>
+		</dict>
+		<key>Windows/libffi-6.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TuqI6ODLyeeyZYWERm2V5Lx7OdE=
+			</data>
+			<key>hash2</key>
+			<data>
+			zP33U3lcWHnRgShx/GZuSrj1w/Z1zHU84CA3EMEUnCM=
+			</data>
+		</dict>
+		<key>Windows/libfontconfig-1.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CVSD5TcelZWU21EZ2RpgUVmAvgU=
+			</data>
+			<key>hash2</key>
+			<data>
+			mpBb2D3QdV6Xh+fm9JSnlRGbRFo75ojbCpUvkMYwSFw=
+			</data>
+		</dict>
+		<key>Windows/libfreetype-6.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fq+9wZFri0cpssXvCoh9LtxrxCs=
+			</data>
+			<key>hash2</key>
+			<data>
+			VgVO9hQQdlq6giIk0/tZU467xw9eZGoIT1lUl9E7cTU=
+			</data>
+		</dict>
+		<key>Windows/libgcc_s_dw2-1.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iev/nXgG6FUK3eDOERczkJogWl0=
+			</data>
+			<key>hash2</key>
+			<data>
+			Y4Q7aLmIcIDG1qvnSr1DgjEsIILZK19Se6E/2Q6lyVY=
+			</data>
+		</dict>
+		<key>Windows/libgdk_pixbuf-2.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			p7skAUFF0Ec58/x5iv7FVXnoHYU=
+			</data>
+			<key>hash2</key>
+			<data>
+			3L+Z+MgvEYkWBJYUJLSdi40TPuQ4MraqWIPJ5j4mWfg=
+			</data>
+		</dict>
+		<key>Windows/libgio-2.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PPpzFx5TCVw2DLxqaxVYhFO/9W0=
+			</data>
+			<key>hash2</key>
+			<data>
+			eOiDYx1Ib9UgsSMaGc4lqTWD0PIpDRFvhXcOdnAcYtk=
+			</data>
+		</dict>
+		<key>Windows/libglib-2.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jUh2XjVp62Ge5Hnex4yJ+1wprIc=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZGtdaJYF2HrbtQB0QrzzZ4YzCUJwgJlISfpxXT4Krx8=
+			</data>
+		</dict>
+		<key>Windows/libgmodule-2.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mWMBCDi3pDpZ5Gcbr12yPWjtGRE=
+			</data>
+			<key>hash2</key>
+			<data>
+			bk1HuF/VmqYz1W4dg7IH4LX1+EeGDiAt/cENhxm5odU=
+			</data>
+		</dict>
+		<key>Windows/libgobject-2.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jdxu1nGA5Mrz8tUn/7lzwSUS/hY=
+			</data>
+			<key>hash2</key>
+			<data>
+			1QDqQBLyhu+QFmbXwkohvrejaY+/OBOzfsPHC52RHCk=
+			</data>
+		</dict>
+		<key>Windows/libgthread-2.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MhMvzWwE0BREA4z6Mjh+Va/S13U=
+			</data>
+			<key>hash2</key>
+			<data>
+			GlfdjGk2d1v+lTFgBRPI2Nk+aajm6VYotUlj9r6VP2w=
+			</data>
+		</dict>
+		<key>Windows/libharfbuzz-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			soqCkbWvNB+jCaRej3bCHKAUn2Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			PDoMObTq+bd1MA0gTAYLjeKPyIdYh2c0UX/isHKTKGo=
+			</data>
+		</dict>
+		<key>Windows/libiconv-2.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			P/ATWbvoch56l7XVaVBBjATsxtQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			6Uv64fEPClT+qc2diKu4ZbjJ+1MsCDrLFocZ38M15wU=
+			</data>
+		</dict>
+		<key>Windows/libintl-8.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DM774frU31QG44D9/xNPPpjiihI=
+			</data>
+			<key>hash2</key>
+			<data>
+			n3TIaNja6pONomPI1ViwBkKoS/UBo4OGrw7JEfzwfvM=
+			</data>
+		</dict>
+		<key>Windows/libpango-1.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4iOjNsjqhvfwck7HuZgS2SAZvP0=
+			</data>
+			<key>hash2</key>
+			<data>
+			YZySlD9Civ1WEieQW0k0Bmw+whvFtWyiOAmLw63q+70=
+			</data>
+		</dict>
+		<key>Windows/libpangocairo-1.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			bwD1Cn8rjQuHQBVYIfP69IXzjZ4=
+			</data>
+			<key>hash2</key>
+			<data>
+			AZBgJNMn1k1jBhAHZVYsY6O3t3si73/1hNqK6y60p8w=
+			</data>
+		</dict>
+		<key>Windows/libpangoft2-1.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gHr7FUtgyubXY7Fua+hlmokBoEE=
+			</data>
+			<key>hash2</key>
+			<data>
+			gSzDJQmzCSGRAGte09OTAdP9adNLxTmBogqE6i6NHEo=
+			</data>
+		</dict>
+		<key>Windows/libpangowin32-1.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/kg0ZZJsC/l3+fze+xLoCwgz250=
+			</data>
+			<key>hash2</key>
+			<data>
+			P21s3JBaKXeQ54djTI2eU4Gr3wcR00TWFGAKwHJMF3o=
+			</data>
+		</dict>
+		<key>Windows/libpixman-1-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TSquQBo1NpDFu0uBzgEXX1z6EjM=
+			</data>
+			<key>hash2</key>
+			<data>
+			X9lsSPGO7xooxyiD572fRORmwCGjmOqqUgbLKtFRW/M=
+			</data>
+		</dict>
+		<key>Windows/libpng16-16.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fca8AavTsTaKVMl+arSm6hnYklw=
+			</data>
+			<key>hash2</key>
+			<data>
+			UGzEMnsvq4PY0supFDpoTt5MEyG1UA4bJ+WeSs1tiHE=
+			</data>
+		</dict>
+		<key>Windows/librsvg-2-2.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			A/ou/H+xtM3tdNcbWP//A5S1Ok0=
+			</data>
+			<key>hash2</key>
+			<data>
+			j4Ndu8bLcmbu7btPmcA2hwdwjObRg/dpEFOg/UQ2uR0=
+			</data>
+		</dict>
+		<key>Windows/libstdc++-6.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GljacIC9B3aMeOoKQ1g/6ESf1YM=
+			</data>
+			<key>hash2</key>
+			<data>
+			/vAVOlPiAWiPcT7VOvftgelxWFHTT84ay5RZo48ikk8=
+			</data>
+		</dict>
+		<key>Windows/libxml2-2.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			75wM1bDuIaRoryB9Z3RuLWd2f1o=
+			</data>
+			<key>hash2</key>
+			<data>
+			93oK1hUWfQ6XMMLdB07btmeaPhIT7b6kSu5P5mpvnYg=
+			</data>
+		</dict>
+		<key>Windows/pthreadGC2.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zj04EUVxdtvvsG9aOVUF7viypkE=
+			</data>
+			<key>hash2</key>
+			<data>
+			wnH0LanxSD3hWGmRTSFqjvRMqAwNWQd4m26Yc+OqJF8=
+			</data>
+		</dict>
+		<key>Windows/zlib1.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yx96WOqv/qMHzNW72nGCq/J8+/M=
+			</data>
+			<key>hash2</key>
+			<data>
+			77PItFuTYqUH8xsz0DmSBTYPPJlkQP4eIOFqaiK+MFc=
+			</data>
+		</dict>
 		<key>Windows64/SVG Converter.4DX</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			r1aAHLsl1HqPOxOjnnlVMBT8weQ=
+			w8/pVIbF5YrNZgt4c+/mH93SC7E=
 			</data>
 			<key>hash2</key>
 			<data>
-			D81BlAXC8IYBjKsGDu0nx8Zm3OxlDG6/r2pFvj/FY7A=
+			ducCE4ZaNl7ndLvgJOzCwPgXxyPDkMeslVPYZeHkKCU=
 			</data>
 		</dict>
 		<key>Windows64/SVG Converter.html</key>
@@ -451,6 +988,281 @@
 			<key>hash2</key>
 			<data>
 			EKLRdLPtg+PsdxOrCPdnhlHZLbWCJYLapu/sbQTYgHg=
+			</data>
+		</dict>
+		<key>Windows64/libcairo-2.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qpZD6lSM/hNaOzV2FlpKcUPbk1g=
+			</data>
+			<key>hash2</key>
+			<data>
+			Xx0BC8whNtXCizQLDg3rGpcbvX6FBvSsE8O8ualR16I=
+			</data>
+		</dict>
+		<key>Windows64/libcharset-1.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UuoiPNBjbmKF49rRYuIHNo/7tRk=
+			</data>
+			<key>hash2</key>
+			<data>
+			JpEIFM5Nv/Mh0j57wbh2uVtcLFUXmhZ6eU8hgeW1hZA=
+			</data>
+		</dict>
+		<key>Windows64/libcroco-0.6-3.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZG20bjhE1oFQgUlHVdzaMXzLn+Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			YEcA3gvVqKuzqXFhDq7TGei4MCU3IVb0eO7YXdrKqvU=
+			</data>
+		</dict>
+		<key>Windows64/libffi-6.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rhiVvQPwcddUm0hRf0JI2Rfydcw=
+			</data>
+			<key>hash2</key>
+			<data>
+			lNZhDbbFPbRTNfUO3qDuN39ZPzYuEbK/6WDv562lE5I=
+			</data>
+		</dict>
+		<key>Windows64/libfontconfig-1.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7y6vO88b4ZHAfsHLfR18ZhqH/5s=
+			</data>
+			<key>hash2</key>
+			<data>
+			oSRH7c5U+Dovat6WFNe0SJBdfAUVQg6xaiMqb6OJLds=
+			</data>
+		</dict>
+		<key>Windows64/libfreetype-6.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kf71UnkoVsVZ/lmQ6dHOap85QKc=
+			</data>
+			<key>hash2</key>
+			<data>
+			NKKS46n+ZW1O80qrYD75UNSc4jBLAP0eHekE8t2qSj0=
+			</data>
+		</dict>
+		<key>Windows64/libgdk_pixbuf-2.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			l2auvA5HEeL0+PRw5sBa5gnfXKw=
+			</data>
+			<key>hash2</key>
+			<data>
+			X3mmVJhkVHv06Vm/ZHPaHK+CepPgC5tzYGt1NDIMwIg=
+			</data>
+		</dict>
+		<key>Windows64/libgio-2.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cTH6G6kpQRDVsjjfgn8Nz0X1PVI=
+			</data>
+			<key>hash2</key>
+			<data>
+			UbNd8kCW00u9hvp8F9ZDX3u5r/ItsfkwStJzy9rjFoE=
+			</data>
+		</dict>
+		<key>Windows64/libglib-2.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BZEakue14+fyLf1W3lctRmwO8+g=
+			</data>
+			<key>hash2</key>
+			<data>
+			Sebk5wTx8NJ+CznLpyURFnWALoplLJ6/IWe5HPcWHsA=
+			</data>
+		</dict>
+		<key>Windows64/libgmodule-2.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Vt8whdiP0A3XRwz2t8E6V8obkDs=
+			</data>
+			<key>hash2</key>
+			<data>
+			HygRdvinOiHUHiALdcgfCe34ihbSHzh9rMzNY4pzn/o=
+			</data>
+		</dict>
+		<key>Windows64/libgobject-2.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gwtCC/xDesHJen5gRkadg4o67w8=
+			</data>
+			<key>hash2</key>
+			<data>
+			j6n/XTcO7mfsff3i5L7HzL2DmN0v4NR/bgObKE7JP9U=
+			</data>
+		</dict>
+		<key>Windows64/libgthread-2.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			frpRKeRAJ79jrxr6HDv8wh+L+4E=
+			</data>
+			<key>hash2</key>
+			<data>
+			DFSngQvWqPUNkY7j87PE7Qdfh0OR7Limdfae+o/uXvM=
+			</data>
+		</dict>
+		<key>Windows64/libharfbuzz-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			N/5NrZIOU73SqxlGDJgh8/PaLoo=
+			</data>
+			<key>hash2</key>
+			<data>
+			c+G4Tac2VWyVr5/3h7Ugt5bNbJm8A/McBZZhNOJxZY0=
+			</data>
+		</dict>
+		<key>Windows64/libiconv-2.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7oRLIqKeD2dtHmZYEDJZ/dhw9O0=
+			</data>
+			<key>hash2</key>
+			<data>
+			Gx4Tbkmn+Skpw8Cn4ob5jz8LKei1UVYoTyZH41gPqkc=
+			</data>
+		</dict>
+		<key>Windows64/libintl-8.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MIjj82Xnv1UUgkzziICbFDwFTUc=
+			</data>
+			<key>hash2</key>
+			<data>
+			+j5r/JCC5RVprPZG7QKSe2LrILSvLuRKpF74taK2Ifw=
+			</data>
+		</dict>
+		<key>Windows64/libpango-1.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			unfxRmwiYGBuyMDPpXjOoTKwqio=
+			</data>
+			<key>hash2</key>
+			<data>
+			9y2IuL/zJX17g9gDymUQMIBTDeq3sn0iZ74UvqbCi+o=
+			</data>
+		</dict>
+		<key>Windows64/libpangocairo-1.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			76Lw6fCfI5Y4vC5ky///AHnwPdk=
+			</data>
+			<key>hash2</key>
+			<data>
+			GkKXPBG8WRW86L5qmSjl30BQwj4IZZRbbq9io68B2UI=
+			</data>
+		</dict>
+		<key>Windows64/libpangoft2-1.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			95ZxX1fL5uSJBKsNzGBr91H1kZk=
+			</data>
+			<key>hash2</key>
+			<data>
+			kZwRtfWPytHXp6YCfnp46V2tbzENAframw8tbXu4c+E=
+			</data>
+		</dict>
+		<key>Windows64/libpangowin32-1.0-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HfiOeXVW+hb+M3ymWv6hTw03ddk=
+			</data>
+			<key>hash2</key>
+			<data>
+			HkyS1ftaMISt9wtn2984zfg8LsroBt8Zt+chJPbNWb4=
+			</data>
+		</dict>
+		<key>Windows64/libpixman-1-0.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			z4RN6elZWbJ8q3kyx22XOqWpB0Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			jwGiLP3lDuDKzf8cA6eL6UlF91AAdHJ6544pDqFK69Y=
+			</data>
+		</dict>
+		<key>Windows64/libpng16-16.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Z789ipFskBusY23qfkMcaPy3H/E=
+			</data>
+			<key>hash2</key>
+			<data>
+			+4eRLszg0292AWR8e+o6Pd/fZafaXz4KYYAeDzWf0R8=
+			</data>
+		</dict>
+		<key>Windows64/librsvg-2-2.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HgZlZRj/1W0GoMNkzb3FWP39Z00=
+			</data>
+			<key>hash2</key>
+			<data>
+			i8hAgYCzGa0RhvF1y/lQ8WeWAPW4H1Sk+GDOWXUFt9E=
+			</data>
+		</dict>
+		<key>Windows64/libwinpthread-1.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			syDQxY1B28w8Xtpjz4AnpCY4xCg=
+			</data>
+			<key>hash2</key>
+			<data>
+			GxTFgHIVmelQqqzMFXy7xFP36kj5/XyNEiYjJKFTNic=
+			</data>
+		</dict>
+		<key>Windows64/libxml2-2.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			n+ItDVhKGrbCkP8PTZudbhSioB4=
+			</data>
+			<key>hash2</key>
+			<data>
+			ucSelSa9G6h8zO80bzwoBOLOZKME3RVmFFAaHJeHxCQ=
+			</data>
+		</dict>
+		<key>Windows64/zlib1.dll</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SiVXZ7ZrTjpruapBjuBUGXS+tM4=
+			</data>
+			<key>hash2</key>
+			<data>
+			6hugoNV4fHKzH16vs8XZArxygdLfW3gIsAFjAxxkb0M=
 			</data>
 		</dict>
 		<key>manifest.json</key>
