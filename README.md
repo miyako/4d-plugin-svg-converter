@@ -23,10 +23,31 @@ Parameter|Type|Description
 ------------|------------|----
 svg|PICTURE|
 image|BLOB|
-format|LONGINT|
-keyNames|ARRAY LONGINT|
+format|LONGINT|see Output Formats
+keyNames|ARRAY LONGINT|see Converter Options
 keyValues|ARRAY REAL|
-color|TEXT|
-basePath|TEXT|
-------------|------------|----
+color|TEXT|vackground color in CSS or ``none`` by default
+basePath|TEXT|base URL (automatically converted; pass system path)
 error|LONGINT|
+
+* Output Formats
+
+```c
+SVG Output PDF (0)
+SVG Output PNG (1)
+SVG Output PS (2)
+SVG Output SVG (3)
+```
+
+* SVG Converter Options
+
+```c
+SVG_DPI_X (1)
+SVG_DPI_Y (2)
+SVG_ZOOM_X (3)
+SVG_ZOOM_Y (4)
+SVG_ZOOM (5)
+SVG_WIDTH (6)
+SVG_HEIGHT (7)
+SVG_KEEP_ASPECT_RATIO (8)
+```
