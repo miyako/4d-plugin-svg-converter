@@ -30,6 +30,21 @@ color|TEXT|vackground color in CSS or ``none`` by default
 basePath|TEXT|base URL (automatically converted; pass system path)
 error|LONGINT|
 
+```
+error:=SVG Convert array (svg;image;format;keyNames;keyValues;color;basePath)
+```
+
+Parameter|Type|Description
+------------|------------|----
+svg|ARRAY PICTURE|
+image|BLOB|each svg is a page in PDF
+format|LONGINT|see Output Formats
+keyNames|ARRAY LONGINT|either ``SVG Output PDF`` or ``SVG Output PS``
+keyValues|ARRAY REAL|
+color|TEXT|vackground color in CSS or ``none`` by default
+basePath|TEXT|base URL (automatically converted; pass system path)
+error|LONGINT|
+
 * Output Formats
 
 ```c
