@@ -3,23 +3,8 @@
 
 4D implementation of the rsvg program. 
 
-##Platform
+### Platform
 
 | carbon | cocoa | win32 | win64 |
 |:------:|:-----:|:---------:|:---------:|
-|🆗|🚫|🆗|🆗|
-
-Commands
----
-
-```c
-// --- Convert Many
-SVG_Convert_array
-
-// --- Convert One
-SVG_Convert
-
-// --- URL
-URL_Convert_from_path
-URL_Convert_to_path
-```
+|<img src="https://cloud.githubusercontent.com/assets/1725068/22371562/1b091f0a-e4db-11e6-8458-8653954a7cce.png" width="24" height="24" />||<img src="https://cloud.githubusercontent.com/assets/1725068/22371562/1b091f0a-e4db-11e6-8458-8653954a7cce.png" width="24" height="24" />|<img src="https://cloud.githubusercontent.com/assets/1725068/22371562/1b091f0a-e4db-11e6-8458-8653954a7cce.png" width="24" height="24" />|
