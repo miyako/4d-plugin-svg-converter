@@ -3,6 +3,8 @@
 
 4D implementation of the rsvg program. 
 
+Features unavailable in the native rendering engine, such as ``mask``, are supported in [RSVG](https://wiki.gnome.org/Projects/LibRsvg).
+
 ### Platform
 
 | carbon | cocoa | win32 | win64 |
