@@ -1,9 +1,37 @@
 4d-plugin-svg-converter
 =======================
 
-4D implementation of the rsvg program. 
+4D implementation of the [RSVG](https://wiki.gnome.org/Projects/LibRsvg) program.
 
-Features unavailable in the native rendering engine, such as ``mask``, are supported in [RSVG](https://wiki.gnome.org/Projects/LibRsvg).
+Features unavailable in the native rendering engine, such as ``mask``, are supported in [RSVG]().
+
+Powered by... 
+
+libcairo
+libcharset
+libcroco
+libffi
+libfontconfig
+libfreetype
+libgdk_pixbuf
+libgio
+libglib
+libgmodule
+libgobject
+libharfbuzz
+libiconv
+libintl
+libpango
+libpangocairo
+libpangoft2
+libpixman
+librsvg
+libxml2
+libz
+
+Size is large (``73.1 MB``).
+
+**Related Project**: https://github.com/miyako/4d-plugin-svg-converter-light
 
 ### Platform
 
