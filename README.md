@@ -33,6 +33,8 @@ Size is large (``73.1 MB``).
 
 **Related Project**: https://github.com/miyako/4d-plugin-svg-converter-light
 
+**Related Project**: https://github.com/miyako/4d-plugin-PDF2SVG
+
 ### Platform
 
 | carbon | cocoa | win32 | win64 |
