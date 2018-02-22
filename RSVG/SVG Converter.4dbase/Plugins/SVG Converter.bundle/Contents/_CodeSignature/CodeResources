@@ -134,7 +134,7 @@
 		</data>
 		<key>Resources/Documentation/index.html</key>
 		<data>
-		yE1fN23Jo4LHQB3PnmuZPhpKPf8=
+		q8Wl5mQK0CEsNrtYOmLv1+2wENE=
 		</data>
 		<key>Resources/Documentation/styles/common.css</key>
 		<data>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TafGMwfDv6bz+OpxFHgPS7GLlWU=
+			WTymxTvtTZ3GNAlstVvRmyFUIIc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -167,23 +167,238 @@
 		</data>
 		<key>Resources/constants.xlf</key>
 		<data>
-		JteZceg4sf5VY3zC6vScIXhur1U=
+		2gNMg4hjLYcxW9WPhQj13ZDc9RY=
+		</data>
+		<key>Resources/documentation.xml</key>
+		<data>
+		eHAbjg8flJron81KtGmNk6l3f2Q=
 		</data>
 		<key>Resources/etc/pango/pango.modules</key>
 		<data>
 		EJvtWj7lacihearPOwwoga0MEus=
 		</data>
+		<key>Resources/kmapper.xml</key>
+		<data>
+		/KRLoYsDis8M70dU4BlbUHYVUdE=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>MacOS/SVG Converter.html</key>
+		<key>MacOS/libcairo.dylib</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			jVggtW1kQGWPvMt6Bul3ptctKE4=
+			N9dqDXbaVJ/TMMG0L1D1LRK/Ynk=
 			</data>
 			<key>requirement</key>
-			<string>identifier "SVG Converter" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+			<string>identifier libcairo and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libcroco.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Nst6Snpa46S/SUKW9wVBYfVQX0I=
+			</data>
+			<key>requirement</key>
+			<string>identifier libcroco and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libffi.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			+ZQ5wd9t0peJhTSfaX0FS5lXxww=
+			</data>
+			<key>requirement</key>
+			<string>identifier libffi and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libfontconfig.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			QRfuhRDPxNbXY/1dARPz8nWOU7M=
+			</data>
+			<key>requirement</key>
+			<string>identifier libfontconfig and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libfreetype.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			6wRD5HNp6MzjBbVposAY/ET7d/w=
+			</data>
+			<key>requirement</key>
+			<string>identifier libfreetype and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libgdk_pixbuf.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			A42l3BNC909p4/lXQdNzVzgXiQ8=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libgdk_pixbuf" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libgio.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			3Vdt1IsOG5oHOqYhb69tsoIhnaU=
+			</data>
+			<key>requirement</key>
+			<string>identifier libgio and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libglib.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			0Mma2mcQJQK6ymGCESO818mIIwA=
+			</data>
+			<key>requirement</key>
+			<string>identifier libglib and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libgmodule.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			UrJQp724qZ3lJy/V+4/VnYPMtLE=
+			</data>
+			<key>requirement</key>
+			<string>identifier libgmodule and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libgobject.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			DK23CW7KvP+bBsoWNMBT1LX91qs=
+			</data>
+			<key>requirement</key>
+			<string>identifier libgobject and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libgthread.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			rdPJ2NBwk+r+fLWO8tbvbmcZCeM=
+			</data>
+			<key>requirement</key>
+			<string>identifier libgthread and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libharfbuzz.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			L6cj9jGrNxnjDbJm2p2EaXBMgmU=
+			</data>
+			<key>requirement</key>
+			<string>identifier libharfbuzz and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libiconv.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			XOYUg4Ctn6aHH/GLKjB37mAGLXY=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libiconv.2" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libintl.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			EWM5/E3bnIjlUwkKB3TZ/JWI+no=
+			</data>
+			<key>requirement</key>
+			<string>identifier "libintl.8" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libjpeg.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			xor3R9GArcZmdcpDezj9CaP6Tmg=
+			</data>
+			<key>requirement</key>
+			<string>identifier libjpeg and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libpango.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			iJurVycjlonp19WUb6Hp1xSYPV0=
+			</data>
+			<key>requirement</key>
+			<string>identifier libpango and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libpangocairo.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Vtb0F/BhwKa+PFzxqcgB9CYOAZY=
+			</data>
+			<key>requirement</key>
+			<string>identifier libpangocairo and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libpangoft2.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			JDrrnKkjwapfgZyM0zKmG1IiN10=
+			</data>
+			<key>requirement</key>
+			<string>identifier libpangoft2 and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libpixman.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			5C979LQdxuvRNII86vCXJXqBylE=
+			</data>
+			<key>requirement</key>
+			<string>identifier libpixman and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libpng.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			bZzM0qEDkZZO2HxMmekZqwfkVfg=
+			</data>
+			<key>requirement</key>
+			<string>identifier libpng and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/librsvg.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			nXs1zOXp6gKrtzqABxAl79gpb9M=
+			</data>
+			<key>requirement</key>
+			<string>identifier librsvg and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libtiff.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			1viYf1/4bVWUXrUUa6FNeG3MZ4U=
+			</data>
+			<key>requirement</key>
+			<string>identifier libtiff and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libxml2.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			0OOWtsw6BaQxKxhUOZJVNJMKN48=
+			</data>
+			<key>requirement</key>
+			<string>identifier libxml2 and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
+		</dict>
+		<key>MacOS/libz.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			w9n3zOQvhGb8qCTZdPKzMmC69Hs=
+			</data>
+			<key>requirement</key>
+			<string>identifier libz and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
 		</dict>
 		<key>QuickLook/Thumbnail.png</key>
 		<dict>
@@ -552,11 +767,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yE1fN23Jo4LHQB3PnmuZPhpKPf8=
+			q8Wl5mQK0CEsNrtYOmLv1+2wENE=
 			</data>
 			<key>hash2</key>
 			<data>
-			w2rqojf4iO1tZ7g9gy4Jg2wB4EVLacdBpmyaO+8py58=
+			CEfjQyGT6k00J+GgAGnorIIZ+1/Bhd8kcUsp1FUlMsA=
 			</data>
 		</dict>
 		<key>Resources/Documentation/styles/common.css</key>
@@ -574,11 +789,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TafGMwfDv6bz+OpxFHgPS7GLlWU=
+			WTymxTvtTZ3GNAlstVvRmyFUIIc=
 			</data>
 			<key>hash2</key>
 			<data>
-			vvOp+YuunTpOlElSkaGhH0LrxiXJrXTU4SHd+GLXuYQ=
+			UyDrPd0BJT87oiop8n8Ow1zOQ7kV5CMh6I4ineDDvFE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -631,11 +846,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JteZceg4sf5VY3zC6vScIXhur1U=
+			2gNMg4hjLYcxW9WPhQj13ZDc9RY=
 			</data>
 			<key>hash2</key>
 			<data>
-			WXqZ0ZyU33IVdd1CBkpYfjIDIgmeSWzdYmdCSJlQRcQ=
+			S1y5dwuBFuMdttFyWUxxCKEQZjyUbqS22zdgC16ogU4=
+			</data>
+		</dict>
+		<key>Resources/documentation.xml</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eHAbjg8flJron81KtGmNk6l3f2Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			9fvNzW2NX94nJmQZ+UQlDtqn3grhCJWWnWNHjXBIyyo=
 			</data>
 		</dict>
 		<key>Resources/etc/pango/pango.modules</key>
@@ -649,26 +875,26 @@
 			CgRlMIJnGX1UpAwfapwKqcY3V05mE8q5O+DY3hCLoy8=
 			</data>
 		</dict>
+		<key>Resources/kmapper.xml</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/KRLoYsDis8M70dU4BlbUHYVUdE=
+			</data>
+			<key>hash2</key>
+			<data>
+			NLctyvrK/CTqidIAgw1k+zNelx0i056j+GZ5wP/NEXU=
+			</data>
+		</dict>
 		<key>Windows/SVG Converter.4DX</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			t48van8hVMZ8EAH4OgJxgqxFWLw=
+			T9OPoYT8hKxuEoCG4s81xXFysAA=
 			</data>
 			<key>hash2</key>
 			<data>
-			8W54+7EJpaMt0yfErZfaTyGjcnL/lLZ/GqLj6aIOuWA=
-			</data>
-		</dict>
-		<key>Windows/SVG Converter.html</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3f3hE90+GMuzyHmK9RVQvLK+Zs8=
-			</data>
-			<key>hash2</key>
-			<data>
-			EKLRdLPtg+PsdxOrCPdnhlHZLbWCJYLapu/sbQTYgHg=
+			TKHJ84Cp9P1aO/Tcf0sXvjR8brsoT5xwfuyJn1bA4Eo=
 			</data>
 		</dict>
 		<key>Windows/libcairo-2.dll</key>
@@ -972,22 +1198,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			w8/pVIbF5YrNZgt4c+/mH93SC7E=
+			OGqlFLU+vY3EWHYAe5ncdoI1lVI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ducCE4ZaNl7ndLvgJOzCwPgXxyPDkMeslVPYZeHkKCU=
-			</data>
-		</dict>
-		<key>Windows64/SVG Converter.html</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3f3hE90+GMuzyHmK9RVQvLK+Zs8=
-			</data>
-			<key>hash2</key>
-			<data>
-			EKLRdLPtg+PsdxOrCPdnhlHZLbWCJYLapu/sbQTYgHg=
+			11lnfaoLGdggpeIOV9IGZrlKayEJOHDjMzP3RlxKKxQ=
 			</data>
 		</dict>
 		<key>Windows64/libcairo-2.dll</key>

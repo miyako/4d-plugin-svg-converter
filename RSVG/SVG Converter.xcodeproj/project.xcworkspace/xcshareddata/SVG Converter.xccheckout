@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>462A7A1C-886C-43EE-961D-B69EF04F3E63</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SVG Converter</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>19C595F1548659F63C2E483E43D4F7D79120231F</key>
+		<string>https://github.com/miyako/4d-plugin-svg-converter.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SVG Converter/SVG Converter.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>19C595F1548659F63C2E483E43D4F7D79120231F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/miyako/4d-plugin-svg-converter.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>19C595F1548659F63C2E483E43D4F7D79120231F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>19C595F1548659F63C2E483E43D4F7D79120231F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>4d-plugin-svg-converter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
