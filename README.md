@@ -47,6 +47,8 @@ Size is large (``73.1 MB``).
 
 ### Releases
 
+[2.0 for Windows only](https://github.com/miyako/4d-plugin-svg-converter/releases/tag/2.0-windows-only)  * smaller size  
+
 [2.0](https://github.com/miyako/4d-plugin-svg-converter/releases/tag/2.0)
 
 ## Syntax
