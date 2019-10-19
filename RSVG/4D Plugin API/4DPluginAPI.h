@@ -25,7 +25,7 @@
 #include "C_REAL.h"
 #include "C_TEXT.h"
 #include "C_BLOB.h"
-#include "C_POINTER.h"
+//#include "C_POINTER.h"
 #include "C_PICTURE.h"
 
 #include "ARRAY_TEXT.h"
@@ -33,8 +33,8 @@
 #include "ARRAY_INTEGER.h"
 #include "ARRAY_REAL.h"
 #include "ARRAY_LONGINT.h"
-#include "ARRAY_TIME.h"
-#include "ARRAY_DATE.h"
+//#include "ARRAY_TIME.h"
+//#include "ARRAY_DATE.h"
 
 //some external libraries assume first load; include this file after them 
 #if VERSIONWIN
