@@ -527,6 +527,7 @@
 					"-U",
 					"-Xlinker",
 					_objc_readClassPair,
+					"-Wl,-exported_symbol,_FourDPackex",
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.4D.svg-converter";
@@ -582,6 +583,7 @@
 					"-U",
 					"-Xlinker",
 					_objc_readClassPair,
+					"-Wl,-exported_symbol,_FourDPackex",
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.4D.svg-converter";
@@ -635,6 +637,7 @@
 					"-U",
 					"-Xlinker",
 					_objc_readClassPair,
+					"-Wl,-exported_symbol,_FourDPackex",
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.4D.svg-converter";
