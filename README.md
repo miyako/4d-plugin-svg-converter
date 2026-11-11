@@ -1,112 +1,219 @@
 4d-plugin-svg-converter
 =======================
 
-4D implementation of the [RSVG](https://wiki.gnome.org/Projects/LibRsvg) program.
+Converts SVG pictures to PDF, PNG, PostScript or SVG with [librsvg](https://wiki.gnome.org/Projects/LibRsvg) and [cairo](https://www.cairographics.org). The plugin reads the SVG data held in a 4D `Picture`, renders it with librsvg onto a cairo surface, and writes the encoded result into a `Blob`. SVG features that 4D's native rendering engine doesn't support, such as `mask`, are rendered by librsvg.
 
-Features unavailable in the native rendering engine, such as ``mask``, are supported in [RSVG]().
+| Command | Returns | Purpose |
+|:--|:--|:--|
+| [SVG Convert](#svg-convert) | `Longint` (error code) | Convert one SVG picture to PDF, PNG, PS or SVG |
+| [SVG Convert array](#svg-convert-array) | `Longint` (error code) | Convert an array of SVG pictures to one multi-page PDF or PS document |
 
-Powered by... 
+**Platforms:** macOS, Windows (64-bit)
 
-libcairo
-libcharset
-libcroco
-libffi
-libfontconfig
-libfreetype
-libgdk_pixbuf
-libgio
-libglib
-libgmodule
-libgobject
-libharfbuzz
-libiconv
-libintl
-libpango
-libpangocairo
-libpangoft2
-libpixman
-librsvg
-libxml2
-libz
+Powered by libcairo, libcroco, libffi, libfontconfig, libfreetype, libgdk_pixbuf, libgio, libglib, libgmodule, libgobject, libharfbuzz, libiconv, libintl, libjpeg, libpango, libpangocairo, libpangoft2, libpixman, libpng, librsvg (2.37), libtiff, libxml2 and libz, shipped as dynamic libraries inside the plugin bundle (`Contents/MacOS/*.dylib`, `Contents/Windows64/*.dll`). The bundle is large (about 73 MB).
 
-Size is large (``73.1 MB``).
-
-**Related Project**: https://github.com/miyako/4d-plugin-svg-converter-light
-
-**Related Project**: https://github.com/miyako/4d-plugin-PDF2SVG
-
-### Platform
-
-| carbon | cocoa | win32 | win64 |
-|:------:|:-----:|:---------:|:---------:|
-|<img src="https://cloud.githubusercontent.com/assets/1725068/22371562/1b091f0a-e4db-11e6-8458-8653954a7cce.png" width="24" height="24" />|<img src="https://cloud.githubusercontent.com/assets/1725068/22371562/1b091f0a-e4db-11e6-8458-8653954a7cce.png" width="24" height="24" />|<img src="https://cloud.githubusercontent.com/assets/1725068/22371562/1b091f0a-e4db-11e6-8458-8653954a7cce.png" width="24" height="24" />|<img src="https://cloud.githubusercontent.com/assets/1725068/22371562/1b091f0a-e4db-11e6-8458-8653954a7cce.png" width="24" height="24" />|
-
-### Version
-
-<img src="https://cloud.githubusercontent.com/assets/1725068/18940649/21945000-8645-11e6-86ed-4a0f800e5a73.png" width="32" height="32" /> <img src="https://cloud.githubusercontent.com/assets/1725068/18940648/2192ddba-8645-11e6-864d-6d5692d55717.png" width="32" height="32" />
+**Related projects**: [4d-plugin-svg-converter-light](https://github.com/miyako/4d-plugin-svg-converter-light), [4d-plugin-PDF2SVG](https://github.com/miyako/4d-plugin-PDF2SVG)
 
 ### Releases
 
-[2.0 for Windows only](https://github.com/miyako/4d-plugin-svg-converter/releases/tag/2.0-windows-only)  * smaller size  
+[2.1](https://github.com/miyako/4d-plugin-svg-converter/releases/tag/2.1)
 
 [2.0](https://github.com/miyako/4d-plugin-svg-converter/releases/tag/2.0)
 
-## Syntax
+[2.0 for Windows only](https://github.com/miyako/4d-plugin-svg-converter/releases/tag/2.0-windows-only) (smaller size)
+
+---
+
+## Requirements & platform notes
+
+- **macOS builds are Intel-only for now.** The librsvg/cairo/pango/glib dylibs bundled in `Contents/MacOS` have no `arm64` slice, so a universal (Apple silicon) build can't be linked until they are rebuilt. On Apple silicon, 4D must run under Rosetta to load the 2.1 release.
+- **The input must be a picture that still holds SVG data.** The plugin looks for the `.svg` codec among the formats stored in the picture. A picture that 4D has already converted to a bitmap (PNG, JPEG, …) is rejected with error `-2`.
+- **Every parameter is mandatory.** Both commands always take seven parameters; there is no short form. Pass empty arrays and empty strings for the parts you don't use.
+- **Failure is reported through the result code, not as a 4D error.** Check the returned `Longint`, and also check that the output `Blob` isn't empty: some failures (for example a PNG encoding failure) return `0` with an empty `Blob`.
+- **Only `SVG_DPI_X` and `SVG_DPI_Y` currently change the output.** The plugin reads the zoom, width, height and aspect-ratio options, but never applies them (see [Converter options](#converter-options)).
+- **Fonts**: text is laid out by pango with fontconfig/freetype from the bundled libraries, so the fonts it finds may differ from what 4D draws natively.
+
+### Output formats
+
+| Constant | Value | Output | Accepted by |
+|:--|:--|:--|:--|
+| `SVG Output PDF` | `0` | PDF document | both commands |
+| `SVG Output PNG` | `1` | PNG image | [SVG Convert](#svg-convert) only |
+| `SVG Output PS` | `2` | PostScript document | both commands |
+| `SVG Output SVG` | `3` | SVG document re-generated by cairo | [SVG Convert](#svg-convert) only |
+
+### Converter options
+
+Options are passed as two parallel arrays: `keyNames` (`ARRAY LONGINT`) holds the option constants and `keyValues` (`ARRAY REAL`) holds the value at the same index. Element 0 of each array is read too; an unknown key (including `0`) is ignored. A missing value counts as `0`. Arrays of another type are ignored.
+
+| Constant | Value | Effect |
+|:--|:--|:--|
+| `SVG_DPI_X` | `1` | Horizontal resolution librsvg uses to convert physical units (`mm`, `in`, `pt`, …) to pixels. Default: librsvg's own default. |
+| `SVG_DPI_Y` | `2` | Vertical resolution, same as above. |
+| `SVG_ZOOM_X` | `3` | **Currently no effect.** |
+| `SVG_ZOOM_Y` | `4` | **Currently no effect.** |
+| `SVG_ZOOM` | `5` | **Currently no effect.** |
+| `SVG_WIDTH` | `6` | **Currently no effect.** |
+| `SVG_HEIGHT` | `7` | **Currently no effect.** |
+| `SVG_KEEP_ASPECT_RATIO` | `8` | **Currently no effect.** |
+
+The output size is always the SVG's own size (its `width`/`height`, or its `viewBox`) as librsvg reports it, at the chosen DPI.
+
+### Result codes
+
+| Value | Meaning |
+|:--|:--|
+| `0` | No error detected (check that the `Blob` isn't empty) |
+| `-1` | librsvg couldn't parse the SVG data |
+| `-2` | The picture holds no SVG data ([SVG Convert](#svg-convert) only) |
+| `-3` | Invalid output format for this command |
+
+---
+
+## SVG Convert
+
+### Syntax
 
 ```
-error:=SVG Convert (svg;image;format;keyNames;keyValues;color;basePath)
+error:=SVG Convert(svg;image;format;keyNames;keyValues;color;basePath)
 ```
 
-Parameter|Type|Description
-------------|------------|----
-svg|PICTURE|
-image|BLOB|
-format|LONGINT|see Output Formats
-keyNames|ARRAY LONGINT|see Converter Options
-keyValues|ARRAY REAL|
-color|TEXT|vackground color in CSS or ``none`` by default
-basePath|TEXT|base URL (automatically converted; pass system path)
-error|LONGINT|
+| Parameter | Type | Description |
+|:--|:--|:--|
+| `svg` | `Picture` | SVG picture to convert |
+| `image` | `Blob` | Receives the converted document or image |
+| `format` | `Longint` | One of the [output formats](#output-formats) |
+| `keyNames` | `ARRAY LONGINT` | [Converter options](#converter-options) |
+| `keyValues` | `ARRAY REAL` | Values for `keyNames`, same index |
+| `color` | `Text` | Background colour as a CSS colour, or `""` / `"none"` for no background |
+| `basePath` | `Text` | Base URI used to resolve relative references in the SVG, or `""` |
+| `Result` | `Longint` | [Result code](#result-codes) |
 
-```
-error:=SVG Convert array (svg;image;format;keyNames;keyValues;color;basePath)
-```
+### Description
 
-Parameter|Type|Description
-------------|------------|----
-svg|ARRAY PICTURE|
-image|BLOB|each svg is a page in PDF
-format|LONGINT|see Output Formats
-keyNames|ARRAY LONGINT|either ``SVG Output PDF`` or ``SVG Output PS``
-keyValues|ARRAY REAL|
-color|TEXT|background color in CSS or ``none`` by default
-basePath|TEXT|base URL (automatically converted; pass system path)
-error|LONGINT|
+`SVG Convert` takes the SVG data stored in `svg`, renders it with librsvg, and replaces the contents of `image` with the result:
 
-* Output Formats
+- `SVG Output PDF`, `SVG Output PS` and `SVG Output SVG` produce a one-page document whose page size is the SVG's size.
+- `SVG Output PNG` produces a 32-bit PNG with an alpha channel. Areas the SVG doesn't paint stay transparent unless you pass a background `color`.
 
-```c
-SVG Output PDF (0)
-SVG Output PNG (1)
-SVG Output PS (2)
-SVG Output SVG (3)
-```
+`color` is parsed with librsvg's CSS colour parser, so CSS names (`"white"`) and hex forms (`"#FFFFFF"`) both work. The alpha part of a colour is ignored: the background is always painted opaque. With `""` or `"none"` nothing is painted behind the SVG.
 
-* SVG Converter Options
+`basePath` is passed to librsvg unchanged, as UTF-8. It only matters when the SVG refers to external files with relative paths (for example `<image xlink:href="photo.png"/>`); embedded `data:` URIs, as in the test database's sample files, don't need it. A `file://` URI of the folder that holds the referenced files is the safest form; whether a plain POSIX or Windows path is accepted depends on librsvg (not verified). The plugin does not convert 4D system paths.
 
-```c
-SVG_DPI_X (1)
-SVG_DPI_Y (2)
-SVG_ZOOM_X (3)
-SVG_ZOOM_Y (4)
-SVG_ZOOM (5)
-SVG_WIDTH (6)
-SVG_HEIGHT (7)
-SVG_KEEP_ASPECT_RATIO (8)
+`image` is always assigned, even on error: it is empty when nothing could be rendered.
+
+### Example
+
+```4d
+C_PICTURE($svg)
+C_BLOB($pdf)
+C_LONGINT($error)
+ARRAY LONGINT($keys;0)
+ARRAY REAL($values;0)
+
+READ PICTURE FILE(Get 4D folder(Current resources folder)+"explicit_png.svg";$svg)
+
+$error:=SVG Convert($svg;$pdf;SVG Output PDF;$keys;$values;"";"")
+
+If ($error=0) & (BLOB size($pdf)>0)
+	BLOB TO DOCUMENT(System folder(Desktop)+"explicit_png.pdf";$pdf)
+End if
 ```
 
-## Example
+Render a PNG at 144 dpi on a white background:
 
-<img width="328" alt="2017-05-26 14 13 24" src="https://cloud.githubusercontent.com/assets/1725068/26481650/9575822a-421d-11e7-9980-b4613254bc1a.png">
+```4d
+ARRAY LONGINT($keys;2)
+ARRAY REAL($values;2)
+$keys{1}:=SVG_DPI_X
+$values{1}:=144
+$keys{2}:=SVG_DPI_Y
+$values{2}:=144
 
-![w](https://cloud.githubusercontent.com/assets/1725068/26482803/5a7e486c-4224-11e7-8e30-414e3693b329.png)
+$error:=SVG Convert($svg;$png;SVG Output PNG;$keys;$values;"white";"")
+```
+
+The test database (`SVG Converter.4dbase`) ships four sample files in its `Resources` folder: `explicit_png.svg`, `explicit_jpeg.svg`, `implicit_png.svg` and `implicit_jpeg.svg`. They embed bitmaps as `data:` URIs with and without an explicit MIME type. Its methods are stored in the binary structure file, so they can't be quoted here.
+
+---
+
+## SVG Convert array
+
+### Syntax
+
+```
+error:=SVG Convert array(svg;image;format;keyNames;keyValues;color;basePath)
+```
+
+| Parameter | Type | Description |
+|:--|:--|:--|
+| `svg` | `ARRAY PICTURE` | SVG pictures, one per page |
+| `image` | `Blob` | Receives the multi-page document |
+| `format` | `Longint` | `SVG Output PDF` or `SVG Output PS` |
+| `keyNames` | `ARRAY LONGINT` | [Converter options](#converter-options), applied to every page |
+| `keyValues` | `ARRAY REAL` | Values for `keyNames`, same index |
+| `color` | `Text` | Background colour for every page as a CSS colour, or `""` / `"none"` |
+| `basePath` | `Text` | Base URI used to resolve relative references, or `""` |
+| `Result` | `Longint` | [Result code](#result-codes) |
+
+### Description
+
+`SVG Convert array` renders each SVG picture of `svg` as one page of a single PDF or PostScript document. Any other `format` returns `-3`.
+
+- **All pages have the size of the first SVG that was rendered.** Later SVGs of a different size are drawn on a page of that first size, so they can be cropped or leave blank space.
+- Elements that don't hold SVG data are skipped without an error. Element `0` is read too (it is normally empty).
+- An SVG that librsvg can't parse is skipped and the result becomes `-1`, but the other pages are still rendered.
+- If `svg` is an undefined variable, it is treated as an empty array: the result is `0` (or `-3` for an invalid `format`) and `image` is empty. A variable of another type gives `0` and an empty `image`.
+- **The SVG codec is matched differently from [SVG Convert](#svg-convert)**: only the entries before the last `;` of each picture format's type list are compared with `.svg`. A picture that [SVG Convert](#svg-convert) accepts may be skipped here if `.svg` is the last entry of that list (inferred from the code; the exact type list 4D returns was not checked).
+
+### Example
+
+```4d
+ARRAY PICTURE($pages;2)
+C_BLOB($pdf)
+C_LONGINT($error)
+ARRAY LONGINT($keys;0)
+ARRAY REAL($values;0)
+
+READ PICTURE FILE(Get 4D folder(Current resources folder)+"explicit_png.svg";$pages{1})
+READ PICTURE FILE(Get 4D folder(Current resources folder)+"explicit_jpeg.svg";$pages{2})
+
+$error:=SVG Convert array($pages;$pdf;SVG Output PDF;$keys;$values;"none";"")
+
+If ($error=0) & (BLOB size($pdf)>0)
+	BLOB TO DOCUMENT(System folder(Desktop)+"pages.pdf";$pdf)
+End if
+```
+
+---
+
+## Error handling & troubleshooting
+
+- **`-2` from SVG Convert**: the picture has no SVG data. Load it from the `.svg` file with `READ PICTURE FILE` (or `BLOB TO PICTURE`) and don't convert it to another picture format first.
+- **`0` but an empty `Blob`**: nothing was rendered, for example a picture array whose elements hold no SVG data, or a PNG that cairo couldn't encode (such as an SVG that librsvg reports with a zero size).
+- **`-1`**: the SVG isn't well-formed XML or librsvg rejects it. With [SVG Convert array](#svg-convert-array) the other pages are still written.
+- **`-3`**: `SVG Output PNG` and `SVG Output SVG` are only accepted by [SVG Convert](#svg-convert); a value outside `0`–`3` is rejected by both commands.
+- **Zoom, width and height options are ignored**: only `SVG_DPI_X` and `SVG_DPI_Y` change the output. To change the size, edit the SVG's `width`/`height` attributes before converting.
+- **Pages cropped in a multi-page document**: every page takes the size of the first rendered SVG.
+- **Linked images missing**: relative `xlink:href` references need `basePath`; embedded `data:` URIs always work.
+- **Apple silicon**: the bundled libraries are Intel-only, so the plugin loads only when 4D runs under Rosetta.
+
+---
+
+## Quick reference
+
+```4d
+ARRAY LONGINT($keys;0)
+ARRAY REAL($values;0)
+
+$error:=SVG Convert($svg;$blob;SVG Output PDF;$keys;$values;"";"")
+$error:=SVG Convert($svg;$blob;SVG Output PNG;$keys;$values;"white";"")
+$error:=SVG Convert($svg;$blob;SVG Output PS;$keys;$values;"none";"")
+$error:=SVG Convert($svg;$blob;SVG Output SVG;$keys;$values;"";"")
+
+$error:=SVG Convert array($pictures;$blob;SVG Output PDF;$keys;$values;"";"")
+```
+
+<img width="328" alt="Test database form" src="https://cloud.githubusercontent.com/assets/1725068/26481650/9575822a-421d-11e7-9980-b4613254bc1a.png">
+
+![Converted output](https://cloud.githubusercontent.com/assets/1725068/26482803/5a7e486c-4224-11e7-8e30-414e3693b329.png)
