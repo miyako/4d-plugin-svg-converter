@@ -5,7 +5,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 2.1 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -13,9 +13,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
 #ifndef __G_TEST_UTILS_H__
@@ -29,6 +27,7 @@
 #include <glib/gstring.h>
 #include <glib/gerror.h>
 #include <glib/gslist.h>
+#include <string.h>
 
 G_BEGIN_DECLS
 
@@ -40,53 +39,86 @@ typedef void (*GTestFixtureFunc) (gpointer      fixture,
                                   gconstpointer user_data);
 
 /* assertion API */
-#define g_assert_cmpstr(s1, cmp, s2)    do { const char *__s1 = (s1), *__s2 = (s2); \
+#define g_assert_cmpstr(s1, cmp, s2)    G_STMT_START { \
+                                             const char *__s1 = (s1), *__s2 = (s2); \
                                              if (g_strcmp0 (__s1, __s2) cmp 0) ; else \
                                                g_assertion_message_cmpstr (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
-                                                 #s1 " " #cmp " " #s2, __s1, #cmp, __s2); } while (0)
-#define g_assert_cmpint(n1, cmp, n2)    do { gint64 __n1 = (n1), __n2 = (n2); \
+                                                 #s1 " " #cmp " " #s2, __s1, #cmp, __s2); \
+                                        } G_STMT_END
+#define g_assert_cmpint(n1, cmp, n2)    G_STMT_START { \
+                                             gint64 __n1 = (n1), __n2 = (n2); \
                                              if (__n1 cmp __n2) ; else \
                                                g_assertion_message_cmpnum (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
-                                                 #n1 " " #cmp " " #n2, __n1, #cmp, __n2, 'i'); } while (0)
-#define g_assert_cmpuint(n1, cmp, n2)   do { guint64 __n1 = (n1), __n2 = (n2); \
+                                                 #n1 " " #cmp " " #n2, (long double) __n1, #cmp, (long double) __n2, 'i'); \
+                                        } G_STMT_END
+#define g_assert_cmpuint(n1, cmp, n2)   G_STMT_START { \
+                                             guint64 __n1 = (n1), __n2 = (n2); \
                                              if (__n1 cmp __n2) ; else \
                                                g_assertion_message_cmpnum (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
-                                                 #n1 " " #cmp " " #n2, __n1, #cmp, __n2, 'i'); } while (0)
-#define g_assert_cmphex(n1, cmp, n2)    do { guint64 __n1 = (n1), __n2 = (n2); \
+                                                 #n1 " " #cmp " " #n2, (long double) __n1, #cmp, (long double) __n2, 'i'); \
+                                        } G_STMT_END
+#define g_assert_cmphex(n1, cmp, n2)    G_STMT_START {\
+                                             guint64 __n1 = (n1), __n2 = (n2); \
                                              if (__n1 cmp __n2) ; else \
                                                g_assertion_message_cmpnum (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
-                                                 #n1 " " #cmp " " #n2, __n1, #cmp, __n2, 'x'); } while (0)
-#define g_assert_cmpfloat(n1,cmp,n2)    do { long double __n1 = (n1), __n2 = (n2); \
+                                                 #n1 " " #cmp " " #n2, (long double) __n1, #cmp, (long double) __n2, 'x'); \
+                                        } G_STMT_END
+#define g_assert_cmpfloat(n1,cmp,n2)    G_STMT_START { \
+                                             long double __n1 = (n1), __n2 = (n2); \
                                              if (__n1 cmp __n2) ; else \
                                                g_assertion_message_cmpnum (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
-                                                 #n1 " " #cmp " " #n2, __n1, #cmp, __n2, 'f'); } while (0)
-#define g_assert_no_error(err)          do { if (err) \
+                                                 #n1 " " #cmp " " #n2, (long double) __n1, #cmp, (long double) __n2, 'f'); \
+                                        } G_STMT_END
+#define g_assert_cmpmem(m1, l1, m2, l2) G_STMT_START {\
+                                             gconstpointer __m1 = m1, __m2 = m2; \
+                                             int __l1 = l1, __l2 = l2; \
+                                             if (__l1 != __l2) \
+                                               g_assertion_message_cmpnum (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
+                                                                           #l1 " (len(" #m1 ")) == " #l2 " (len(" #m2 "))", \
+                                                                           (long double) __l1, "==", (long double) __l2, 'i'); \
+                                             else if (__l1 != 0 && memcmp (__m1, __m2, __l1) != 0) \
+                                               g_assertion_message (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
+                                                                    "assertion failed (" #m1 " == " #m2 ")"); \
+                                        } G_STMT_END
+#define g_assert_no_error(err)          G_STMT_START { \
+                                             if (err) \
                                                g_assertion_message_error (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
-                                                 #err, err, 0, 0); } while (0)
-#define g_assert_error(err, dom, c)	do { if (!err || (err)->domain != dom || (err)->code != c) \
+                                                 #err, err, 0, 0); \
+                                        } G_STMT_END
+#define g_assert_error(err, dom, c)     G_STMT_START { \
+                                               if (!err || (err)->domain != dom || (err)->code != c) \
                                                g_assertion_message_error (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
-                                                 #err, err, dom, c); } while (0)
-#define g_assert_true(expr)             do { if G_LIKELY (expr) ; else \
+                                                 #err, err, dom, c); \
+                                        } G_STMT_END
+#define g_assert_true(expr)             G_STMT_START { \
+                                             if G_LIKELY (expr) ; else \
                                                g_assertion_message (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
-                                                                    #expr); \
-                                           } while (0)
-#define g_assert_false(expr)            do { if G_LIKELY (!(expr)) ; else \
+                                                                    "'" #expr "' should be TRUE"); \
+                                        } G_STMT_END
+#define g_assert_false(expr)            G_STMT_START { \
+                                             if G_LIKELY (!(expr)) ; else \
                                                g_assertion_message (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
-                                                                    #expr); \
-                                           } while (0)
-#define g_assert_null(expr)              do { if G_LIKELY ((expr) == NULL) ; else \
+                                                                    "'" #expr "' should be FALSE"); \
+                                        } G_STMT_END
+#define g_assert_null(expr)             G_STMT_START { if G_LIKELY ((expr) == NULL) ; else \
                                                g_assertion_message (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
-                                                                    #expr); \
-                                           } while (0)
+                                                                    "'" #expr "' should be NULL"); \
+                                        } G_STMT_END
+#define g_assert_nonnull(expr)          G_STMT_START { \
+                                             if G_LIKELY ((expr) != NULL) ; else \
+                                               g_assertion_message (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
+                                                                    "'" #expr "' should not be NULL"); \
+                                        } G_STMT_END
 #ifdef G_DISABLE_ASSERT
-#define g_assert_not_reached()          do { (void) 0; } while (0)
-#define g_assert(expr)                  do { (void) 0; } while (0)
+#define g_assert_not_reached()          G_STMT_START { (void) 0; } G_STMT_END
+#define g_assert(expr)                  G_STMT_START { (void) 0; } G_STMT_END
 #else /* !G_DISABLE_ASSERT */
-#define g_assert_not_reached()          do { g_assertion_message_expr (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, NULL); } while (0)
-#define g_assert(expr)                  do { if G_LIKELY (expr) ; else \
+#define g_assert_not_reached()          G_STMT_START { g_assertion_message_expr (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, NULL); } G_STMT_END
+#define g_assert(expr)                  G_STMT_START { \
+                                             if G_LIKELY (expr) ; else \
                                                g_assertion_message_expr (G_LOG_DOMAIN, __FILE__, __LINE__, G_STRFUNC, \
                                                                          #expr); \
-                                           } while (0)
+                                        } G_STMT_END
 #endif /* !G_DISABLE_ASSERT */
 
 GLIB_AVAILABLE_IN_ALL
@@ -107,7 +139,7 @@ void    g_test_maximized_result         (double          maximized_quantity,
 GLIB_AVAILABLE_IN_ALL
 void    g_test_init                     (int            *argc,
                                          char         ***argv,
-                                         ...);
+                                         ...) G_GNUC_NULL_TERMINATED;
 /* query testing framework config */
 #define g_test_initialized()            (g_test_config_vars->test_initialized)
 #define g_test_quick()                  (g_test_config_vars->test_quick)
@@ -233,7 +265,11 @@ GLIB_AVAILABLE_IN_ALL
 double   g_test_rand_double_range       (double          range_start,
                                          double          range_end);
 
-/* semi-internal API */
+/*
+ * semi-internal API: non-documented symbols with stable ABI. You
+ * should use the non-internal helper macros instead. However, for
+ * compatibility reason, you may use this semi-internal API.
+ */
 GLIB_AVAILABLE_IN_ALL
 GTestCase*    g_test_create_case        (const char       *test_name,
                                          gsize             data_size,
@@ -254,7 +290,6 @@ void          g_test_suite_add_suite    (GTestSuite     *suite,
 GLIB_AVAILABLE_IN_ALL
 int           g_test_run_suite          (GTestSuite     *suite);
 
-/* internal ABI */
 GLIB_AVAILABLE_IN_ALL
 void    g_test_trap_assertions          (const char     *domain,
                                          const char     *file,
@@ -321,6 +356,13 @@ GLIB_VAR const GTestConfig * const g_test_config_vars;
 
 /* internal logging API */
 typedef enum {
+  G_TEST_RUN_SUCCESS,
+  G_TEST_RUN_SKIPPED,
+  G_TEST_RUN_FAILURE,
+  G_TEST_RUN_INCOMPLETE
+} GTestResult;
+
+typedef enum {
   G_TEST_LOG_NONE,
   G_TEST_LOG_ERROR,             /* s:msg */
   G_TEST_LOG_START_BINARY,      /* s:binaryname s:seed */
@@ -372,7 +414,7 @@ void            g_test_log_msg_free     (GTestLogMsg    *tmsg);
  *
  * Specifies the prototype of fatal log handler functions.
  *
- * Return value: %TRUE if the program should abort, %FALSE otherwise
+ * Returns: %TRUE if the program should abort, %FALSE otherwise
  *
  * Since: 2.22
  */

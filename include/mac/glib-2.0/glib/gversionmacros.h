@@ -4,7 +4,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 2.1 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,9 +12,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
 /*
@@ -106,6 +104,96 @@
  * Since: 2.38
  */
 #define GLIB_VERSION_2_38       (G_ENCODE_VERSION (2, 38))
+
+/**
+ * GLIB_VERSION_2_40:
+ *
+ * A macro that evaluates to the 2.40 version of GLib, in a format
+ * that can be used by the C pre-processor.
+ *
+ * Since: 2.40
+ */
+#define GLIB_VERSION_2_40       (G_ENCODE_VERSION (2, 40))
+
+/**
+ * GLIB_VERSION_2_42:
+ *
+ * A macro that evaluates to the 2.42 version of GLib, in a format
+ * that can be used by the C pre-processor.
+ *
+ * Since: 2.42
+ */
+#define GLIB_VERSION_2_42       (G_ENCODE_VERSION (2, 42))
+
+/**
+ * GLIB_VERSION_2_44:
+ *
+ * A macro that evaluates to the 2.44 version of GLib, in a format
+ * that can be used by the C pre-processor.
+ *
+ * Since: 2.44
+ */
+#define GLIB_VERSION_2_44       (G_ENCODE_VERSION (2, 44))
+
+/**
+ * GLIB_VERSION_2_46:
+ *
+ * A macro that evaluates to the 2.46 version of GLib, in a format
+ * that can be used by the C pre-processor.
+ *
+ * Since: 2.46
+ */
+#define GLIB_VERSION_2_46       (G_ENCODE_VERSION (2, 46))
+
+/**
+ * GLIB_VERSION_2_48:
+ *
+ * A macro that evaluates to the 2.48 version of GLib, in a format
+ * that can be used by the C pre-processor.
+ *
+ * Since: 2.48
+ */
+#define GLIB_VERSION_2_48       (G_ENCODE_VERSION (2, 48))
+
+/**
+ * GLIB_VERSION_2_50:
+ *
+ * A macro that evaluates to the 2.50 version of GLib, in a format
+ * that can be used by the C pre-processor.
+ *
+ * Since: 2.50
+ */
+#define GLIB_VERSION_2_50       (G_ENCODE_VERSION (2, 50))
+
+/**
+ * GLIB_VERSION_2_52:
+ *
+ * A macro that evaluates to the 2.52 version of GLib, in a format
+ * that can be used by the C pre-processor.
+ *
+ * Since: 2.52
+ */
+#define GLIB_VERSION_2_52       (G_ENCODE_VERSION (2, 52))
+
+/**
+ * GLIB_VERSION_2_54:
+ *
+ * A macro that evaluates to the 2.54 version of GLib, in a format
+ * that can be used by the C pre-processor.
+ *
+ * Since: 2.54
+ */
+#define GLIB_VERSION_2_54       (G_ENCODE_VERSION (2, 54))
+
+/**
+ * GLIB_VERSION_2_56:
+ *
+ * A macro that evaluates to the 2.56 version of GLib, in a format
+ * that can be used by the C pre-processor.
+ *
+ * Since: 2.56
+ */
+#define GLIB_VERSION_2_56       (G_ENCODE_VERSION (2, 56))
 
 /* evaluates to the current stable version; for development cycles,
  * this means the next stable target
@@ -294,6 +382,132 @@
 # define GLIB_AVAILABLE_IN_2_38                 GLIB_UNAVAILABLE(2, 38)
 #else
 # define GLIB_AVAILABLE_IN_2_38                 _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MIN_REQUIRED >= GLIB_VERSION_2_40
+# define GLIB_DEPRECATED_IN_2_40                GLIB_DEPRECATED
+# define GLIB_DEPRECATED_IN_2_40_FOR(f)         GLIB_DEPRECATED_FOR(f)
+#else
+# define GLIB_DEPRECATED_IN_2_40                _GLIB_EXTERN
+# define GLIB_DEPRECATED_IN_2_40_FOR(f)         _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_40
+# define GLIB_AVAILABLE_IN_2_40                 GLIB_UNAVAILABLE(2, 40)
+#else
+# define GLIB_AVAILABLE_IN_2_40                 _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MIN_REQUIRED >= GLIB_VERSION_2_42
+# define GLIB_DEPRECATED_IN_2_42                GLIB_DEPRECATED
+# define GLIB_DEPRECATED_IN_2_42_FOR(f)         GLIB_DEPRECATED_FOR(f)
+#else
+# define GLIB_DEPRECATED_IN_2_42                _GLIB_EXTERN
+# define GLIB_DEPRECATED_IN_2_42_FOR(f)         _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_42
+# define GLIB_AVAILABLE_IN_2_42                 GLIB_UNAVAILABLE(2, 42)
+#else
+# define GLIB_AVAILABLE_IN_2_42                 _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MIN_REQUIRED >= GLIB_VERSION_2_44
+# define GLIB_DEPRECATED_IN_2_44                GLIB_DEPRECATED
+# define GLIB_DEPRECATED_IN_2_44_FOR(f)         GLIB_DEPRECATED_FOR(f)
+#else
+# define GLIB_DEPRECATED_IN_2_44                _GLIB_EXTERN
+# define GLIB_DEPRECATED_IN_2_44_FOR(f)         _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_44
+# define GLIB_AVAILABLE_IN_2_44                 GLIB_UNAVAILABLE(2, 44)
+#else
+# define GLIB_AVAILABLE_IN_2_44                 _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MIN_REQUIRED >= GLIB_VERSION_2_46
+# define GLIB_DEPRECATED_IN_2_46                GLIB_DEPRECATED
+# define GLIB_DEPRECATED_IN_2_46_FOR(f)         GLIB_DEPRECATED_FOR(f)
+#else
+# define GLIB_DEPRECATED_IN_2_46                _GLIB_EXTERN
+# define GLIB_DEPRECATED_IN_2_46_FOR(f)         _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_46
+# define GLIB_AVAILABLE_IN_2_46                 GLIB_UNAVAILABLE(2, 46)
+#else
+# define GLIB_AVAILABLE_IN_2_46                 _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MIN_REQUIRED >= GLIB_VERSION_2_48
+# define GLIB_DEPRECATED_IN_2_48                GLIB_DEPRECATED
+# define GLIB_DEPRECATED_IN_2_48_FOR(f)         GLIB_DEPRECATED_FOR(f)
+#else
+# define GLIB_DEPRECATED_IN_2_48                _GLIB_EXTERN
+# define GLIB_DEPRECATED_IN_2_48_FOR(f)         _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_48
+# define GLIB_AVAILABLE_IN_2_48                 GLIB_UNAVAILABLE(2, 48)
+#else
+# define GLIB_AVAILABLE_IN_2_48                 _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MIN_REQUIRED >= GLIB_VERSION_2_50
+# define GLIB_DEPRECATED_IN_2_50                GLIB_DEPRECATED
+# define GLIB_DEPRECATED_IN_2_50_FOR(f)         GLIB_DEPRECATED_FOR(f)
+#else
+# define GLIB_DEPRECATED_IN_2_50                _GLIB_EXTERN
+# define GLIB_DEPRECATED_IN_2_50_FOR(f)         _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_50
+# define GLIB_AVAILABLE_IN_2_50                 GLIB_UNAVAILABLE(2, 50)
+#else
+# define GLIB_AVAILABLE_IN_2_50                 _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MIN_REQUIRED >= GLIB_VERSION_2_52
+# define GLIB_DEPRECATED_IN_2_52                GLIB_DEPRECATED
+# define GLIB_DEPRECATED_IN_2_52_FOR(f)         GLIB_DEPRECATED_FOR(f)
+#else
+# define GLIB_DEPRECATED_IN_2_52                _GLIB_EXTERN
+# define GLIB_DEPRECATED_IN_2_52_FOR(f)         _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_52
+# define GLIB_AVAILABLE_IN_2_52                 GLIB_UNAVAILABLE(2, 52)
+#else
+# define GLIB_AVAILABLE_IN_2_52                 _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MIN_REQUIRED >= GLIB_VERSION_2_54
+# define GLIB_DEPRECATED_IN_2_54                GLIB_DEPRECATED
+# define GLIB_DEPRECATED_IN_2_54_FOR(f)         GLIB_DEPRECATED_FOR(f)
+#else
+# define GLIB_DEPRECATED_IN_2_54                _GLIB_EXTERN
+# define GLIB_DEPRECATED_IN_2_54_FOR(f)         _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_54
+# define GLIB_AVAILABLE_IN_2_54                 GLIB_UNAVAILABLE(2, 54)
+#else
+# define GLIB_AVAILABLE_IN_2_54                 _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MIN_REQUIRED >= GLIB_VERSION_2_56
+# define GLIB_DEPRECATED_IN_2_56                GLIB_DEPRECATED
+# define GLIB_DEPRECATED_IN_2_56_FOR(f)         GLIB_DEPRECATED_FOR(f)
+#else
+# define GLIB_DEPRECATED_IN_2_56                _GLIB_EXTERN
+# define GLIB_DEPRECATED_IN_2_56_FOR(f)         _GLIB_EXTERN
+#endif
+
+#if GLIB_VERSION_MAX_ALLOWED < GLIB_VERSION_2_56
+# define GLIB_AVAILABLE_IN_2_56                 GLIB_UNAVAILABLE(2, 56)
+#else
+# define GLIB_AVAILABLE_IN_2_56                 _GLIB_EXTERN
 #endif
 
 #endif /*  __G_VERSION_MACROS_H__ */

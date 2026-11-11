@@ -21,8 +21,6 @@
 		D10DD2C5135FA56100319781 /* C_TIME.h in Headers */ = {isa = PBXBuildFile; fileRef = D10DD2C3135FA56100319781 /* C_TIME.h */; };
 		D10DD2EB135FAB2F00319781 /* C_DATE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D10DD2E9135FAB2F00319781 /* C_DATE.cpp */; };
 		D10DD2EC135FAB2F00319781 /* C_DATE.h in Headers */ = {isa = PBXBuildFile; fileRef = D10DD2EA135FAB2F00319781 /* C_DATE.h */; };
-		D11724D617BC504700535DBE /* libcairo.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D11724D517BC504700535DBE /* libcairo.dylib */; };
-		D11724DA17BC505400535DBE /* librsvg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D11724D917BC505400535DBE /* librsvg.dylib */; };
 		D120937F13534DCC00A72CAA /* 4DPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = D120937E13534DCC00A72CAA /* 4DPlugin.h */; };
 		D130064F12F02D9700702C0E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D130064E12F02D9700702C0E /* Cocoa.framework */; };
 		D1392DD513582164004911A5 /* C_PICTURE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1392DD313582164004911A5 /* C_PICTURE.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -31,11 +29,6 @@
 		D1392DDA13582171004911A5 /* C_BLOB.h in Headers */ = {isa = PBXBuildFile; fileRef = D1392DD813582171004911A5 /* C_BLOB.h */; };
 		D13E88A013543F3800C1F956 /* ARRAY_REAL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13E889E13543F3800C1F956 /* ARRAY_REAL.cpp */; };
 		D13E88A113543F3800C1F956 /* ARRAY_REAL.h in Headers */ = {isa = PBXBuildFile; fileRef = D13E889F13543F3800C1F956 /* ARRAY_REAL.h */; };
-		D14E5A0017DBC17300EDFE31 /* libgio.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D14E59FB17DBC17300EDFE31 /* libgio.dylib */; };
-		D14E5A0117DBC17300EDFE31 /* libglib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D14E59FC17DBC17300EDFE31 /* libglib.dylib */; };
-		D14E5A0217DBC17300EDFE31 /* libgmodule.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D14E59FD17DBC17300EDFE31 /* libgmodule.dylib */; };
-		D14E5A0317DBC17300EDFE31 /* libgobject.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D14E59FE17DBC17300EDFE31 /* libgobject.dylib */; };
-		D14E5A0417DBC17300EDFE31 /* libgthread.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D14E59FF17DBC17300EDFE31 /* libgthread.dylib */; };
 		D16AC3AA147CB499000AA750 /* ARRAY_BOOLEAN.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16AC3A8147CB499000AA750 /* ARRAY_BOOLEAN.cpp */; };
 		D16AC3AB147CB499000AA750 /* ARRAY_BOOLEAN.h in Headers */ = {isa = PBXBuildFile; fileRef = D16AC3A9147CB499000AA750 /* ARRAY_BOOLEAN.h */; };
 		D19271A51353D6F2001CEA07 /* ARRAY_TEXT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19271A31353D6F2001CEA07 /* ARRAY_TEXT.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -52,18 +45,33 @@
 		D19CC1831353782E0004336E /* C_REAL.h in Headers */ = {isa = PBXBuildFile; fileRef = D19CC17B1353782E0004336E /* C_REAL.h */; };
 		D19CC1841353782E0004336E /* C_TEXT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19CC17C1353782E0004336E /* C_TEXT.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		D19CC1851353782E0004336E /* C_TEXT.h in Headers */ = {isa = PBXBuildFile; fileRef = D19CC17D1353782E0004336E /* C_TEXT.h */; };
-		D1E2EF6E17F55351009A2AE6 /* libgdk_pixbuf.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E2EF6D17F55351009A2AE6 /* libgdk_pixbuf.dylib */; };
-		D1E2EF7017F5535E009A2AE6 /* libcroco.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E2EF6F17F5535E009A2AE6 /* libcroco.dylib */; };
-		D1E2EF7217F55363009A2AE6 /* libpango.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E2EF7117F55363009A2AE6 /* libpango.dylib */; };
-		D1E2EF7417F5536F009A2AE6 /* libharfbuzz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E2EF7317F5536F009A2AE6 /* libharfbuzz.dylib */; };
-		D1E2EF7617F55379009A2AE6 /* libpangocairo.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E2EF7517F55379009A2AE6 /* libpangocairo.dylib */; };
-		D1E2EF7A17F55386009A2AE6 /* libjpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E2EF7717F55386009A2AE6 /* libjpeg.dylib */; };
-		D1E2EF7B17F55386009A2AE6 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E2EF7817F55386009A2AE6 /* libpng.dylib */; };
-		D1E2EF7C17F55386009A2AE6 /* libtiff.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E2EF7917F55386009A2AE6 /* libtiff.dylib */; };
-		D1E2EF7F17F55392009A2AE6 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E2EF7D17F55392009A2AE6 /* libxml2.dylib */; };
-		D1E2EF8017F55392009A2AE6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E2EF7E17F55392009A2AE6 /* libz.dylib */; };
 		AE5F7E935F668B484519D921 /* manifest.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1E878B3378B0CA96D7875656 /* manifest.json */; };
 		86DA2675E0BF53A6EDCBD4EF /* constants.xlf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 64221E77C322E34314C05D23 /* constants.xlf */; };
+		35BBC5F3ECB2B48F3B508203 /* librsvg-2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA7D8A7FB867284B8C8F6B1 /* librsvg-2.a */; };
+		20336A1EB8BE45B034073052 /* libcroco-0.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E97B29BE24767E8F72FACF0F /* libcroco-0.6.a */; };
+		882BE6CE19E6611ED95E1D42 /* libgdk_pixbuf-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE58348CCBFBA384B1A47E7 /* libgdk_pixbuf-2.0.a */; };
+		B58D4122B6D850ADBE0D9CB0 /* libpangocairo-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD17D0FBBC02A029549A79B /* libpangocairo-1.0.a */; };
+		2811CB9873E958E93678DCC9 /* libpango-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B66C4B67181D5FD76B6AE7C1 /* libpango-1.0.a */; };
+		E46D649A83705E8E40DEF0C9 /* libfribidi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B80D7CC556DA3649C163FF7D /* libfribidi.a */; };
+		D66FA296E9A1602EB071BD3F /* libcairo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A42C0CC5A1A293DE2B965322 /* libcairo.a */; };
+		807FAD2BF7F2A6F37DE0CBB9 /* libpixman-1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB677FAFB23A0F1202266156 /* libpixman-1.a */; };
+		C3791488570D37F291C7F952 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB77B1616FB762420F07EF1E /* libpng16.a */; };
+		B1F83B8F3F0BE1E9264B60B2 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C06AE2612D8BA38670E96210 /* libjpeg.a */; };
+		67104BB1C8B193AFCA56CCEE /* libgio-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F688EE01A873CB5F1A252938 /* libgio-2.0.a */; };
+		12C89537F175D53CF1E408AA /* libgobject-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF7BF0692C3DE24CD20448F /* libgobject-2.0.a */; };
+		2719A43C272037E6B4DD2C65 /* libgmodule-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DAF709201E3E05BE2D4D65 /* libgmodule-2.0.a */; };
+		33DFC33290BFC2DC1CFC9090 /* libglib-2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F918694105C1DA8676BC149 /* libglib-2.0.a */; };
+		61F25B3738FC4A305E3431F3 /* libintl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A81100557B0505CFDF1E1B /* libintl.a */; };
+		78C02B83A30333DEB6DE7512 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EF4A572836A113987E4451 /* libz.tbd */; };
+		BE367F7F4D7DBEC604BF0D49 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC35646BF823E0447A233C6 /* libxml2.tbd */; };
+		B15CC5EB555774DBE79E9D55 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B228DB27C14DFC0906F28C1F /* libiconv.tbd */; };
+		BEB08B637FEB9CDDA31D9EC2 /* libffi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C9E5A7C7588479796F1F0A /* libffi.tbd */; };
+		C9F9578E6CABDC60D2B9F4D8 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D6940510EB783B9DE896D5 /* libresolv.tbd */; };
+		20E16164BEE0E9255F5F2693 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE12A91780D6070835EC5AA6 /* ApplicationServices.framework */; };
+		E52185B7B6AEE7388A6518EC /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558EACD28634E8E1D80C67DD /* CoreFoundation.framework */; };
+		26E9606FA95688CD96225A2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4525A75E6F91D57E50D64E /* CoreGraphics.framework */; };
+		357501ADDBF74F78706EF4D2 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE19D7BA53DB50E520B5D0F7 /* CoreServices.framework */; };
+		BD6508603BEA186096C3127D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D612B257652F1BAC8B3DC3 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,8 +105,6 @@
 		D10DD2C3135FA56100319781 /* C_TIME.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_TIME.h; path = Classes/C_TIME.h; sourceTree = "<group>"; };
 		D10DD2E9135FAB2F00319781 /* C_DATE.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_DATE.cpp; path = Classes/C_DATE.cpp; sourceTree = "<group>"; };
 		D10DD2EA135FAB2F00319781 /* C_DATE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_DATE.h; path = Classes/C_DATE.h; sourceTree = "<group>"; };
-		D11724D517BC504700535DBE /* libcairo.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcairo.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libcairo.dylib"; sourceTree = "<group>"; };
-		D11724D917BC505400535DBE /* librsvg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = librsvg.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/librsvg.dylib"; sourceTree = "<group>"; };
 		D120937E13534DCC00A72CAA /* 4DPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 4DPlugin.h; sourceTree = "<group>"; };
 		D130064E12F02D9700702C0E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		D1392DD313582164004911A5 /* C_PICTURE.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_PICTURE.cpp; path = Classes/C_PICTURE.cpp; sourceTree = "<group>"; };
@@ -107,11 +113,6 @@
 		D1392DD813582171004911A5 /* C_BLOB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_BLOB.h; path = Classes/C_BLOB.h; sourceTree = "<group>"; };
 		D13E889E13543F3800C1F956 /* ARRAY_REAL.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ARRAY_REAL.cpp; path = Classes/ARRAY_REAL.cpp; sourceTree = "<group>"; };
 		D13E889F13543F3800C1F956 /* ARRAY_REAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARRAY_REAL.h; path = Classes/ARRAY_REAL.h; sourceTree = "<group>"; };
-		D14E59FB17DBC17300EDFE31 /* libgio.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgio.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libgio.dylib"; sourceTree = "<group>"; };
-		D14E59FC17DBC17300EDFE31 /* libglib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglib.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libglib.dylib"; sourceTree = "<group>"; };
-		D14E59FD17DBC17300EDFE31 /* libgmodule.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgmodule.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libgmodule.dylib"; sourceTree = "<group>"; };
-		D14E59FE17DBC17300EDFE31 /* libgobject.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgobject.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libgobject.dylib"; sourceTree = "<group>"; };
-		D14E59FF17DBC17300EDFE31 /* libgthread.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgthread.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libgthread.dylib"; sourceTree = "<group>"; };
 		D16AC3A8147CB499000AA750 /* ARRAY_BOOLEAN.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ARRAY_BOOLEAN.cpp; path = Classes/ARRAY_BOOLEAN.cpp; sourceTree = "<group>"; };
 		D16AC3A9147CB499000AA750 /* ARRAY_BOOLEAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARRAY_BOOLEAN.h; path = Classes/ARRAY_BOOLEAN.h; sourceTree = "<group>"; };
 		D19271A31353D6F2001CEA07 /* ARRAY_TEXT.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ARRAY_TEXT.cpp; path = Classes/ARRAY_TEXT.cpp; sourceTree = "<group>"; };
@@ -129,18 +130,33 @@
 		D19CC17C1353782E0004336E /* C_TEXT.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_TEXT.cpp; path = classes/C_TEXT.cpp; sourceTree = "<group>"; };
 		D19CC17D1353782E0004336E /* C_TEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_TEXT.h; path = classes/C_TEXT.h; sourceTree = "<group>"; };
 		D1DBC9CD17BC3C6800020037 /* SVG Converter */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = "SVG Converter"; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/SVG Converter"; sourceTree = "<group>"; };
-		D1E2EF6D17F55351009A2AE6 /* libgdk_pixbuf.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgdk_pixbuf.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libgdk_pixbuf.dylib"; sourceTree = "<group>"; };
-		D1E2EF6F17F5535E009A2AE6 /* libcroco.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcroco.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libcroco.dylib"; sourceTree = "<group>"; };
-		D1E2EF7117F55363009A2AE6 /* libpango.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpango.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libpango.dylib"; sourceTree = "<group>"; };
-		D1E2EF7317F5536F009A2AE6 /* libharfbuzz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libharfbuzz.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libharfbuzz.dylib"; sourceTree = "<group>"; };
-		D1E2EF7517F55379009A2AE6 /* libpangocairo.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpangocairo.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libpangocairo.dylib"; sourceTree = "<group>"; };
-		D1E2EF7717F55386009A2AE6 /* libjpeg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjpeg.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libjpeg.dylib"; sourceTree = "<group>"; };
-		D1E2EF7817F55386009A2AE6 /* libpng.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libpng.dylib"; sourceTree = "<group>"; };
-		D1E2EF7917F55386009A2AE6 /* libtiff.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtiff.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libtiff.dylib"; sourceTree = "<group>"; };
-		D1E2EF7D17F55392009A2AE6 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libxml2.dylib"; sourceTree = "<group>"; };
-		D1E2EF7E17F55392009A2AE6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = "SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS/libz.dylib"; sourceTree = "<group>"; };
 		1E878B3378B0CA96D7875656 /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		64221E77C322E34314C05D23 /* constants.xlf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = constants.xlf; sourceTree = "<group>"; };
+		7CA7D8A7FB867284B8C8F6B1 /* librsvg-2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "librsvg-2.a"; sourceTree = "<group>"; };
+		E97B29BE24767E8F72FACF0F /* libcroco-0.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libcroco-0.6.a"; sourceTree = "<group>"; };
+		AAE58348CCBFBA384B1A47E7 /* libgdk_pixbuf-2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libgdk_pixbuf-2.0.a"; sourceTree = "<group>"; };
+		6AD17D0FBBC02A029549A79B /* libpangocairo-1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpangocairo-1.0.a"; sourceTree = "<group>"; };
+		B66C4B67181D5FD76B6AE7C1 /* libpango-1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpango-1.0.a"; sourceTree = "<group>"; };
+		B80D7CC556DA3649C163FF7D /* libfribidi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libfribidi.a"; sourceTree = "<group>"; };
+		A42C0CC5A1A293DE2B965322 /* libcairo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libcairo.a"; sourceTree = "<group>"; };
+		EB677FAFB23A0F1202266156 /* libpixman-1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpixman-1.a"; sourceTree = "<group>"; };
+		FB77B1616FB762420F07EF1E /* libpng16.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libpng16.a"; sourceTree = "<group>"; };
+		C06AE2612D8BA38670E96210 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libjpeg.a"; sourceTree = "<group>"; };
+		F688EE01A873CB5F1A252938 /* libgio-2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libgio-2.0.a"; sourceTree = "<group>"; };
+		AEF7BF0692C3DE24CD20448F /* libgobject-2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libgobject-2.0.a"; sourceTree = "<group>"; };
+		28DAF709201E3E05BE2D4D65 /* libgmodule-2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libgmodule-2.0.a"; sourceTree = "<group>"; };
+		9F918694105C1DA8676BC149 /* libglib-2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libglib-2.0.a"; sourceTree = "<group>"; };
+		06A81100557B0505CFDF1E1B /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libintl.a"; sourceTree = "<group>"; };
+		B2EF4A572836A113987E4451 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CBC35646BF823E0447A233C6 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		B228DB27C14DFC0906F28C1F /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		E5C9E5A7C7588479796F1F0A /* libffi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libffi.tbd; path = usr/lib/libffi.tbd; sourceTree = SDKROOT; };
+		32D6940510EB783B9DE896D5 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		AE12A91780D6070835EC5AA6 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		558EACD28634E8E1D80C67DD /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		1B4525A75E6F91D57E50D64E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DE19D7BA53DB50E520B5D0F7 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		29D612B257652F1BAC8B3DC3 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,23 +166,31 @@
 			files = (
 				8D01CCCE0486CAD60068D4B7 /* Carbon.framework in Frameworks */,
 				D130064F12F02D9700702C0E /* Cocoa.framework in Frameworks */,
-				D11724D617BC504700535DBE /* libcairo.dylib in Frameworks */,
-				D11724DA17BC505400535DBE /* librsvg.dylib in Frameworks */,
-				D14E5A0017DBC17300EDFE31 /* libgio.dylib in Frameworks */,
-				D14E5A0117DBC17300EDFE31 /* libglib.dylib in Frameworks */,
-				D14E5A0217DBC17300EDFE31 /* libgmodule.dylib in Frameworks */,
-				D14E5A0317DBC17300EDFE31 /* libgobject.dylib in Frameworks */,
-				D14E5A0417DBC17300EDFE31 /* libgthread.dylib in Frameworks */,
-				D1E2EF6E17F55351009A2AE6 /* libgdk_pixbuf.dylib in Frameworks */,
-				D1E2EF7017F5535E009A2AE6 /* libcroco.dylib in Frameworks */,
-				D1E2EF7217F55363009A2AE6 /* libpango.dylib in Frameworks */,
-				D1E2EF7417F5536F009A2AE6 /* libharfbuzz.dylib in Frameworks */,
-				D1E2EF7617F55379009A2AE6 /* libpangocairo.dylib in Frameworks */,
-				D1E2EF7A17F55386009A2AE6 /* libjpeg.dylib in Frameworks */,
-				D1E2EF7B17F55386009A2AE6 /* libpng.dylib in Frameworks */,
-				D1E2EF7C17F55386009A2AE6 /* libtiff.dylib in Frameworks */,
-				D1E2EF7F17F55392009A2AE6 /* libxml2.dylib in Frameworks */,
-				D1E2EF8017F55392009A2AE6 /* libz.dylib in Frameworks */,
+				35BBC5F3ECB2B48F3B508203 /* librsvg-2.a in Frameworks */,
+				20336A1EB8BE45B034073052 /* libcroco-0.6.a in Frameworks */,
+				882BE6CE19E6611ED95E1D42 /* libgdk_pixbuf-2.0.a in Frameworks */,
+				B58D4122B6D850ADBE0D9CB0 /* libpangocairo-1.0.a in Frameworks */,
+				2811CB9873E958E93678DCC9 /* libpango-1.0.a in Frameworks */,
+				E46D649A83705E8E40DEF0C9 /* libfribidi.a in Frameworks */,
+				D66FA296E9A1602EB071BD3F /* libcairo.a in Frameworks */,
+				807FAD2BF7F2A6F37DE0CBB9 /* libpixman-1.a in Frameworks */,
+				C3791488570D37F291C7F952 /* libpng16.a in Frameworks */,
+				B1F83B8F3F0BE1E9264B60B2 /* libjpeg.a in Frameworks */,
+				67104BB1C8B193AFCA56CCEE /* libgio-2.0.a in Frameworks */,
+				12C89537F175D53CF1E408AA /* libgobject-2.0.a in Frameworks */,
+				2719A43C272037E6B4DD2C65 /* libgmodule-2.0.a in Frameworks */,
+				33DFC33290BFC2DC1CFC9090 /* libglib-2.0.a in Frameworks */,
+				61F25B3738FC4A305E3431F3 /* libintl.a in Frameworks */,
+				78C02B83A30333DEB6DE7512 /* libz.tbd in Frameworks */,
+				BE367F7F4D7DBEC604BF0D49 /* libxml2.tbd in Frameworks */,
+				B15CC5EB555774DBE79E9D55 /* libiconv.tbd in Frameworks */,
+				BEB08B637FEB9CDDA31D9EC2 /* libffi.tbd in Frameworks */,
+				C9F9578E6CABDC60D2B9F4D8 /* libresolv.tbd in Frameworks */,
+				20E16164BEE0E9255F5F2693 /* ApplicationServices.framework in Frameworks */,
+				E52185B7B6AEE7388A6518EC /* CoreFoundation.framework in Frameworks */,
+				26E9606FA95688CD96225A2B /* CoreGraphics.framework in Frameworks */,
+				357501ADDBF74F78706EF4D2 /* CoreServices.framework in Frameworks */,
+				BD6508603BEA186096C3127D /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +205,7 @@
 				08FB77ADFE841716C02AAC07 /* Source */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				1EBD4A4E1D1EEF1B2D2C785B /* a */,
 				189286360695AD8900B05D6E /* Products */,
 				D1DBC9CD17BC3C6800020037 /* SVG Converter */,
 			);
@@ -190,25 +215,18 @@
 		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				D14E59FB17DBC17300EDFE31 /* libgio.dylib */,
-				D14E59FC17DBC17300EDFE31 /* libglib.dylib */,
-				D14E59FD17DBC17300EDFE31 /* libgmodule.dylib */,
-				D14E59FE17DBC17300EDFE31 /* libgobject.dylib */,
-				D14E59FF17DBC17300EDFE31 /* libgthread.dylib */,
-				D1E2EF6D17F55351009A2AE6 /* libgdk_pixbuf.dylib */,
-				D11724D517BC504700535DBE /* libcairo.dylib */,
-				D1E2EF6F17F5535E009A2AE6 /* libcroco.dylib */,
-				D1E2EF7117F55363009A2AE6 /* libpango.dylib */,
-				D1E2EF7317F5536F009A2AE6 /* libharfbuzz.dylib */,
-				D1E2EF7517F55379009A2AE6 /* libpangocairo.dylib */,
-				D1E2EF7717F55386009A2AE6 /* libjpeg.dylib */,
-				D1E2EF7817F55386009A2AE6 /* libpng.dylib */,
-				D1E2EF7917F55386009A2AE6 /* libtiff.dylib */,
-				D11724D917BC505400535DBE /* librsvg.dylib */,
-				D1E2EF7D17F55392009A2AE6 /* libxml2.dylib */,
-				D1E2EF7E17F55392009A2AE6 /* libz.dylib */,
 				08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */,
 				D130064E12F02D9700702C0E /* Cocoa.framework */,
+				B2EF4A572836A113987E4451 /* libz.tbd */,
+				CBC35646BF823E0447A233C6 /* libxml2.tbd */,
+				B228DB27C14DFC0906F28C1F /* libiconv.tbd */,
+				E5C9E5A7C7588479796F1F0A /* libffi.tbd */,
+				32D6940510EB783B9DE896D5 /* libresolv.tbd */,
+				AE12A91780D6070835EC5AA6 /* ApplicationServices.framework */,
+				558EACD28634E8E1D80C67DD /* CoreFoundation.framework */,
+				1B4525A75E6F91D57E50D64E /* CoreGraphics.framework */,
+				DE19D7BA53DB50E520B5D0F7 /* CoreServices.framework */,
+				29D612B257652F1BAC8B3DC3 /* CoreText.framework */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -286,6 +304,28 @@
 				D19CC1771353782E0004336E /* C_INTEGER.h */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		1EBD4A4E1D1EEF1B2D2C785B /* a */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7D8A7FB867284B8C8F6B1 /* librsvg-2.a */,
+				E97B29BE24767E8F72FACF0F /* libcroco-0.6.a */,
+				AAE58348CCBFBA384B1A47E7 /* libgdk_pixbuf-2.0.a */,
+				6AD17D0FBBC02A029549A79B /* libpangocairo-1.0.a */,
+				B66C4B67181D5FD76B6AE7C1 /* libpango-1.0.a */,
+				B80D7CC556DA3649C163FF7D /* libfribidi.a */,
+				A42C0CC5A1A293DE2B965322 /* libcairo.a */,
+				EB677FAFB23A0F1202266156 /* libpixman-1.a */,
+				FB77B1616FB762420F07EF1E /* libpng16.a */,
+				C06AE2612D8BA38670E96210 /* libjpeg.a */,
+				F688EE01A873CB5F1A252938 /* libgio-2.0.a */,
+				AEF7BF0692C3DE24CD20448F /* libgobject-2.0.a */,
+				28DAF709201E3E05BE2D4D65 /* libgmodule-2.0.a */,
+				9F918694105C1DA8676BC149 /* libglib-2.0.a */,
+				06A81100557B0505CFDF1E1B /* libintl.a */,
+			);
+			path = a;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,24 +504,22 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include/mac",
+					"$(PROJECT_DIR)/include/mac/glib-2.0",
+					"$(PROJECT_DIR)/include/mac/cairo",
+					"$(PROJECT_DIR)/include/mac/pango-1.0",
+					"$(PROJECT_DIR)/include/mac/gdk-pixbuf-2.0",
+					"$(PROJECT_DIR)/include/mac/librsvg-2.0",
+					"$(PROJECT_DIR)/include/mac/librsvg-2.0/librsvg",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6)",
+					"$(PROJECT_DIR)/a",
 				);
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
@@ -521,24 +559,22 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include/mac",
+					"$(PROJECT_DIR)/include/mac/glib-2.0",
+					"$(PROJECT_DIR)/include/mac/cairo",
+					"$(PROJECT_DIR)/include/mac/pango-1.0",
+					"$(PROJECT_DIR)/include/mac/gdk-pixbuf-2.0",
+					"$(PROJECT_DIR)/include/mac/librsvg-2.0",
+					"$(PROJECT_DIR)/include/mac/librsvg-2.0/librsvg",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6)",
+					"$(PROJECT_DIR)/a",
 				);
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
@@ -576,24 +612,22 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include/mac",
+					"$(PROJECT_DIR)/include/mac/glib-2.0",
+					"$(PROJECT_DIR)/include/mac/cairo",
+					"$(PROJECT_DIR)/include/mac/pango-1.0",
+					"$(PROJECT_DIR)/include/mac/gdk-pixbuf-2.0",
+					"$(PROJECT_DIR)/include/mac/librsvg-2.0",
+					"$(PROJECT_DIR)/include/mac/librsvg-2.0/librsvg",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
-					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6)",
+					"$(PROJECT_DIR)/a",
 				);
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
-				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/SVG Converter.4dbase/Plugins/SVG Converter.bundle/Contents/MacOS\"";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
@@ -648,7 +682,6 @@
 				OBJROOT = "$(SRCROOT)/build";
 				SDKROOT = macosx;
 				SYMROOT = "$(SRCROOT)/SVG Converter.4dbase/Plugins";
-				USER_HEADER_SEARCH_PATHS = "include/mac/**";
 			};
 			name = Development;
 		};
@@ -685,7 +718,6 @@
 				OBJROOT = "$(SRCROOT)/build";
 				SDKROOT = macosx;
 				SYMROOT = "$(SRCROOT)/SVG Converter.4dbase/Plugins";
-				USER_HEADER_SEARCH_PATHS = "include/mac/**";
 			};
 			name = Deployment;
 		};
@@ -722,7 +754,6 @@
 				OBJROOT = "$(SRCROOT)/build";
 				SDKROOT = macosx;
 				SYMROOT = "$(SRCROOT)/SVG Converter.4dbase/Plugins";
-				USER_HEADER_SEARCH_PATHS = "include/mac/**";
 			};
 			name = Default;
 		};

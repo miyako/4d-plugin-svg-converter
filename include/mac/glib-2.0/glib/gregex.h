@@ -14,9 +14,8 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
 #ifndef __G_REGEX_H__
@@ -56,7 +55,7 @@ G_BEGIN_DECLS
  *     Since 2.16
  * @G_REGEX_ERROR_NOTHING_TO_REPEAT: Nothing to repeat. Since 2.16
  * @G_REGEX_ERROR_UNRECOGNIZED_CHARACTER: Unrecognized character after "(?",
- *     "(?&lt;" or "(?P". Since 2.16
+ *     "(?<" or "(?P". Since 2.16
  * @G_REGEX_ERROR_POSIX_NAMED_CLASS_OUTSIDE_CLASS: POSIX named classes are
  *     supported only within a class. Since 2.16
  * @G_REGEX_ERROR_UNMATCHED_PARENTHESIS: Missing terminating ")" or ")"
@@ -231,7 +230,7 @@ GQuark g_regex_error_quark (void);
  *     newline in the string, respectively, as well as at the very start
  *     and end. This can be changed within a pattern by a "(?m)" option
  *     setting.
- * @G_REGEX_DOTALL: A dot metacharater (".") in the pattern matches all
+ * @G_REGEX_DOTALL: A dot metacharacter (".") in the pattern matches all
  *     characters, including newlines. Without it, newlines are excluded.
  *     This option can be changed within a pattern by a ("?s") option setting.
  * @G_REGEX_EXTENDED: Whitespace data characters in the pattern are
@@ -244,7 +243,7 @@ GQuark g_regex_error_quark (void);
  *     it is constrained to match only at the first matching point in the
  *     string that is being searched. This effect can also be achieved by
  *     appropriate constructs in the pattern itself such as the "^"
- *     metacharater.
+ *     metacharacter.
  * @G_REGEX_DOLLAR_ENDONLY: A dollar metacharacter ("$") in the pattern
  *     matches only at the end of the string. Without this option, a
  *     dollar also matches immediately before the final character if
@@ -292,7 +291,8 @@ GQuark g_regex_error_quark (void);
  * Since: 2.14
  */
 /* Remember to update G_REGEX_COMPILE_MASK in gregex.c after
- * adding a new flag. */
+ * adding a new flag.
+ */
 typedef enum
 {
   G_REGEX_CASELESS          = 1 << 0,
@@ -321,7 +321,7 @@ typedef enum
  *     it is constrained to match only at the first matching point in the
  *     string that is being searched. This effect can also be achieved by
  *     appropriate constructs in the pattern itself such as the "^"
- *     metacharater.
+ *     metacharacter.
  * @G_REGEX_MATCH_NOTBOL: Specifies that first character of the string is
  *     not the beginning of a line, so the circumflex metacharacter should
  *     not match before it. Setting this without #G_REGEX_MULTILINE (at
@@ -405,14 +405,20 @@ typedef enum
 /**
  * GRegex:
  *
- * A GRegex is the "compiled" form of a regular expression pattern. This
- * structure is opaque and its fields cannot be accessed directly.
+ * A GRegex is the "compiled" form of a regular expression pattern.
+ * This structure is opaque and its fields cannot be accessed directly.
  *
  * Since: 2.14
  */
 typedef struct _GRegex		GRegex;
 
 
+/**
+ * GMatchInfo:
+ *
+ * A GMatchInfo is an opaque struct used to return information about
+ * matches.
+ */
 typedef struct _GMatchInfo	GMatchInfo;
 
 /**

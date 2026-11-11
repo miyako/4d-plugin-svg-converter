@@ -4,7 +4,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 2.1 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,9 +12,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General
- * Public License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
- * Boston, MA 02111-1307, USA.
+ * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
  *
  * gvaluecollector.h: GValue varargs stubs
  */
@@ -158,6 +156,13 @@ G_STMT_START {										\
   G_VALUE_COLLECT_INIT(value, _value_type, var_args, flags, __error);			\
 } G_STMT_END
 
+/**
+ * G_VALUE_COLLECT_SKIP:
+ * @_value_type: the #GType of the value to skip
+ * @var_args: the va_list variable; it may be evaluated multiple times
+ *
+ * Skip an argument of type @_value_type from @var_args.
+ */
 #define G_VALUE_COLLECT_SKIP(_value_type, var_args)					\
 G_STMT_START {										\
   GTypeValueTable *_vtable = g_type_value_table_peek (_value_type);			\
@@ -246,7 +251,7 @@ G_STMT_START {										\
 /**
  * G_VALUE_COLLECT_FORMAT_MAX_LENGTH:
  * 
- * The maximal number of #GTypeCValue<!-- -->s which can be collected for a 
+ * The maximal number of #GTypeCValues which can be collected for a 
  * single #GValue.
  */
 #define	G_VALUE_COLLECT_FORMAT_MAX_LENGTH	(8)

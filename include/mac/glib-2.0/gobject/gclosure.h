@@ -5,7 +5,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 2.1 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -13,9 +13,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General
- * Public License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
- * Boston, MA 02111-1307, USA.
+ * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 #ifndef __G_CLOSURE_H__
 #define __G_CLOSURE_H__
@@ -99,16 +97,16 @@ typedef void  (*GClosureNotify)		(gpointer	 data,
 /**
  * GClosureMarshal:
  * @closure: the #GClosure to which the marshaller belongs
- * @return_value: (allow-none): a #GValue to store the return
+ * @return_value: (nullable): a #GValue to store the return
  *  value. May be %NULL if the callback of @closure doesn't return a
  *  value.
  * @n_param_values: the length of the @param_values array
  * @param_values: (array length=n_param_values): an array of
- *  #GValue<!-- -->s holding the arguments on which to invoke the
+ *  #GValues holding the arguments on which to invoke the
  *  callback of @closure
- * @invocation_hint: (allow-none): the invocation hint given as the
+ * @invocation_hint: (nullable): the invocation hint given as the
  *  last argument to g_closure_invoke()
- * @marshal_data: (allow-none): additional data specified when
+ * @marshal_data: (nullable): additional data specified when
  *  registering the marshaller, see g_closure_set_marshal() and
  *  g_closure_set_meta_marshal()
  * 
@@ -121,6 +119,26 @@ typedef void  (*GClosureMarshal)	(GClosure	*closure,
 					 gpointer        invocation_hint,
 					 gpointer	 marshal_data);
 
+/**
+ * GVaClosureMarshal:
+ * @closure: the #GClosure to which the marshaller belongs
+ * @return_value: (nullable): a #GValue to store the return
+ *  value. May be %NULL if the callback of @closure doesn't return a
+ *  value.
+ * @instance: (type GObject.TypeInstance): the instance on which the closure is
+ *  invoked.
+ * @args: va_list of arguments to be passed to the closure.
+ * @marshal_data: (nullable): additional data specified when
+ *  registering the marshaller, see g_closure_set_marshal() and
+ *  g_closure_set_meta_marshal()
+ * @n_params: the length of the @param_types array
+ * @param_types: (array length=n_params): the #GType of each argument from
+ *  @args.
+ *
+ * This is the signature of va_list marshaller functions, an optional
+ * marshaller that can be used in some situations to avoid
+ * marshalling the signal argument into GValues.
+ */
 typedef void (* GVaClosureMarshal) (GClosure *closure,
 				    GValue   *return_value,
 				    gpointer  instance,

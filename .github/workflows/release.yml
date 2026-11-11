@@ -178,6 +178,32 @@ jobs:
         with:
           ref: ${{ needs.version.outputs.tag }}
 
+      # The librsvg stack (a/*.a) is built from pinned sources by
+      # scripts/build-macos-deps.sh. The cache key changes with the script
+      # (pins, flags), and the cache is saved right after the build so a
+      # later signing failure doesn't throw the build away.
+      - name: restore prebuilt libraries
+        id: deps-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: a/*.a
+          key: macos-deps-${{ hashFiles('scripts/build-macos-deps.sh') }}
+
+      - name: build prebuilt libraries (cache miss)
+        if: steps.deps-cache.outputs.cache-hit != 'true'
+        env:
+          MACOSX_DEPLOYMENT_TARGET: ${{ env.MACOS_DEPLOYMENT_TARGET }}
+        run: |
+          command -v pkg-config >/dev/null || brew install pkgconf
+          scripts/build-macos-deps.sh a
+
+      - name: save prebuilt libraries
+        if: steps.deps-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: a/*.a
+          key: macos-deps-${{ hashFiles('scripts/build-macos-deps.sh') }}
+
       # Every library the Xcode project references must be present, and every
       # static or dynamic library the target links must carry arm64 + x86_64.
       # Paths are resolved through the project's group hierarchy, so a

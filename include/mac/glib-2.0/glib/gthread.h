@@ -1,10 +1,10 @@
 /* GLIB - Library of useful routines for C programming
  * Copyright (C) 1995-1997  Peter Mattis, Spencer Kimball and Josh MacDonald
  *
- * This library is free software; you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as
- * published by the Free Software Foundation; either version 2 of the
- * licence, or (at your option) any later version.
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,9 +12,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307,
- * USA.
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
 /*
@@ -33,6 +31,7 @@
 
 #include <glib/gatomic.h>
 #include <glib/gerror.h>
+#include <glib/gutils.h>
 
 G_BEGIN_DECLS
 
@@ -267,6 +266,75 @@ void            g_once_init_leave               (volatile void  *location,
 
 GLIB_AVAILABLE_IN_2_36
 guint          g_get_num_processors (void);
+
+/**
+ * GMutexLocker:
+ *
+ * Opaque type. See g_mutex_locker_new() for details.
+ * Since: 2.44
+ */
+typedef void GMutexLocker;
+
+/**
+ * g_mutex_locker_new:
+ * @mutex: a mutex to lock
+ *
+ * Lock @mutex and return a new #GMutexLocker. Unlock with
+ * g_mutex_locker_free(). Using g_mutex_unlock() on @mutex
+ * while a #GMutexLocker exists can lead to undefined behaviour.
+ *
+ * This is intended to be used with g_autoptr().  Note that g_autoptr()
+ * is only available when using GCC or clang, so the following example
+ * will only work with those compilers:
+ * |[
+ * typedef struct
+ * {
+ *   ...
+ *   GMutex mutex;
+ *   ...
+ * } MyObject;
+ *
+ * static void
+ * my_object_do_stuff (MyObject *self)
+ * {
+ *   g_autoptr(GMutexLocker) locker = g_mutex_locker_new (&self->mutex);
+ *
+ *   // Code with mutex locked here
+ *
+ *   if (cond)
+ *     // No need to unlock
+ *     return;
+ *
+ *   // Optionally early unlock
+ *   g_clear_pointer (&locker, g_mutex_locker_free);
+ *
+ *   // Code with mutex unlocked here
+ * }
+ * ]|
+ *
+ * Returns: a #GMutexLocker
+ * Since: 2.44
+ */
+static inline GMutexLocker *
+g_mutex_locker_new (GMutex *mutex)
+{
+  g_mutex_lock (mutex);
+  return (GMutexLocker *) mutex;
+}
+
+/**
+ * g_mutex_locker_free:
+ * @locker: a GMutexLocker
+ *
+ * Unlock @locker's mutex. See g_mutex_locker_new() for details.
+ *
+ * Since: 2.44
+ */
+static inline void
+g_mutex_locker_free (GMutexLocker *locker)
+{
+  g_mutex_unlock ((GMutex *) locker);
+}
 
 G_END_DECLS
 

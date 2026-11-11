@@ -10,7 +10,7 @@ Converts SVG pictures to PDF, PNG, PostScript or SVG with [librsvg](https://wiki
 
 **Platforms:** macOS, Windows (64-bit)
 
-Powered by libcairo, libcroco, libffi, libfontconfig, libfreetype, libgdk_pixbuf, libgio, libglib, libgmodule, libgobject, libharfbuzz, libiconv, libintl, libjpeg, libpango, libpangocairo, libpangoft2, libpixman, libpng, librsvg (2.37), libtiff, libxml2 and libz, shipped as dynamic libraries inside the plugin bundle (`Contents/MacOS/*.dylib`, `Contents/Windows64/*.dll`). The bundle is large (about 73 MB).
+Powered by librsvg, libcroco, gdk-pixbuf, pango, fribidi, cairo, pixman, glib/gio, libpng and libjpeg. On macOS they are built from pinned sources as universal (arm64 + x86_64) static libraries and linked into the plugin binary (librsvg 2.40.21, cairo 1.16.0, pango 1.42.4 with CoreText fonts, glib 2.56.4; see `scripts/build-macos-deps.sh`), with libxml2, zlib, libiconv and libffi from the system. On Windows they ship as DLLs in `Contents/Windows64` (librsvg 2.37, with libfontconfig, libfreetype, libharfbuzz, libintl and others).
 
 **Related projects**: [4d-plugin-svg-converter-light](https://github.com/miyako/4d-plugin-svg-converter-light), [4d-plugin-PDF2SVG](https://github.com/miyako/4d-plugin-PDF2SVG)
 
@@ -26,7 +26,7 @@ Powered by libcairo, libcroco, libffi, libfontconfig, libfreetype, libgdk_pixbuf
 
 ## Requirements & platform notes
 
-- **macOS builds are Intel-only for now.** The librsvg/cairo/pango/glib dylibs bundled in `Contents/MacOS` have no `arm64` slice, so a universal (Apple silicon) build can't be linked until they are rebuilt. On Apple silicon, 4D must run under Rosetta to load the 2.1 release.
+- **macOS builds are universal (Apple silicon and Intel), macOS 11.5 or later.** Since the librsvg stack is now built from source, text uses the system fonts through CoreText, so `font-family` names such as `Times New Roman` or `Courier` resolve to the installed Mac fonts; the 2.1 release fell back to one sans-serif font for most families. TIFF images embedded in an SVG are no longer decoded on macOS (PNG and JPEG are).
 - **The input must be a picture that still holds SVG data.** The plugin looks for the `.svg` codec among the formats stored in the picture. A picture that 4D has already converted to a bitmap (PNG, JPEG, …) is rejected with error `-2`.
 - **Every parameter is mandatory.** Both commands always take seven parameters; there is no short form. Pass empty arrays and empty strings for the parts you don't use.
 - **Failure is reported through the result code, not as a 4D error.** Check the returned `Longint`, and also check that the output `Blob` isn't empty: some failures (for example a PNG encoding failure) return `0` with an empty `Blob`.

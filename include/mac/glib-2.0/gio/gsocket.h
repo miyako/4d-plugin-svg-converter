@@ -5,7 +5,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 2.1 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -13,9 +13,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General
- * Public License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
- * Boston, MA 02111-1307, USA.
+ * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
  *
  * Authors: Christian Kellner <gicmo@gnome.org>
  *          Samuel Cormier-Iijima <sciyoshi@gmail.com>
@@ -159,6 +157,18 @@ gboolean               g_socket_leave_multicast_group   (GSocket                
                                                          gboolean                 source_specific,
                                                          const gchar             *iface,
                                                          GError                 **error);
+GLIB_AVAILABLE_IN_2_56
+gboolean               g_socket_join_multicast_group_ssm    (GSocket                 *socket,
+                                                             GInetAddress            *group,
+                                                             GInetAddress            *source_specific,
+                                                             const gchar             *iface,
+                                                             GError                 **error);
+GLIB_AVAILABLE_IN_2_56
+gboolean               g_socket_leave_multicast_group_ssm   (GSocket                 *socket,
+                                                             GInetAddress            *group,
+                                                             GInetAddress            *source_specific,
+                                                             const gchar             *iface,
+                                                             GError                 **error);
 GLIB_AVAILABLE_IN_ALL
 gboolean               g_socket_connect                 (GSocket                 *socket,
 							 GSocketAddress          *address,
@@ -238,6 +248,22 @@ gssize                 g_socket_send_message            (GSocket                
 							 gint                     flags,
 							 GCancellable            *cancellable,
 							 GError                 **error);
+
+GLIB_AVAILABLE_IN_2_48
+gint                   g_socket_receive_messages        (GSocket                 *socket,
+                                                         GInputMessage           *messages,
+                                                         guint                    num_messages,
+                                                         gint                     flags,
+                                                         GCancellable            *cancellable,
+                                                         GError                 **error);
+GLIB_AVAILABLE_IN_2_44
+gint                   g_socket_send_messages           (GSocket                 *socket,
+							 GOutputMessage          *messages,
+							 guint                    num_messages,
+							 gint                     flags,
+							 GCancellable            *cancellable,
+							 GError                 **error);
+
 GLIB_AVAILABLE_IN_ALL
 gboolean               g_socket_close                   (GSocket                 *socket,
 							 GError                 **error);

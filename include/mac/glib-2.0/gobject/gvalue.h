@@ -4,7 +4,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 2.1 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,9 +12,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General
- * Public License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
- * Boston, MA 02111-1307, USA.
+ * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
  *
  * gvalue.h: generic GValue functions
  */
@@ -90,6 +88,8 @@ G_BEGIN_DECLS
  * 
  * The type of value transformation functions which can be registered with
  * g_value_register_transform_func().
+ *
+ * @dest_value will be initialized to the correct destination type.
  */
 typedef void (*GValueTransform) (const GValue *src_value,
 				 GValue       *dest_value);
@@ -139,6 +139,9 @@ void            g_value_unset   	(GValue       *value);
 GLIB_AVAILABLE_IN_ALL
 void		g_value_set_instance	(GValue	      *value,
 					 gpointer      instance);
+GLIB_AVAILABLE_IN_2_42
+void            g_value_init_from_instance   (GValue       *value,
+                                              gpointer      instance);
 
 
 /* --- private --- */
@@ -175,10 +178,9 @@ void	g_value_register_transform_func	(GType		 src_type,
 /**
  * G_VALUE_INIT:
  *
- * A #GValue must be initialized before it can be used.
- * This macro can be used as initializer instead of an explicit
- * <literal>{ 0 }</literal> when declaring a variable,
- * but it cannot be assigned to a variable.
+ * A #GValue must be initialized before it can be used. This macro can
+ * be used as initializer instead of an explicit `{ 0 }` when declaring
+ * a variable, but it cannot be assigned to a variable.
  *
  * |[
  *   GValue value = G_VALUE_INIT;

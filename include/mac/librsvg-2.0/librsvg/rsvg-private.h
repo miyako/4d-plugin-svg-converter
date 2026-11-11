@@ -123,18 +123,29 @@ struct RsvgSaxHandler {
 };
 
 typedef enum {
-    RSVG_LOAD_POLICY_ALL_PERMISSIVE
+    RSVG_LOAD_POLICY_STRICT
 } RsvgLoadPolicy;
 
-#define RSVG_LOAD_POLICY_DEFAULT (RSVG_LOAD_POLICY_ALL_PERMISSIVE)
+#define RSVG_LOAD_POLICY_DEFAULT (RSVG_LOAD_POLICY_STRICT)
+
+/* Reading state for an RsvgHandle */
+typedef enum {
+    RSVG_HANDLE_STATE_START,
+    RSVG_HANDLE_STATE_EXPECTING_GZ_1,
+    RSVG_HANDLE_STATE_READING_COMPRESSED,
+    RSVG_HANDLE_STATE_READING,
+    RSVG_HANDLE_STATE_CLOSED_OK,
+    RSVG_HANDLE_STATE_CLOSED_ERROR
+} RsvgHandleState;
 
 struct RsvgHandlePrivate {
     RsvgHandleFlags flags;
 
+    RsvgHandleState state;
+
     RsvgLoadPolicy load_policy;
 
     gboolean is_disposed;
-    gboolean is_closed;
 
     RsvgSizeFunc size_func;
     gpointer user_data;
@@ -156,6 +167,7 @@ struct RsvgHandlePrivate {
      */
     RsvgSaxHandler *handler;
     int handler_nest;
+    gsize num_loaded_elements;
 
     GHashTable *entities;       /* g_malloc'd string -> xmlEntityPtr */
 
@@ -173,12 +185,11 @@ struct RsvgHandlePrivate {
     gchar *base_uri;
     GFile *base_gfile;
 
-    gboolean finished;
-
     gboolean in_loop;		/* see get_dimension() */
 
-    gboolean first_write;
-    GInputStream *data_input_stream; /* for rsvg_handle_write of svgz data */
+    GInputStream *compressed_input_stream; /* for rsvg_handle_write of svgz data */
+
+    gboolean is_testing; /* Are we being run from the test suite? */
 };
 
 typedef struct {
@@ -193,13 +204,14 @@ struct RsvgDrawingCtx {
     RsvgState *state;
     GError **error;
     RsvgDefs *defs;
-    gchar *base_uri;
+    gsize num_elements_acquired;
     PangoContext *pango_context;
     double dpi_x, dpi_y;
     RsvgViewBox vb;
     GSList *vb_stack;
     GSList *drawsub_stack;
-    GSList *ptrs;
+    GSList *acquired_nodes;
+    gboolean is_testing;
 };
 
 /*Abstract base class for context for our backends (one as yet)*/
@@ -293,7 +305,7 @@ typedef enum {
     /* Filter primitives */
     RSVG_NODE_TYPE_FILTER_PRIMITIVE = 64,
     RSVG_NODE_TYPE_FILTER_PRIMITIVE_BLEND,
-    RSVG_NODE_TYPE_FILTER_PRIMITIVE_COLOUR_MATRIX,
+    RSVG_NODE_TYPE_FILTER_PRIMITIVE_COLOR_MATRIX,
     RSVG_NODE_TYPE_FILTER_PRIMITIVE_COMPONENT_TRANSFER,
     RSVG_NODE_TYPE_FILTER_PRIMITIVE_COMPOSITE,
     RSVG_NODE_TYPE_FILTER_PRIMITIVE_CONVOLVE_MATRIX,
@@ -353,12 +365,19 @@ GdkPixbuf *rsvg_pixbuf_from_data_with_size_data (const guchar * buff,
                                                  const char *base_uri, GError ** error);
 G_GNUC_INTERNAL
 gboolean     rsvg_eval_switch_attributes	(RsvgPropertyBag * atts, gboolean * p_has_cond);
-G_GNUC_INTERNAL
-gchar       *rsvg_get_base_uri_from_filename    (const gchar * file_name);
+
 G_GNUC_INTERNAL
 void rsvg_pop_discrete_layer    (RsvgDrawingCtx * ctx);
 G_GNUC_INTERNAL
 void rsvg_push_discrete_layer   (RsvgDrawingCtx * ctx);
+G_GNUC_INTERNAL
+gboolean rsvg_drawing_ctx_limits_exceeded (RsvgDrawingCtx *draw_ctx);
+G_GNUC_INTERNAL
+RsvgNode *rsvg_drawing_ctx_acquire_node_ref     (RsvgDrawingCtx * ctx, RsvgNode *node);
+G_GNUC_INTERNAL
+RsvgNode *rsvg_acquire_node     (RsvgDrawingCtx * ctx, const char *url);
+G_GNUC_INTERNAL
+void rsvg_release_node          (RsvgDrawingCtx * ctx, RsvgNode *node);
 G_GNUC_INTERNAL
 void rsvg_render_path           (RsvgDrawingCtx * ctx, const cairo_path_t *path);
 G_GNUC_INTERNAL
@@ -391,6 +410,8 @@ double _rsvg_css_hand_normalize_length  (const RsvgLength * in, gdouble pixels_p
                                          gdouble width_or_height, gdouble font_size);
 double _rsvg_css_normalize_font_size    (RsvgState * state, RsvgDrawingCtx * ctx);
 G_GNUC_INTERNAL
+double _rsvg_css_accumulate_baseline_shift (RsvgState * state, RsvgDrawingCtx * ctx);
+G_GNUC_INTERNAL
 RsvgLength _rsvg_css_parse_length (const char *str);
 G_GNUC_INTERNAL
 void _rsvg_push_view_box    (RsvgDrawingCtx * ctx, double w, double h);
@@ -405,16 +426,28 @@ void rsvg_return_if_fail_warning (const char *pretty_function,
                                   const char *expression, GError ** error);
 
 G_GNUC_INTERNAL
-guint8* _rsvg_handle_acquire_data (RsvgHandle *handle,
-                                   const char *uri,
-                                   char **content_type,
-                                   gsize *len,
-                                   GError **error);
+char *rsvg_handle_resolve_uri (RsvgHandle *handle,
+                               const char *uri);
+
+G_GNUC_INTERNAL
+gboolean rsvg_allow_load (GFile       *base_gfile,
+                          const char  *uri,
+                          GError     **error);
+
+G_GNUC_INTERNAL
+char *_rsvg_handle_acquire_data (RsvgHandle *handle,
+                                 const char *uri,
+                                 char **content_type,
+                                 gsize *len,
+                                 GError **error);
 G_GNUC_INTERNAL
 GInputStream *_rsvg_handle_acquire_stream (RsvgHandle *handle,
                                            const char *uri,
                                            char **content_type,
                                            GError **error);
+
+G_GNUC_INTERNAL
+xmlParserCtxtPtr rsvg_free_xml_parser_and_doc (xmlParserCtxtPtr ctxt) G_GNUC_WARN_UNUSED_RESULT;
 
 
 #define rsvg_return_if_fail(expr, error)    G_STMT_START{			\

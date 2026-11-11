@@ -4,7 +4,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 2.1 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,9 +12,7 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
- * Boston, MA 02111-1307, USA.
+ * License along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
 /*
@@ -43,46 +41,11 @@ G_BEGIN_DECLS
 #  if defined (__GNUC__) && defined (__PPC__) && (defined (_CALL_SYSV) || defined (_WIN32))
 #    define G_VA_COPY(ap1, ap2)	  (*(ap1) = *(ap2))
 #  elif defined (G_VA_COPY_AS_ARRAY)
-#    define G_VA_COPY(ap1, ap2)	  g_memmove ((ap1), (ap2), sizeof (va_list))
+#    define G_VA_COPY(ap1, ap2)	  memmove ((ap1), (ap2), sizeof (va_list))
 #  else /* va_list is a pointer */
 #    define G_VA_COPY(ap1, ap2)	  ((ap1) = (ap2))
 #  endif /* va_list is a pointer */
 #endif /* !G_VA_COPY */
-
-/* inlining hassle. for compilers that don't allow the 'inline' keyword,
- * mostly because of strict ANSI C compliance or dumbness, we try to fall
- * back to either '__inline__' or '__inline'.
- * G_CAN_INLINE is defined in glibconfig.h if the compiler seems to be 
- * actually *capable* to do function inlining, in which case inline 
- * function bodies do make sense. we also define G_INLINE_FUNC to properly 
- * export the function prototypes if no inlining can be performed.
- * inline function bodies have to be special cased with G_CAN_INLINE and a
- * .c file specific macro to allow one compiled instance with extern linkage
- * of the functions by defining G_IMPLEMENT_INLINES and the .c file macro.
- */
-#if defined (G_HAVE_INLINE) && defined (__GNUC__) && defined (__STRICT_ANSI__)
-#  undef inline
-#  define inline __inline__
-#elif !defined (G_HAVE_INLINE)
-#  undef inline
-#  if defined (G_HAVE___INLINE__)
-#    define inline __inline__
-#  elif defined (G_HAVE___INLINE)
-#    define inline __inline
-#  else /* !inline && !__inline__ && !__inline */
-#    define inline  /* don't inline, then */
-#  endif
-#endif
-#ifdef G_IMPLEMENT_INLINES
-#  define G_INLINE_FUNC _GLIB_EXTERN
-#  undef  G_CAN_INLINE
-#elif defined (__GNUC__) 
-#  define G_INLINE_FUNC static __inline __attribute__ ((unused))
-#elif defined (G_CAN_INLINE) 
-#  define G_INLINE_FUNC static inline
-#else /* can't inline */
-#  define G_INLINE_FUNC _GLIB_EXTERN
-#endif /* !G_INLINE_FUNC */
 
 GLIB_AVAILABLE_IN_ALL
 const gchar *         g_get_user_name        (void);
@@ -120,7 +83,7 @@ GLIB_AVAILABLE_IN_ALL
 const gchar * const * g_win32_get_system_data_dirs_for_module (void (*address_of_function)(void));
 #endif
 
-#if defined (G_OS_WIN32) && defined (G_CAN_INLINE) && !defined (__cplusplus)
+#if defined (G_OS_WIN32) && defined (G_CAN_INLINE)
 /* This function is not part of the public GLib API either. Just call
  * g_get_system_data_dirs() in your code, never mind that that is
  * actually a macro and you will in fact call this inline function.
@@ -218,7 +181,8 @@ typedef enum
 {
   G_FORMAT_SIZE_DEFAULT     = 0,
   G_FORMAT_SIZE_LONG_FORMAT = 1 << 0,
-  G_FORMAT_SIZE_IEC_UNITS   = 1 << 1
+  G_FORMAT_SIZE_IEC_UNITS   = 1 << 1,
+  G_FORMAT_SIZE_BITS        = 1 << 2
 } GFormatSizeFlags;
 
 GLIB_AVAILABLE_IN_2_30
@@ -239,16 +203,7 @@ gchar *g_format_size_for_display (goffset size);
  * function passed to g_atexit().
  */
 typedef void (*GVoidFunc) (void);
-#ifndef ATEXIT
-# define ATEXIT(proc) g_ATEXIT(proc)
-#else
-# define G_NATIVE_ATEXIT
-#endif /* ATEXIT */
-/* we use a GLib function as a replacement for ATEXIT, so
- * the programmer is not required to check the return value
- * (if there is any in the implementation) and doesn't encounter
- * missing include files.
- */
+#define ATEXIT(proc) g_ATEXIT(proc)
 GLIB_DEPRECATED
 void	g_atexit		(GVoidFunc    func);
 
@@ -265,7 +220,7 @@ int atexit (void (*)(void));
 #define g_atexit(func) atexit(func)
 #endif
 
-#endif  /* G_DISABLE_DEPRECATED */
+#endif
 
 
 /* Look for an executable in PATH, following execvp() rules */
@@ -273,19 +228,32 @@ GLIB_AVAILABLE_IN_ALL
 gchar*  g_find_program_in_path  (const gchar *program);
 
 /* Bit tests
+ *
+ * These are defined in a convoluted way because we want the compiler to
+ * be able to inline the code for performance reasons, but for
+ * historical reasons, we must continue to provide non-inline versions
+ * on our ABI.
+ *
+ * We define these as functions in gutils.c which are just implemented
+ * as calls to the _impl() versions in order to preserve the ABI.
  */
-G_INLINE_FUNC gint	g_bit_nth_lsf (gulong  mask,
-				       gint    nth_bit) G_GNUC_CONST;
-G_INLINE_FUNC gint	g_bit_nth_msf (gulong  mask,
-				       gint    nth_bit) G_GNUC_CONST;
-G_INLINE_FUNC guint	g_bit_storage (gulong  number) G_GNUC_CONST;
 
-/* inline function implementations
- */
-#if defined (G_CAN_INLINE) || defined (__G_UTILS_C__)
-G_INLINE_FUNC gint
-g_bit_nth_lsf (gulong mask,
-	       gint   nth_bit)
+#define g_bit_nth_lsf(mask, nth_bit) g_bit_nth_lsf_impl(mask, nth_bit)
+#define g_bit_nth_msf(mask, nth_bit) g_bit_nth_msf_impl(mask, nth_bit)
+#define g_bit_storage(number)        g_bit_storage_impl(number)
+
+GLIB_AVAILABLE_IN_ALL
+gint    (g_bit_nth_lsf)         (gulong mask,
+                                 gint   nth_bit);
+GLIB_AVAILABLE_IN_ALL
+gint    (g_bit_nth_msf)         (gulong mask,
+                                 gint   nth_bit);
+GLIB_AVAILABLE_IN_ALL
+guint   (g_bit_storage)         (gulong number);
+
+static inline gint
+g_bit_nth_lsf_impl (gulong mask,
+                    gint   nth_bit)
 {
   if (G_UNLIKELY (nth_bit < -1))
     nth_bit = -1;
@@ -293,13 +261,14 @@ g_bit_nth_lsf (gulong mask,
     {
       nth_bit++;
       if (mask & (1UL << nth_bit))
-	return nth_bit;
+        return nth_bit;
     }
   return -1;
 }
-G_INLINE_FUNC gint
-g_bit_nth_msf (gulong mask,
-	       gint   nth_bit)
+
+static inline gint
+g_bit_nth_msf_impl (gulong mask,
+                    gint   nth_bit)
 {
   if (nth_bit < 0 || G_UNLIKELY (nth_bit > GLIB_SIZEOF_LONG * 8))
     nth_bit = GLIB_SIZEOF_LONG * 8;
@@ -307,19 +276,20 @@ g_bit_nth_msf (gulong mask,
     {
       nth_bit--;
       if (mask & (1UL << nth_bit))
-	return nth_bit;
+        return nth_bit;
     }
   return -1;
 }
-G_INLINE_FUNC guint
-g_bit_storage (gulong number)
+
+static inline guint
+g_bit_storage_impl (gulong number)
 {
 #if defined(__GNUC__) && (__GNUC__ >= 4) && defined(__OPTIMIZE__)
   return G_LIKELY (number) ?
-	   ((GLIB_SIZEOF_LONG * 8U - 1) ^ (guint) __builtin_clzl(number)) + 1 : 1;
+           ((GLIB_SIZEOF_LONG * 8U - 1) ^ (guint) __builtin_clzl(number)) + 1 : 1;
 #else
-  register guint n_bits = 0;
-  
+  guint n_bits = 0;
+
   do
     {
       n_bits++;
@@ -329,7 +299,17 @@ g_bit_storage (gulong number)
   return n_bits;
 #endif
 }
-#endif  /* G_CAN_INLINE || __G_UTILS_C__ */
+
+/* Crashes the program. */
+#if GLIB_VERSION_MAX_ALLOWED >= GLIB_VERSION_2_50
+#ifndef G_OS_WIN32
+#  include <stdlib.h>
+#  define g_abort() abort ()
+#else
+GLIB_AVAILABLE_IN_2_50
+void g_abort (void) G_GNUC_NORETURN G_ANALYZER_NORETURN;
+#endif
+#endif
 
 #ifndef G_DISABLE_DEPRECATED
 
