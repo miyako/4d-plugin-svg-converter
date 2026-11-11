@@ -49,6 +49,15 @@ void CommandDispatcher (PA_long32 pProcNum, sLONG_PTR *pResult, PackagePtr pPara
 
 #pragma mark -
 
+// 4D reals can be outside the int range; converting such a value to int
+// is undefined behaviour, so map anything out of range (or NaN) to -1.
+static int _realToInt(double value)
+{
+	if(!(value >= -2147483648.0 && value <= 2147483647.0))
+		return -1;
+	return (int)value;
+}
+
 static cairo_status_t rsvg_cairo_write_func (void *data, const unsigned char *bytes, unsigned int len)
 {	
 	if(len > 0)
@@ -113,15 +122,15 @@ void _getParams(ARRAY_LONGINT &keys, ARRAY_REAL &values,
 				break;	
 				
 			case SVG_WIDTH:
-				*width = value;
+				*width = _realToInt(value);
 				break;
 				
 			case SVG_HEIGHT:
-				*height = value;
+				*height = _realToInt(value);
 				break;	
 				
 			case SVG_KEEP_ASPECT_RATIO:
-				*keep_aspect_ratio = value;
+				*keep_aspect_ratio = _realToInt(value);
 				break;					
 		}
 		
@@ -177,27 +186,19 @@ void SVG_Convert_array(sLONG_PTR *pResult, PackagePtr pParams)
 	
 	Param1 = *((PA_Variable*) pParams[0]);
 	
-	switch (Param1.fType) 
-	{
-		case eVK_ArrayPicture:
-			break;
-		case eVK_Undefined:
-			PA_ClearVariable(&Param1);				
-			Param1 = PA_CreateVariable(eVK_ArrayPicture);
-			break;				
-		default:
-			break;
-	}
+	// An undefined variable is treated as an empty array. The old code
+	// created a picture array here that was never returned or freed.
+	bool isArray = (Param1.fType == eVK_ArrayPicture);
 	
 	CUTF8String typeSvg = CUTF8String((const uint8_t *)".svg", 4);
 	
-	if(Param1.fType == eVK_ArrayPicture){
+	if(isArray || (Param1.fType == eVK_Undefined)){
 	
 		if((format == SVG_OUTPUT_PDF) || (format == SVG_OUTPUT_PS)){
 			
 			rsvg_set_default_dpi_x_y (dpi_x, dpi_y);
 
-			for(int i = 0; i <= Param1.uValue.fArray.fNbElements; ++i) {
+			for(int i = 0; isArray && (i <= Param1.uValue.fArray.fNbElements); ++i) {
 				
 				PA_Picture picture = PA_GetPictureInArray(Param1, i);
 				
@@ -232,6 +233,8 @@ void SVG_Convert_array(sLONG_PTR *pResult, PackagePtr pParams)
 								
 								//found svg
 								rsvg = rsvg_handle_new_from_data((const guint8 *)PA_LockHandle(h), PA_GetHandleSize(h), &error);
+								PA_UnlockHandle(h);
+								g_clear_error(&error);
 								
 								if (rsvg) {
 									
@@ -324,6 +327,7 @@ void SVG_Convert_array(sLONG_PTR *pResult, PackagePtr pParams)
 									}
 									
 									rsvg_handle_close(rsvg, &error);
+									g_clear_error(&error);
 								//	g_object_unref(rsvg);
 									g_clear_object(&rsvg);
 									
@@ -408,6 +412,7 @@ void SVG_Convert(sLONG_PTR *pResult, PackagePtr pParams)
 		rsvg_set_default_dpi_x_y (dpi_x, dpi_y);
 		
 		rsvg = rsvg_handle_new_from_data(p, Param1_In.getBytesLength(&type), &error);
+		g_clear_error(&error);
 		
 		if (rsvg) {
 
@@ -512,6 +517,7 @@ void SVG_Convert(sLONG_PTR *pResult, PackagePtr pParams)
 			}
 
 			rsvg_handle_close(rsvg, &error);
+			g_clear_error(&error);
 		//	g_object_unref(rsvg);
 			g_clear_object(&rsvg);
 		
